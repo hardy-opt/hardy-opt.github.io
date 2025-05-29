@@ -23,6 +23,13 @@ $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
+$violet-color: #6a329f !default;
+$violet-color-dark: #44067f !default;
+$orange-color-light: #fce5cd !default; /** light ordange **/
+$grass-color-light: #d9ead3 !default;/**light green **/
+$violet-color-light: #d9d2e9 !default; /**light $violet-color-light **/
+$navy-color-dark: #063b6c !default; /** dark blue navy **/
+/** # 44067f Color Hex website: https://www.color-hex.com/color/44067f **/
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);

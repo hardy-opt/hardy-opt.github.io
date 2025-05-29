@@ -7,3 +7,20 @@
 
 "Vision":
   color: "#009f36"
+
+"COAP":
+  url: https://link.springer.com/journal/10589
+  color: "#f29105"
+
+"AIMSCIENCES":
+  url: https://www.aimsciences.org/jimo
+  color: "#2698ba"
+
+"arXiv":
+  color: "#b7d12a"
+
+"Master Thesis":
+  color: "#ffdddd"
+
+"IBISML":
+  color: "#11d68b"

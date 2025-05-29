@@ -1,115 +1,132 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
+#@string{aps = {American Physical Society,}}
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
-}
-
-@book{einstein1956investigations,
+@article{tankaria2022regularized,
+  title={A regularized limited memory BFGS method for large-scale unconstrained optimization and its efficient implementations},
+  author={Tankaria, Hardik and Sugimoto, Shinji and Yamashita, Nobuo},
+  journal={Computational Optimization and Applications},
+  volume={82},
+  number={1},
+  pages={61--88},
+  year={2022},
+  publisher={Springer},
+  url={https://link.springer.com/article/10.1007/s10589-022-00351-5},
+  preview={RLBFGS.gif}, # add gif/png/jpeg in assets/img/publication_review,
+  abbr={COAP},
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+  description={The limited memory BFGS (L-BFGS) method is one of the popular methods for solving large-scale unconstrained optimization.
+  Since the standard L-BFGS method uses a line search to guarantee its global convergence, it sometimes requires a large number of function
+  evaluations. To overcome the difficulty, we propose a new L-BFGS with a certain regularization technique. We show its global convergence
+  under the usual assumptions. In order to make the method more robust and efficient, we also extend it with several techniques such as
+  the nonmonotone technique and simultaneous use of the Wolfe line search. Finally, we present some numerical results for test problems
+  in CUTEst, which show that the proposed method is robust in terms of solving more problems.}
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
+@article{tankaria2021nys,
+  title={Nys-curve{:} Nystr{\"o}m-approximated curvature for stochastic optimization},
+  author={Tankaria, Hardik and Singh, Dinesh and Yamada, Makoto},
+  journal={arXiv preprint},
+  arxiv={2110.08577v1},
+  pages={arXiv--2110},
+  year={2021},
+  url={https://arxiv.org/abs/2110.08577v1},
+  preview={Nystromproc.gif}, # add gif/png/jpeg in assets/img/publication_review,
+  abbr={arXiv},
   bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
+  description={The quasi-Newton methods generally provide curvature information by approximating the Hessian using the secant
+  equation. However, the secant equation becomes insipid in approximating the Newton step owing to its use of the first-order
+  derivatives. In this study, we propose an approximate Newton step-based stochastic optimization algorithm for large-scale
+  empirical risk minimization of convex functions with linear convergence rates. Specifically, we compute a partial column
+  Hessian of size (d×k) with k $<$d randomly selected variables, then use the \textit{Nyström method} to better approximate the
+  full Hessian matrix. To further reduce the computational complexity per iteration, we directly compute the update step ($\delta$w)
+  without computing and storing the full Hessian or its inverse. Furthermore, to address large-scale scenarios in which even
+  computing a partial Hessian may require significant time, we used distribution-preserving (DP) sub-sampling to compute a
+  partial Hessian. The DP sub-sampling generates p sub-samples with similar first and second-order distribution statistics and
+  selects a single sub-sample at each epoch in a round-robin manner to compute the partial Hessian. We integrate our
+  approximated Hessian with stochastic gradient descent and stochastic variance-reduced gradients to solve the logistic
+  regression problem. The numerical experiments show that the proposed approach was able to obtain a better approximation of
+  Newton\textquotesingle s method with performance competitive with the state-of-the-art first-order and the stochastic
+  quasi-Newton methods.}
 }
 
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
+@article{singh2021nys,
+  title={Nys-newton{:} Nystr$\backslash$" om-approximated curvature for stochastic optimization},
+  author={Singh, Dinesh and Tankaria, Hardik and Yamada, Makoto},
+  journal={arXiv preprint},
+  arxiv={2110.08577},
+  year={2021},
+  url={https://arxiv.org/abs/2110.08577},
+  abbr={arXiv},
   bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
+  preview={Mri.jpeg}
+  }
+
+@article{tankaria2022stochastic,
+  title={A stochastic variance reduced gradient using Barzilai-Borwein techniques as second order information},
+  author={Tankaria, Hardik and Yamashita, Nobuo},
+  journal={Journal of Industrial and Management Optimization},
+  year={2022},
+  url={https://www.aimsciences.org/article/doi/10.3934/jimo.2023089},
+  preview={Datasets.jpeg}, # add gif/png/jpeg in assets/img/publication_review,
+  abbr={AIMSCIENCES},
+  bibtex_show={true},
+  description={In this paper, we consider to improve the stochastic variance reduce gradient (SVRG) method via incorporating
+  the curvature information of the objective function. We propose to reduce the variance of stochastic gradients using the
+  computationally efficient Barzilai-Borwein (BB) method by incorporating it into the SVRG. We also incorporate a BB-step
+  size as its variant. We prove its linear convergence theorem that works not only for the proposed method but also for the
+  other existing variants of SVRG with second-order information. We conduct the numerical experiments on the benchmark datasets
+  and show that the proposed method with constant step size performs better than the existing variance reduced methods for some
+  test problems.}
 }
 
-@book{przibram1967letters,
+@article{tankaria2024regularized,
+  title={Regularized Nystr{\"o}m method for Large-Scale Unconstrained Non-Convex Optimization},
+  author={Tankaria, Hardik},
+  year={2024},
+  url={https://www.researchgate.net/profile/Hardik-Tankaria/publication/380000293_Regularized_Nystrom_method_for_Large-Scale_Unconstrained_Non-Convex_Optimization/links/6626b65443f8df018d21b6eb/Regularized-Nystroem-method-for-Large-Scale-Unconstrained-Non-Convex-Optimization.pdf},
+  preview={NysNewtoncomp.gif}, # add gif/png/jpeg in assets/img/publication_review,
+  abbr={ResearchGate},
   bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+  description={We propose a quasi-Newton type regularized Nyström method for solving unconstrained large scale non-convex
+  optimization problem with high-dimensional feature spaces. We focus on l2-regularized objective function. To efficiently
+  approximate the Hessian, we employ a regularized Nystrom method to approximate Hessian. However, the Hessian of non-convex
+  function may produce negative eigenvalues. We confront the issue of negative eigenvalue via incorporating the regularized
+  parameter to obtain positive definite matrix and the descent direction, resulting in to the regulazied fixed-rank Nystrom
+  approximation. This fixed-rank approximation offers flexibility in rank selection through random column sampling,
+  enhancing computational efficiency. Complementing this, we employ backtracking line search to ascertain suitable step
+  sizes, utilizing partial Hessian information to approximate the full Hessian matrix. We establish global convergence under
+  standard assumptions and provide a comprehensive analysis of the global complexity. Finally, we demonstrate numerical
+  experiments to show the robustness and efficiency of the proposed method by comparing it with existing methods.}
+}
+
+@article{tankaria2022nys,
+  title={Nys-Newton{:} Nystroem-Approximated Curvature for Convex Optimization},
+  author={TANKARIA, Hardik and SINGH, Dinesh and YAMADA, Makoto},
+  journal={電子情報通信学会技術研究報告 (Web)},
+  volume={122},
+  number={325 (IBISML2022 40-64)},
+  pages={134--141},
+  year={2022},
+  url={https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202302216950577696},
+  abbr={IBISML},
+  bibtex_show={true},
+  preview={Nystrom.jpeg}
+}
+
+@phdthesis{tankaria2016hasse,
+  title={Hasse-Minkowski principle for Quadratic forms over Q},
+  author={Tankaria, Hardik},
+  year={2016},
+  school={Indian Institute of Technology Hyderabad}, # add gif/png/jpeg in assets/img/publication_review,
+  abbr={Master Thesis},
+  bibtex_show={true},
+  description={This master's thesis covers the Hasse–Minkowski theorem, a central theorem in number theory.
+  The theorem states that two quadratic forms over a number field are equivalent if and only if they are equivalent
+  at all completions of the number field. The paper looks into the proof of this theorem, in relation to quadratic forms
+  over the rationals. It addresses the local-global principle when exploring equivalence, emphasizing the relationship
+  between local properties at different places (like real and p-adic completions) and global properties over the rationals.
+  The thesis reinforces what we understand about quadratic forms, and illustrates how the Hasse–Minkowski principle and
+  theorem relate to algebraic number theory as a whole.}
 }
