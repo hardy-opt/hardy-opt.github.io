@@ -162,10 +162,11 @@
 - title: Manuscripts Under Review
   type: list
   contents:
-    - title: NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its Application.
+    - title: >-
+      NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its Application.
       items:
-        - Year: 2023
-        - Authors: Hardik Tankaria, Dinesh Singh, and Makoto Yamada
+    - Year: 2023
+    - Authors: Hardik Tankaria, Dinesh Singh, and Makoto Yamada
     - title: Regularized Nyström method for Large-Scale Unconstrained Non-Convex Optimization.
       items:
         - Year: 2024
@@ -221,10 +222,12 @@
       year: August 2023
       description:
         - Location: Waseda University, Tokyo, Japan
-    - title: Nys-Newton: Nyström approximated curvature information for convex optimization
+    - title: >-
+      Nys-Newton: Nyström approximated curvature information for convex optimization
       institution: (IBISML) Information based Induction Sciences and Machine Learning (online)
       year: December 2022
-    - title: Nys-Transfer: Nyström approximated Newton-sketch for Fine-tuning the Deep Nets for Brain MRI
+    - title: >-
+      Nys-Transfer: Nyström approximated Newton-sketch for Fine-tuning the Deep Nets for Brain MRI
       institution: International Symposium on Artificial Intelligence & Brain Science, Okinawa Institute of Science & Technology (OIST)
       year: July 2022
       description:
