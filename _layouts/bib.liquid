@@ -185,10 +185,15 @@
       {{ entry.note | strip }}
     </div>
 
-    <!-- Description --> #
-    {% if entry.description %} #
-      <div class="description">{{ entry.description }}</div> #
-    {% endif %} #
+    <!-- Abstract -->
+    {% if entry.abstract %}
+      <div class="abstract">{{ entry.abstract }}</div>
+    {% endif %}
+
+
+    # {% if entry.abstract %}
+    #  <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
+    # {% endif %}
 
     <!-- Links/Buttons -->
     <div class="links">
@@ -196,9 +201,6 @@
         <a class="award btn btn-sm z-depth-0" role="button">
           {%- if entry.award_name %}{{ entry.award_name }}{% else %}Awarded{% endif -%}
         </a>
-      {% endif %}
-      {% if entry.abstract %}
-        <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
       {% endif %}
       {% if entry.doi %}
         <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
@@ -351,12 +353,12 @@
       </div>
     {% endif %}
 
-    {% if entry.abstract %}
-      <!-- Hidden abstract block -->
-      <div class="abstract hidden">
-        <p>{{ entry.abstract }}</p>
-      </div>
-    {% endif %}
+  #  {% if entry.abstract %}
+  #    <!-- Hidden abstract block -->
+  #    <div class="abstract hidden">
+  #      <p>{{ entry.abstract }}</p>
+  #    </div>
+  #  {% endif %}
 
     {% if entry.bibtex_show %}
       <!-- Hidden bibtex block -->
