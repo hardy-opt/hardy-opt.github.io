@@ -25,8 +25,6 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 back_to_top: true # set to false to disable the back to top button
 
 
-encoding: utf-8
-
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
@@ -158,6 +156,8 @@ collections:
 # -----------------------------------------------------------------------------
 # Jekyll settings
 # -----------------------------------------------------------------------------
+encoding: utf-8
+
 
 # Markdown and syntax highlight
 markdown: kramdown
@@ -266,8 +266,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Tankaria]
+  first_name: [Hardik]
 
   style: apa
   locale: en
