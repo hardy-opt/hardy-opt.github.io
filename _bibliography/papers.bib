@@ -15,15 +15,14 @@
   url={https://link.springer.com/article/10.1007/s10589-022-00351-5},
   preview={RLBFGS.gif},
   abbr={COAP},
-  bibtex_show={true}
+  bibtex_show={true},
+  description={The limited memory BFGS (L-BFGS) method is one of the popular methods for solving large-scale unconstrained optimization.
+  Since the standard L-BFGS method uses a line search to guarantee its global convergence, it sometimes requires a large number of function
+  evaluations. To overcome the difficulty, we propose a new L-BFGS with a certain regularization technique. We show its global convergence
+  under the usual assumptions. In order to make the method more robust and efficient, we also extend it with several techniques such as
+  the nonmonotone technique and simultaneous use of the Wolfe line search. Finally, we present some numerical results for test problems
+  in CUTEst, which show that the proposed method is robust in terms of solving more problems.}
 }
-
-#description={The limited memory BFGS (L-BFGS) method is one of the popular methods for solving large-scale unconstrained optimization.
-#Since the standard L-BFGS method uses a line search to guarantee its global convergence, it sometimes requires a large number of function
-#evaluations. To overcome the difficulty, we propose a new L-BFGS with a certain regularization technique. We show its global convergence
-#under the usual assumptions. In order to make the method more robust and efficient, we also extend it with several techniques such as
-#the nonmonotone technique and simultaneous use of the Wolfe line search. Finally, we present some numerical results for test problems
-#in CUTEst, which show that the proposed method is robust in terms of solving more problems.}
 
 @article{tankaria2021nys,
   title={Nys-curve{:} Nystr{\"o}m-approximated curvature for stochastic optimization},
@@ -35,22 +34,22 @@
   url={https://arxiv.org/abs/2110.08577v1},
   preview={Nystromproc.gif},
   abbr={arXiv},
-  bibtex_show={true}
+  bibtex_show={true},
+  description={The quasi-Newton methods generally provide curvature information by approximating the Hessian using the secant
+  equation. However, the secant equation becomes insipid in approximating the Newton step owing to its use of the first-order
+  derivatives. In this study, we propose an approximate Newton step-based stochastic optimization algorithm for large-scale
+  empirical risk minimization of convex functions with linear convergence rates. Specifically, we compute a partial column
+  Hessian of size (d×k) with k $<$d randomly selected variables, then use the \textit{Nyström method} to better approximate the
+  full Hessian matrix. To further reduce the computational complexity per iteration, we directly compute the update step ($\delta$w)
+  without computing and storing the full Hessian or its inverse. Furthermore, to address large-scale scenarios in which even
+  computing a partial Hessian may require significant time, we used distribution-preserving (DP) sub-sampling to compute a
+  partial Hessian. The DP sub-sampling generates p sub-samples with similar first and second-order distribution statistics and
+  selects a single sub-sample at each epoch in a round-robin manner to compute the partial Hessian. We integrate our
+  approximated Hessian with stochastic gradient descent and stochastic variance-reduced gradients to solve the logistic
+  regression problem. The numerical experiments show that the proposed approach was able to obtain a better approximation of
+  Newton\textquotesingle s method with performance competitive with the state-of-the-art first-order and the stochastic
+  quasi-Newton methods.}
 }
-#description={The quasi-Newton methods generally provide curvature information by approximating the Hessian using the secant
-#equation. However, the secant equation becomes insipid in approximating the Newton step owing to its use of the first-order
-#derivatives. In this study, we propose an approximate Newton step-based stochastic optimization algorithm for large-scale
-#empirical risk minimization of convex functions with linear convergence rates. Specifically, we compute a partial column
-#Hessian of size (d×k) with k $<$d randomly selected variables, then use the \textit{Nyström method} to better approximate the
-#full Hessian matrix. To further reduce the computational complexity per iteration, we directly compute the update step ($\delta$w)
-#without computing and storing the full Hessian or its inverse. Furthermore, to address large-scale scenarios in which even
-#computing a partial Hessian may require significant time, we used distribution-preserving (DP) sub-sampling to compute a
-#partial Hessian. The DP sub-sampling generates p sub-samples with similar first and second-order distribution statistics and
-#selects a single sub-sample at each epoch in a round-robin manner to compute the partial Hessian. We integrate our
-#approximated Hessian with stochastic gradient descent and stochastic variance-reduced gradients to solve the logistic
-#regression problem. The numerical experiments show that the proposed approach was able to obtain a better approximation of
-#Newton\textquotesingle s method with performance competitive with the state-of-the-art first-order and the stochastic
-#quasi-Newton methods.}
 
 @article{singh2021nys,
   title={Nys-newton{:} Nystr$\backslash$" om-approximated curvature for stochastic optimization},
@@ -105,7 +104,7 @@
 @article{tankaria2022nys,
   title={Nys-Newton{:} Nystroem-Approximated Curvature for Convex Optimization},
   author={TANKARIA, Hardik and SINGH, Dinesh and YAMADA, Makoto},
-  journal={{\begin{CJK}{UTF8}{min}電子情報通信学会技術研究報告 (Web)\end{CJK}},
+  journal={電子情報通信学会技術研究報告 (Web),
   volume={122},
   number={325 (IBISML2022 40-64)},
   pages={134--141},
@@ -120,7 +119,7 @@
   title={Hasse-Minkowski principle for Quadratic forms over Q},
   author={Tankaria, Hardik},
   year={2016},
-  journal={Indian Institute of Technology Hyderabad}, 
+  journal={Indian Institute of Technology Hyderabad},
   abbr={Master Thesis},
   bibtex_show={true},
   description={This master's thesis covers the Hasse–Minkowski theorem, a central theorem in number theory.
