@@ -35,22 +35,22 @@
   url={https://arxiv.org/abs/2110.08577v1},
   preview={Nystromproc.gif}, # add gif/png/jpeg in assets/img/publication_review,
   abbr={arXiv},
-  bibtex_show={true},
-  description={The quasi-Newton methods generally provide curvature information by approximating the Hessian using the secant
-  equation. However, the secant equation becomes insipid in approximating the Newton step owing to its use of the first-order
-  derivatives. In this study, we propose an approximate Newton step-based stochastic optimization algorithm for large-scale
-  empirical risk minimization of convex functions with linear convergence rates. Specifically, we compute a partial column
-  Hessian of size (d×k) with k $<$d randomly selected variables, then use the \textit{Nyström method} to better approximate the
-  full Hessian matrix. To further reduce the computational complexity per iteration, we directly compute the update step ($\delta$w)
-  without computing and storing the full Hessian or its inverse. Furthermore, to address large-scale scenarios in which even
-  computing a partial Hessian may require significant time, we used distribution-preserving (DP) sub-sampling to compute a
-  partial Hessian. The DP sub-sampling generates p sub-samples with similar first and second-order distribution statistics and
-  selects a single sub-sample at each epoch in a round-robin manner to compute the partial Hessian. We integrate our
-  approximated Hessian with stochastic gradient descent and stochastic variance-reduced gradients to solve the logistic
-  regression problem. The numerical experiments show that the proposed approach was able to obtain a better approximation of
-  Newton\textquotesingle s method with performance competitive with the state-of-the-art first-order and the stochastic
-  quasi-Newton methods.}
+  bibtex_show={true}
 }
+#description={The quasi-Newton methods generally provide curvature information by approximating the Hessian using the secant
+#equation. However, the secant equation becomes insipid in approximating the Newton step owing to its use of the first-order
+#derivatives. In this study, we propose an approximate Newton step-based stochastic optimization algorithm for large-scale
+#empirical risk minimization of convex functions with linear convergence rates. Specifically, we compute a partial column
+#Hessian of size (d×k) with k $<$d randomly selected variables, then use the \textit{Nyström method} to better approximate the
+#full Hessian matrix. To further reduce the computational complexity per iteration, we directly compute the update step ($\delta$w)
+#without computing and storing the full Hessian or its inverse. Furthermore, to address large-scale scenarios in which even
+#computing a partial Hessian may require significant time, we used distribution-preserving (DP) sub-sampling to compute a
+#partial Hessian. The DP sub-sampling generates p sub-samples with similar first and second-order distribution statistics and
+#selects a single sub-sample at each epoch in a round-robin manner to compute the partial Hessian. We integrate our
+#approximated Hessian with stochastic gradient descent and stochastic variance-reduced gradients to solve the logistic
+#regression problem. The numerical experiments show that the proposed approach was able to obtain a better approximation of
+#Newton\textquotesingle s method with performance competitive with the state-of-the-art first-order and the stochastic
+#quasi-Newton methods.}
 
 @article{singh2021nys,
   title={Nys-newton{:} Nystr$\backslash$" om-approximated curvature for stochastic optimization},
