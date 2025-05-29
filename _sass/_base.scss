@@ -787,6 +787,15 @@ footer.sticky-bottom {
         }
       }
 
+      .abstract {
+        text-align: justify; /* This will align both left and right edges */
+        padding-left: 15px;  /* Indent from the left */
+        padding-right: 15px; /* Indent from the right */
+        margin-top: 15px;    /* Space above the abstract */
+        margin-bottom: 15px; /* Space below the abstract */
+        line-height: 1.6;    /* Adjust line spacing for readability */
+      }
+
       .links {
         a.btn {
           color: var(--global-text-color);
