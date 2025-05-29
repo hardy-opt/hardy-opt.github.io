@@ -25,6 +25,12 @@ impressum_path: # set to path to include impressum link in the footer, use the s
 back_to_top: true # set to false to disable the back to top button
 
 
+exclude:
+  - _news/announcement_*.md
+  - _posts/
+  # - _pages/blog.md
+  #- _projects/?_project.md
+  #- assets/jupyter/blog.ipynb
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
