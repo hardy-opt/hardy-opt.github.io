@@ -141,7 +141,7 @@
           class="fa-solid fa-circle-info ml-1"
           data-toggle="popover"
           data-placement="top"
-          data-html="true"
+          data-url="true"
           data-content="{{ entry.annotation | escape }}"
         >
         </i>
@@ -206,11 +206,11 @@
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
       {% endif %}
-      {% if entry.html %}
-        {% if entry.html contains '://' %}
-          <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+      {% if entry.url %}
+        {% if entry.url contains '://' %}
+          <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
         {% else %}
-          <a href="{{ entry.html | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
+          <a href="{{ entry.url | prepend: '/assets/html/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">URL</a>
         {% endif %}
       {% endif %}
       {% if entry.pdf %}

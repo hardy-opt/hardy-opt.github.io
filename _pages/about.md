@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: PhD in Mathematical Optimization and Machine Learning, Aspiring Data Scientist
 
 profile:
   align: right
@@ -30,6 +30,6 @@ social: true # includes social icons at the bottom of the page
 
 Hii! Welcome to my professional portfolio. I am Hardik Tankaria, a dedicated researcher with a Ph.D. in Continuous Optimization from [Kyoto University](https://www.kyoto-u.ac.jp/en), Japan, and a master degree from [IIT Hyderabad](https://www.iith.ac.in/). Recently, I served as research associate in [IIT Mandi](https://www.iitmandi.ac.in/), contributing large-scale optimization with federated learning. With over six years of specialized experience, my work is to develop large-scale optimization techniques and solve complex optimization challenges in machine learning and in deep learning.
 
-I am looking for a challenging role as a [Data Scientist or Machine Learning Engineer that allows me to apply my strong background in innovating and solving complex real-world problems within data-driven industries. I want to work on impactful projects that leverage data to create significant value.
+I am looking for a challenging role as a [Data Scientist or Machine Learning Engineer] that allows me to apply my strong background in innovating and solving complex real-world problems within data-driven industries. I want to work on impactful projects that leverage data to create significant value.
 
 ---
