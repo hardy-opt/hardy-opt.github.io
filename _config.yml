@@ -180,9 +180,12 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ["_pages", "_scripts"]
+include: ["_scripts", "_pages/about_einstein.md", "_pages/about.md", "_pages/blog.md", "_pages/cv.md", "_pages/news.md", "_pages/profiles.md", "_pages/projects.md", "_pages/publication.md", "_pages/teaching.md"]
 exclude:
   - bin/
+  - _pages/dropdown.md
+  - _pages/repositories.md
+  - _pages/books.md
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
@@ -196,7 +199,6 @@ exclude:
   - lighthouse_results/
   - package.json
   - package-lock.json
-  - _pages/about_einstein.md
   - purgecss.config.js
   - README.md
   - readme_preview/
