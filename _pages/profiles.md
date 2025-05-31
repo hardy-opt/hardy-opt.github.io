@@ -1,8 +1,8 @@
 ---
 layout: profiles
-permalink: /people/
-title: people
-description: members of the lab or group
+permalink: /Leadership/
+title: Leadership
+description: Leadership quality and extra curricular activities
 nav: true
 nav_order: 7
 

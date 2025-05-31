@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: PhD in Mathematical Optimization and Machine Learning, Aspiring Data Scientist
 
