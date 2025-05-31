@@ -27,9 +27,9 @@ back_to_top: true # set to false to disable the back to top button
 
 exclude:
   - _news/announcement_*.md
-  - _posts/
   - _pages/dropdown.md
   - _pages/repositories.md
+  #  - _posts/
   #- _projects/?_project.md
   #- assets/jupyter/blog.ipynb
 # -----------------------------------------------------------------------------
