@@ -1,6 +1,6 @@
 ---
 layout: profiles
-permalink: /Leadership/
+permalink: /leadership/
 title: Leadership
 description: Leadership quality and extra curricular activities
 nav: true
