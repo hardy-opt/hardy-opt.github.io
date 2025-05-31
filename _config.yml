@@ -29,7 +29,7 @@ exclude:
   - _news/announcement_*.md
   - _posts/
   - _pages/dropdown.md
-  # - _pages/blog.md
+  - _pages/repositories.md
   #- _projects/?_project.md
   #- assets/jupyter/blog.ipynb
 # -----------------------------------------------------------------------------
