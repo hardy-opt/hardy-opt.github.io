@@ -10,9 +10,9 @@ nav_order: 6
 
 ---
 
-## January 2025
-**Nys-Fed: Communication and Memory Efficient Nyström Approximated Curvature for Federated Learning**
-*Invited talk, Indian Institute of Technology, Mandi, India*
+## January 2025  
+**Nys-Fed: Communication and Memory Efficient Nyström Approximated Curvature for Federated Learning**  
+*Invited talk, Indian Institute of Technology, Mandi, India*  
 Location: Mandi, Himachal Pradesh, India
 
 ---
@@ -47,21 +47,21 @@ Format: Online
 
 ## July 2022  
 **Nys-Transfer: Nyström Approximated Newton-Sketch for Fine-Tuning the Deep Nets for Brain MRI**  
-*International Symposium on Artificial Intelligence & Brain Science, Okinawa Institute of Science & Technology (OIST)*  
+*International Symposium on Artificial Intelligence & Brain Science, Okinawa Institute of Science & Technology (OIST)*   
 Location: Okinawa, Japan
 
 ---
 
 ## February 2022
 **Damped Nystrom Approximated Curvature via Levenberg–Marquardt method for Stochastic Optimization**  
-*第16回ICTイノベーション/16th ICT Innovation, Kyoto University*
+*第16回ICTイノベーション/16th ICT Innovation, Kyoto University*   
 Location: Kyoto, Japan
 
 ---
 
-## February 2020
+## February 2020  
 **An Accelerated Stochastic Variance Reduced Gradient Method**  
-*第14回ICTイノベーション/14th ICT Innovation, Kyoto University*
+*第14回ICTイノベーション/14th ICT Innovation, Kyoto University*   
 Location: Kyoto, Japan
 
 ---
