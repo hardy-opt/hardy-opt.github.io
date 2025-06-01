@@ -36,6 +36,10 @@ body.sticky-bottom-footer {
   img {
     width: 100%;
   }
+  
+  .profile-image-shift {
+    margin-top: -20px; // adjust this value to move the image up more or less
+  }
 }
 
 // TODO: redefine content layout.
