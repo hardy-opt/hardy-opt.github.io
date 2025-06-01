@@ -6,7 +6,19 @@ description: A collection of my presentations at domestic and international conf
 nav: true
 nav_order: 6
 ---
-# Conferences and Presentations / Talks
+# International conferences / Invited Talks  
+
+## August 2019  
+**Regularized L-BFGS Method for Large Scale Unconstrained Optimization**  
+*6th International Conference on Continuous Optimization (ICCOPT)*  
+**Location: `Berlin, Germany`**
+
+---
+
+## August 2023  
+**A Stochastic Variance Reduced Gradient Using Second Order Information**  
+*10th International Congress on Industrial and Applied Mathematics (ICIAM)*  
+**Location: `Waseda University, Tokyo, Japan`**
 
 ---
 
@@ -16,18 +28,13 @@ nav_order: 6
 **Location: `Mandi, Himachal Pradesh, India`**
 
 ---
+# Domestic Conferences / Poster Presentations
+---
 
 ## February 2024  
 **Reducing Variance of Stochastic Gradient using Barzilai-Borwein method as second-order information**  
 *20th Joint Research Meeting of the Japan Society for Industrial and Applied Mathematics (JSIAM)*  
 Location: Nagaoka Institute of Technology, Niigata, Japan
-
----
-
-## August 2023  
-**A Stochastic Variance Reduced Gradient Using Second Order Information**  
-*10th International Congress on Industrial and Applied Mathematics (ICIAM)*  
-**Location: `Waseda University, Tokyo, Japan`**
 
 ---
 
@@ -63,10 +70,3 @@ Location: Kyoto, Japan
 **An Accelerated Stochastic Variance Reduced Gradient Method**  
 *第14回ICTイノベーション/14th ICT Innovation, Kyoto University*   
 Location: Kyoto, Japan
-
----
-
-## August 2019  
-**Regularized L-BFGS Method for Large Scale Unconstrained Optimization**  
-*6th International Conference on Continuous Optimization (ICOPT)*  
-**Location: `Berlin, Germany`**
