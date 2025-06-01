@@ -13,7 +13,7 @@ nav_order: 6
 ## January 2025  
 **Nys-Fed: Communication and Memory Efficient Nyström Approximated Curvature for Federated Learning**  
 *Invited talk, Indian Institute of Technology, Mandi, India*  
-Location: Mandi, Himachal Pradesh, India
+**Location: `Mandi, Himachal Pradesh, India`**
 
 ---
 
@@ -27,7 +27,7 @@ Location: Nagaoka Institute of Technology, Niigata, Japan
 ## August 2023  
 **A Stochastic Variance Reduced Gradient Using Second Order Information**  
 *10th International Congress on Industrial and Applied Mathematics (ICIAM)*  
-Location: Waseda University, Tokyo, Japan
+**Location: `Waseda University, Tokyo, Japan`**
 
 ---
 
@@ -69,4 +69,4 @@ Location: Kyoto, Japan
 ## August 2019  
 **Regularized L-BFGS Method for Large Scale Unconstrained Optimization**  
 *6th International Conference on Continuous Optimization (ICOPT)*  
-Location: Berlin, Germany
+**Location: `Berlin, Germany`**
