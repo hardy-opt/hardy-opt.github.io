@@ -20,9 +20,19 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
 #ICIAM https://iciam2023.org/
 #https://iciam2023.org/registered_data?id=00815#04101
 
+<<<<<<< HEAD
 Few good repositories
 https://github.com/rasbt
 https://github.com/colah
 https://github.com/fchollet
 https://github.com/amueller
 https://github.com/sidchop
+=======
+Pretty good repositories
+https://github.com/sidchop
+https://github.com/amueller
+https://github.com/fchollet
+https://github.com/colah
+http://colah.github.io/
+https://github.com/rasbt
+>>>>>>> restore-source
