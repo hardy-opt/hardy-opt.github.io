@@ -110,7 +110,16 @@ Similarly, for all Pay, customers with negative payment status (-2, -1) have ver
   * A noticeable pattern is that individuals who defaulted tend to have lower PAY\_AMT for higher BILL\_AMT compared to non-defaulters.  
   * Feature engineering opportunities here include creating ratios (payment-to-bill ratio), or analyzing trends in bill/payment amounts over time.
 
-![Bill Payment Analysis](assets/img/figures1/bill_payment_analysis.png)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/bill_payment_analysis.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Bill Payment Analysis
+</div>
+
 
 ### **Hypothesis Formation & Feature Engineering Ideas**
 
@@ -242,16 +251,6 @@ The main.py script generates comprehensive evaluation reports and visualizations
 - **XGBoost** provides the best balance between precision and recall for default prediction
 
 
-## **🔮 Future Enhancements**
-
-* **Advanced Feature Engineering**: Explore more complex interaction terms, polynomial features, and time-series analysis for payment history.  
-* **Deep Learning Models**: Experiment with Neural Networks (e.g., LSTMs for sequential payment data) for potentially higher predictive power.  
-* **Hyperparameter Optimization**: Implement more exhaustive tuning strategies (e.g., GridSearchCV, Bayesian Optimization) for all models.  
-* **Explainability (XAI)**: Use techniques like SHAP or LIME to explain model predictions, providing more transparency to credit officers.  
-* **Deployment**: Develop a simple API or web application to serve the trained model for real-time predictions.  
-* **Monitoring**: Implement a system to monitor model performance drift over time in a production environment.
-
-<!-- ---
 layout: page
 title: p
 description: with background image
@@ -331,4 +330,4 @@ Here's the code for the last row of images above:
 </div>
 ```
 
-{% endraw %} -->
+{% endraw %}
