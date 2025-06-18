@@ -255,9 +255,9 @@ The main.py script generates comprehensive evaluation reports and visualizations
 * **Model Comparison Chart**: A bar plot showing the ROC AUC scores for all trained models.
 
 # Model Comparison
-
+<br/><br/>
 ## Overall Performance Metrics
-
+<br/><br/>
 | Metric | Logistic Regression | Random Forest | XGBoost | Best Model |
 |--------|-------------------|---------------|---------|------------|
 | **Accuracy** | 0.6830 | **0.7922** | 0.7975 | XGBoost |
@@ -267,11 +267,11 @@ The main.py script generates comprehensive evaluation reports and visualizations
 | **Specificity** | 0.6887 | **0.8822** | 0.8897 | XGBoost |
 | **AUC Score** | 0.7323 | 0.7522 | **0.7669** | XGBoost |
 | **Avg Precision** | 0.4850 | 0.5077 | **0.5339** | XGBoost |
-
+<br/><br/>
 ## Detailed Classification Results
-
+<br/><br/>
 ### Class-wise Performance
-
+<br/><br/>
 | Model | Class | Precision | Recall | F1-Score | Support |
 |-------|-------|-----------|--------|----------|---------|
 | **Logistic Regression** | No Default | 0.88 | 0.69 | 0.77 | 4687 |
@@ -280,15 +280,15 @@ The main.py script generates comprehensive evaluation reports and visualizations
 | | Default | 0.53 | 0.47 | 0.50 | 1313 |
 | **XGBoost** | No Default | 0.86 | 0.89 | 0.87 | 4687 |
 | | Default | 0.54 | 0.47 | 0.50 | 1313 |
-
+<br/><br/>
 ### Weighted Averages
-
+<br/><br/>
 | Model | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
 | **Logistic Regression** | 0.77 | 0.68 | 0.71 |
 | **Random Forest** | 0.78 | 0.79 | 0.79 |
 | **XGBoost** | 0.79 | 0.80 | 0.79 |
-
+<br/><br/>
 ## Key Insights
 
 - **XGBoost** achieves the highest overall performance across most metrics
