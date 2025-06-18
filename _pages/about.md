@@ -6,7 +6,7 @@ subtitle: PhD in Mathematical Optimization and Machine Learning, Aspiring Data S
 
 profile:
   align: right
-  image: Hardik1.png
+  image: Hardik11.png
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Location: Kyoto, Japan</p>
