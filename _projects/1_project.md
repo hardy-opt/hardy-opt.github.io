@@ -254,9 +254,9 @@ The main.py script generates comprehensive evaluation reports and visualizations
 * **ROC AUC Scores**: A critical metric for evaluating classifier performance on imbalanced datasets.  
 * **Model Comparison Chart**: A bar plot showing the ROC AUC scores for all trained models.
 
-# Model Comparison
+# **Model Comparison**
 
-<br/>
+
 ## Overall Performance Metrics
 
 | Metric | Logistic Regression | Random Forest | XGBoost | Best Model |
@@ -269,9 +269,10 @@ The main.py script generates comprehensive evaluation reports and visualizations
 | **AUC Score** | 0.7323 | 0.7522 | **0.7669** | XGBoost |
 | **Avg Precision** | 0.4850 | 0.5077 | **0.5339** | XGBoost |
 
-## Detailed Classification Results
 
-<br/>
+## **Detailed Classification Results**
+
+
 ### Class-wise Performance
 
 | Model | Class | Precision | Recall | F1-Score | Support |
@@ -283,7 +284,7 @@ The main.py script generates comprehensive evaluation reports and visualizations
 | **XGBoost** | No Default | 0.86 | 0.89 | 0.87 | 4687 |
 | | Default | 0.54 | 0.47 | 0.50 | 1313 |
 
-<br/>
+
 ### Weighted Averages
 
 | Model | Precision | Recall | F1-Score |
@@ -292,7 +293,7 @@ The main.py script generates comprehensive evaluation reports and visualizations
 | **Random Forest** | 0.78 | 0.79 | 0.79 |
 | **XGBoost** | 0.79 | 0.80 | 0.79 |
 
-<br/>
+
 ## Key Insights
 
 - **XGBoost** achieves the highest overall performance across most metrics
