@@ -43,7 +43,14 @@ A key finding during EDA was the significant class imbalance in our target varia
 * **Default Cases**: 6,636 instances.  
 * **Non-Default Cases**: 23,364 instances.
 
-![Distribution of Default](assets/img/figures1/target_distribution.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/target_distribution.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Distribution of Default
+</div>
 
 This imbalance is typical in real-world fraud or default prediction scenarios and necessitates specialized handling (like SMOTE and class weighting) to prevent models from simply predicting the majority class and achieving deceptively high accuracy.
 
@@ -59,7 +66,14 @@ Analyzing demographic features provided valuable insights into different custome
 * **Distribution**: Males (39.6%) and Females (60.4%) are present in a roughly 2:3 ratio.  
 * **Default Rates**: Default rates in Males is (\~33%) and (~28%) among females, indicating that gender alone might not be a strong predictor of default.
 
-![Demographic Analysis](assets/img/figures1/demographic_analysis.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/demographic_analysis.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Demographic Analysis
+</div>
 
 
 #### **Education (EDUCATION)**
@@ -78,18 +92,44 @@ Analyzing demographic features provided valuable insights into different custome
   * The Others category again exhibits a considerably higher default rate, similar to the EDUCATION feature. This pattern (higher default rates in "Others" categories) is a strong signal for potential feature engineering or data quality improvements, possibly by imputing or re-categorizing these 0 or Other values.
 
 
-![Education & Marriage Analysis](assets/img/figures1/education_marriage_analysis.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/education_marriage_analysis.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Education & Marriage Analysis
+</div>
+
 
 
 * **Demographic Feature Distributions**:  
   (This plot visualizes gender, education, and marriage distributions alongside default rates for each category.)
 
-![Full Correlation Matrix](assets/img/figures1/full_correlation_matrix.png)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/full_correlation_matrix.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Full Correlation Matrix
+</div>
+
 
 
 ### **Payment Behavior Analysis**
 
-![Payment Status Analysis](assets/img/figures1/payment_status_analysis.png)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/payment_status_analysis.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Payment Status Analysis
+</div>
+
 
 Analyzing past payment statuses (PAY\_0 to PAY\_6) and bill/payment amounts revealed critical patterns:
 Clients with a payment status of
@@ -102,7 +142,14 @@ Similarly, for all Pay, customers with negative payment status (-2, -1) have ver
 
 * **PAY\_0 (Previous Month Payment Status)**: A strong correlation exists between late payment in the previous month and defaulting in the next month. This heatmap shows correlations between payment statuses across different months (PAY_0 through PAY_6) and the target variable (default.payment.next.month). Strong positive correlations (0.6-0.8) between consecutive payment periods, indicating payment behavior consistency. Correlations decrease as time periods get further apart and all payment variables show positive correlation with default probability (0.19-0.32). Also, earlier payment history (PAY_0) has stronger correlation with default than older history. This suggests that recent payment behavior is more predictive of future default than historical payment patterns.
 
-![Payment correlation Analysis](assets/img/figures1/payment_correlation_matrix.png)
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures1/payment_correlation_matrix.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+      Payment correlation Analysis
+</div>
 
 
 * **Bill Amounts (BILL\_AMT1-6) and Payment Amounts (PAY\_AMT1-6)**: These features show the financial activity of the client.  
