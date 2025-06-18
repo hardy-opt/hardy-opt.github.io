@@ -255,9 +255,9 @@ The main.py script generates comprehensive evaluation reports and visualizations
 * **Model Comparison Chart**: A bar plot showing the ROC AUC scores for all trained models.
 
 # Model Comparison
+
 <br/>
 ## Overall Performance Metrics
-<br/>
 
 | Metric | Logistic Regression | Random Forest | XGBoost | Best Model |
 |--------|-------------------|---------------|---------|------------|
@@ -269,10 +269,9 @@ The main.py script generates comprehensive evaluation reports and visualizations
 | **AUC Score** | 0.7323 | 0.7522 | **0.7669** | XGBoost |
 | **Avg Precision** | 0.4850 | 0.5077 | **0.5339** | XGBoost |
 
-<br/>
 ## Detailed Classification Results
-<br/>
 
+<br/>
 ### Class-wise Performance
 
 | Model | Class | Precision | Recall | F1-Score | Support |
@@ -286,7 +285,6 @@ The main.py script generates comprehensive evaluation reports and visualizations
 
 <br/>
 ### Weighted Averages
-<br/>
 
 | Model | Precision | Recall | F1-Score |
 |-------|-----------|--------|----------|
