@@ -42,17 +42,17 @@ In this deep dive, I’ll explore a powerful optimization technique I implemente
 
 The proposed serach direction:
 $$
-w_{t} = w_{t-1} - \eta\ (\nabla f_{i_t}(w_{t-1}) - \nabla f_{i_t}(\Tilde{w}) + \nable F(\Tilde{w}) + {(\Tilde{A} - \Tilde{A}_{i_t}) (w_{t-1} - \Tilde{w})})
+w_{t} = w_{t-1} - \eta\ (\nabla f_{i_t}(w_{t-1}) - \nabla f_{i_t}(\tilde{w}) + \nabla F(\Tilde{w}) + {(\tilde{A} - \tilde{A}_{i_t}) (w_{t-1} - \tilde{w})})
 $$
 
 We choose BB-approximation in following way,
 
 $$
-\Tilde{A}^k = \frac{s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\Tilde{w}_k) - \nabla f_{i}(\Tilde{w}_{k-1}))}{\|\s^k\|^2},
+\tilde{A}^k = \frac{s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\tilde{w}_k) - \nabla f_{i}(\Tilde{w}_{k-1}))}{\|\s^k\|^2},
 $$
 
 $$
-\Tilde{A}^{k}_{i_t} = \frac{(s^k)^\top (\nabla f_{i_t}(\Tilde{w}_k) - \nabla f_{i_t}(\Tilde{w}_{m-1}))}{\|s^k\|^2},
+\tilde{A}^{k}_{i_t} = \frac{(s^k)^\top (\nabla f_{i_t}(\Tilde{w}_k) - \nabla f_{i_t}(\Tilde{w}_{m-1}))}{\|s^k\|^2},
 $$
 
 Where $s^k = \Tilde{w}_k - \Tilde{w}_{k-1}$ and $y^k = \nable F(\Tilde{w}_k) - \nabla F(\Tilde{w}_{k-1})$
@@ -93,7 +93,7 @@ The result is better, more stable convergence, particularly on challenging, ill-
 
 ## 🧪 Real-world Example: Gisette Dataset
 
-To demonstrate the practical benefits of SVRGBB, I evaluated these methods on the **Gisette dataset**, a well-known challenging high-dimensional classification task. This dataset serves as an excellent benchmark for understanding how optimization algorithms perform under realistic conditions.
+To demonstrate the practical benefits of SVRG-2BB, I evaluated these methods on the **Gisette dataset**, a well-known challenging high-dimensional classification task. This dataset serves as an excellent benchmark for understanding how optimization algorithms perform under realistic conditions.
 
 ### Sample Results
 <div class="row">
@@ -136,13 +136,13 @@ This approach is not just a theoretical advancement in optimization; it has prof
 - **Linear SVMs**: Effective for spam filtering, image recognition (e.g., OCR), and text classification.
 - **Any Convex Model**: Applicable across a broad spectrum of convex machine learning models where minimizing convergence time is critical.
 
-**SVRGBB bridges the gap between rigorous theory-driven optimization and the demands of practical, high-performance machine learning workflows**, offering a path to build more efficient and scalable solutions.
+**SVRG-2BB bridges the gap between rigorous theory-driven optimization and the demands of practical, high-performance machine learning workflows**, offering a path to build more efficient and scalable solutions.
 
 ---
 
 ## 🛠 Try It Yourself
 
-You can explore and run all experiments from this [GitHub repo](). It provides a clean MATLAB setup for testing various SVRG variants, including the proposed Barzilai-Borwein approximations, allowing you to reproduce and experiment with these powerful optimization techniques.
+You can explore and run all experiments from this [GitHub repo](https://github.com/hardy-opt/SVRG2BB). It provides a clean MATLAB setup for testing various SVRG variants, including the proposed Barzilai-Borwein approximations, allowing you to reproduce and experiment with these powerful optimization techniques.
 
 ---
 

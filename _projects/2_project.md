@@ -147,7 +147,7 @@ The Gisette dataset is a high-dimensional binary classification problem used to 
     </div>
 </div>
 <div class="caption">
-Gisette dataset: \[\#n : 6000 , \#d: 5001\] and  \[\lambda = 1e-5 \]
+Gisette dataset: \#n : 6000 , \#d: 5001 and  $\lambda = 1e-5$
 </div>
 
 - **🔄 Optimality Gap vs. Epoch**: Shows how quickly the algorithm nears the optimal solution. One can note that SVRG2BB outperforms other existing methods.
