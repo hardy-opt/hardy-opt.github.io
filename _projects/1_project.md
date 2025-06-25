@@ -261,11 +261,11 @@ The main.py script generates comprehensive evaluation reports and visualizations
 
 | Metric | Logistic Regression | Random Forest | XGBoost | Best Model |
 |--------|-------------------|---------------|---------|------------|
-| **Accuracy** | 0.6830 | **0.7922** | 0.7975 | XGBoost |
+| **Accuracy** | 0.6830 | 0.7922 | **0.7975** | XGBoost |
 | **Precision** | 0.3736 | 0.5282 | **0.5433** | XGBoost |
-| **Recall** | 0.6626 | 0.4707 | 0.4684 | Logistic Regression |
-| **F1-Score** | **0.4778** | 0.4978 | 0.5031 | XGBoost |
-| **Specificity** | 0.6887 | **0.8822** | 0.8897 | XGBoost |
+| **Recall** | **0.6626** | 0.4707 | 0.4684 | Logistic Regression |
+| **F1-Score** | 0.4778 | 0.4978 | **0.5031** | XGBoost |
+| **Specificity** | 0.6887 | 0.8822 | **0.8897** | XGBoost |
 | **AUC Score** | 0.7323 | 0.7522 | **0.7669** | XGBoost |
 | **Avg Precision** | 0.4850 | 0.5077 | **0.5339** | XGBoost |
 

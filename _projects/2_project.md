@@ -1,156 +1,171 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: Accelerating Large-Scale Optimization for ML
+description: A MATLAB project implementing SVRGBB for significantly faster and more stable training of large-scale machine learning models like logistic regression by tackling noisy gradients.
+img: assets/img/figures2/SVRG2BB_background.png
 importance: 2
 category: work
-giscus_comments: true
+related_publications: False
 ---
 
+# SVRGBB: Accelerating Large-Scale Machine Learning with Barzilai-Borwein Optimization
 
+This project showcases my work on enhancing **Stochastic Variance Reduced Gradient (SVRG)** techniques by incorporating **Barzilai-Borwein (BB)** approximation for adaptive step-size selection. My goal was to significantly improve the convergence speed of gradient-based optimizers on large-scale convex machine learning problems, specifically **L2-regularized logistic regression** and **support vector machines (SVMs)**.
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## 📌 The Challenge: Gradient Noise in Large-Scale ML
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+In the realm of large-scale machine learning, **gradient noise** is a primary obstacle to efficient model training. While **mini-batch or stochastic gradient descent (SGD)** offers essential scalability for millions of data points, it often comes at the cost of high variance in updates, leading to noticeably slower convergence. This project directly addresses this challenge.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+In vanilla SGD, the update direction is inherently noisy, causing updates to fluctuate considerably around the true gradient. This inherent noise can severely impede convergence, particularly as datasets scale up.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+**SVRG (Stochastic Variance Reduced Gradient)** offers a powerful mitigation strategy. It introduces a *control variate*—anchoring noisy stochastic gradients to more accurate full-gradient snapshots taken periodically. This anchoring reduces gradient variance, enabling faster and more stable optimization.
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+However, further refinements are necessary to unlock the full potential of these methods in large-scale settings.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+---
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## 📈 My Solution: SVRGBB - Blending Variance Reduction with Second-Order Insight for Scalability
 
-{% raw %}
+While SVRG effectively reduces variance, I found that performance can be further enhanced by strategically incorporating **curvature information** without computing full Hessian matrices. This is where the **Barzilai-Borwein (BB)** method proves invaluable.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
+**BB** is a step-size heuristic, derived from quasi-Newton methods, that efficiently estimates curvature.
+
+### Key Enhancements with SVRGBB:
+- Integrated BB into the core SVRG structure to achieve **superior acceleration**.
+- Dynamically adapted **BB-approximated step sizes** using historical gradient information within each epoch.
+- Preserved and enhanced SVRG’s **variance-reduction** structure to achieve synergy between variance control and second-order insight.
+
+The result is **faster, more stable convergence**, especially on ill-conditioned, real-world, large-scale datasets.
+
+---
+
+## 🧪 Problem Formulations
+
+This project tackles two fundamental machine learning optimization problems:
+
+### 1. L2-Regularized Logistic Regression
+
+\[
+\min_{w} F(w) = \frac{1}{n} \sum_{i=1}^{n} \log(1 + \exp(-b_i a_i^T w)) + \frac{\lambda}{2} \|w\|^2
+\]
+
+### 2. L2-Squared Support Vector Machine (SVM)
+
+\[
+\min_{w} F(w) = \frac{1}{2n} \sum_{i=1}^{n} \left( \max(0, 1 - b_i a_i^T w) \right)^2 + \frac{\lambda}{2} \|w\|^2
+\]
+
+Where:
+- \( a_i \in \mathbb{R}^d \): Feature vector  
+- \( b_i \in \{ \pm 1 \} \): Label  
+- \( \lambda \): L2-regularization parameter
+
+---
+
+## 📁 Repository Structure
+
+```bash
+SVRGBB/
+├── SVRG_BB/
+│   ├── data/                   # Preprocessed .mat datasets
+│   ├── SVRG_NUMERICAL_EXP.m    # Central experiment driver
+│   ├── BB_optimizers/          # BB-augmented SVRG implementations
+│   ├── Results_July2022/       # Latest experiment logs
+│   └── Problem/                # Objective & gradient functions
+├── Figures/                    # Generated .eps figures
+└── README.md
 ```
 
-{% endraw %}
+---
 
+## 🚀 Key Features & My Implementation Highlights
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+- **Core SVRG Variants**: Implemented SVRG, SVRG-2BB, and SVRG-2BBS in MATLAB.
+- **Modular Design**: Easy swapping of objectives and optimizers for flexibility.
+- **Dataset Support**: Benchmarks include Adult, W8A, Covtype, Gisette, Ijcnn, and Mnist.
+- **Visualization Tools**: Automatic plotting of:
+  - Optimality gap (vs. epoch / CPU time)
+  - Gradient variance (vs. epoch)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+---
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+## ▶️ How to Run
+0. First of all add the whole folder in MATLAB path.
+
+1. **Launch MATLAB** and navigate to the experiment file:
+    ```matlab
+    cd SVRGBB/
+    ```
+
+2. **Run the experiments**:
+    ```matlab
+    SVRG_NUMERICAL_EXP();
+    ```
+
+3. **Generate performance plots**:
+    ```matlab
+    cd ../Figures/
+    ploter();
+    ```
+
+Plots are saved as `.eps` files in dataset-specific folders under `Figures/`.
+
+---
+
+## 📊 Performance on Gisette Dataset
+
+The Gisette dataset is a high-dimensional binary classification problem used to benchmark performance.
+
+### Key Metrics:
+
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/figures2/Legend.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
 </div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/figures2/Gisette-1.0e-05-Opt_Epoch.png" title="example image" class="img-fluid rounded z-depth-1" %}
+
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures2/Gisette-1.0e-05-Opt_Time.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures2/Gisette-1.0e-05-Var_Epoch.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+Gisette dataset: \[\#n : 6000 , \#d: 5001\] and  \[\lambda = 1e-5 \]
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- **🔄 Optimality Gap vs. Epoch**: Shows how quickly the algorithm nears the optimal solution. One can note that SVRG2BB outperforms other existing methods.
+- **⏱ Optimality Gap vs. CPU Time**: Demonstrates real-world training efficiency.
+- **🔁 Variance vs. Epoch**: Illustrates how SVRG2BB effectively reduces stochastic gradient noise.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+---
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+## 📌 Use Cases
 
-{% raw %}
+- **Optimization Research**: MATLAB framework for experimenting with SVRG enhancements.
+- **Benchmarking Solvers**: Evaluate convex optimization algorithms.
+- **Large-Scale ML Applications**: Efficiently train models with high data volumes.
+- **Educational Tool**: Demonstrate and understand variance-reduction and step-size adaptation techniques.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+---
 
-{% endraw %}
+## 📄 Citation
+
+**Tankaria, H., & Yamashita, N.**  
+*A Stochastic Variance Reduced Technique using Barzilai-Borwein techniques as second order information.*  
+Journal of Optimization, Industry, and Management, 2024, **20(2): 525-547**  
+[DOI Link](https://www.aimsciences.org/article/doi/10.3934/jimo.2023089)
+
+---
+
+## 📬 Contact
+
+For questions or collaborations, reach out:
+
+📧 **hardiktankaria1406@gmail.com**
