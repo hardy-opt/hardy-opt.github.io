@@ -65,7 +65,7 @@ $$
 ## 📁 Repository Structure
 
 ```bash
-SVRG-2BB/
+SVRG2BB/
 ├── SGD_lib/                    # Utility tools for learning rate, epochs, etc.
 ├── SVRG_BB/                    # Main repo for SVRG-2BB proposed method
 │   ├── data/w8a.m              # Datasets (MAT files - eg. w8a.mat) and data loaders(w8a.m)
@@ -162,6 +162,10 @@ Gisette dataset: \#n : 6000 , \#d: 5001 and  $\lambda = 1e-5$
 - **Benchmarking Solvers**: Evaluate convex optimization algorithms.
 - **Large-Scale ML Applications**: Efficiently train models with high data volumes.
 - **Educational Tool**: Demonstrate and understand variance-reduction and step-size adaptation techniques.
+
+---
+
+You can explore and run all experiments from this [GitHub repo](https://github.com/hardy-opt/SVRG2BB). It provides a clean MATLAB setup for testing various SVRG variants, including the proposed Barzilai-Borwein approximations, allowing you to reproduce and experiment with these powerful optimization techniques.
 
 ---
 
