@@ -42,29 +42,29 @@ In this deep dive, I’ll explore a powerful optimization technique I implemente
 
 The proposed serach direction:
 $$
-w_{t} = w_{t-1} - \eta\ (\nabla f_{i_t}(w_{t-1}) - \nabla f_{i_t}(\tilde{w}) + \nabla F(\Tilde{w}) + {(\tilde{A} - \tilde{A}_{i_t}) (w_{t-1} - \tilde{w})})
+w_{t} = w_{t-1} - \eta\ (\nabla f_{i_t}(w_{t-1}) - \nabla f_{i_t}(\tilde{w}) + \nabla F(\tilde{w}) + {(\tilde{A} - \tilde{A}_{i_t}) (w_{t-1} - \tilde{w})})
 $$
 
 We choose BB-approximation in following way,
 
 $$
-\tilde{A}^k = \frac{s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\tilde{w}_k) - \nabla f_{i}(\Tilde{w}_{k-1}))}{\|\s^k\|^2},
+\tilde{A}^k = \frac{s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\tilde{w}_k) - \nabla f_{i}(\tilde{w}_{k-1}))}{\|\s^k\|^2},
 $$
 
 $$
-\tilde{A}^{k}_{i_t} = \frac{(s^k)^\top (\nabla f_{i_t}(\Tilde{w}_k) - \nabla f_{i_t}(\Tilde{w}_{m-1}))}{\|s^k\|^2},
+\tilde{A}^{k}_{i_t} = \frac{(s^k)^\top (\nabla f_{i_t}(\tilde{w}_k) - \nabla f_{i_t}(\tilde{w}_{m-1}))}{\|s^k\|^2},
 $$
 
-Where $s^k = \Tilde{w}_k - \Tilde{w}_{k-1}$ and $y^k = \nable F(\Tilde{w}_k) - \nabla F(\Tilde{w}_{k-1})$
+Where $s^k = \tilde{w}_k - \tilde{w}_{k-1}$ and $y^k = \nable F(\tilde{w}_k) - \nabla F(\tilde{w}_{k-1})$
 
 Hence, we get
 
 $$
-\textbf{E}[\Tilde{A}_{i_t}] = \Tilde{A}.
+\textbf{E}[\tilde{A}_{i_t}] = \tilde{A}.
 $$
 
 $$
-\Tilde{A}_{i_t} \approx \nabla^2 f_{i_t}(\Tilde{w})  \text{\ and \ } \Tilde{A} \approx \nabla^2 F(\Tilde{w})
+\tilde{A}_{i_t} \approx \nabla^2 f_{i_t}(\tilde{w})  \text{\ and \ } \tilde{A} \approx \nabla^2 F(\tilde{w})
 $$
 ---
 
