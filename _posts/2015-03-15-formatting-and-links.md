@@ -48,14 +48,16 @@ $$
 We choose BB-approximation in following way,
 
 $$
-\tilde{A}^k = \frac{s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\tilde{w}_k) - \nabla f_{i}(\tilde{w}_{k-1}))}{\|\s^k\|^2},
+\tilde{A}^k = \frac{(s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\tilde{w}_k) - \nabla f_{i}(\tilde{w}_{k-1}))}{\|s^k\|^2},
 $$
 
 $$
 \tilde{A}^{k}_{i_t} = \frac{(s^k)^\top (\nabla f_{i_t}(\tilde{w}_k) - \nabla f_{i_t}(\tilde{w}_{m-1}))}{\|s^k\|^2},
 $$
 
-Where $s^k = \tilde{w}_k - \tilde{w}_{k-1}$ and $y^k = \nable F(\tilde{w}_k) - \nabla F(\tilde{w}_{k-1})$
+Where
+$$s^k = \tilde{w}_k - \tilde{w}_{k-1} \text{ and } y^k = \nabla F(\tilde{w}_k) - \nabla F(\tilde{w}_{k-1})
+$$
 
 Hence, we get
 
