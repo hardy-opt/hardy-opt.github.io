@@ -1,14 +1,14 @@
 ---
 layout: page
 title: Accelerating Large-Scale Optimization for ML
-description: A MATLAB project implementing SVRGBB for significantly faster and more stable training of large-scale machine learning models like logistic regression by tackling noisy gradients.
+description: A MATLAB project implementing SVRG-2BB for significantly faster and more stable training of large-scale machine learning models like logistic regression by tackling noisy gradients.
 img: assets/img/figures2/SVRG2BB_background.png
 importance: 2
 category: work
 related_publications: False
 ---
 
-# SVRGBB: Accelerating Large-Scale Machine Learning with Barzilai-Borwein Optimization
+# SVRG-2BB: Accelerating Large-Scale Machine Learning with Barzilai-Borwein Optimization
 
 This project showcases my work on enhancing **Stochastic Variance Reduced Gradient (SVRG)** techniques by incorporating **Barzilai-Borwein (BB)** approximation for adaptive step-size selection. My goal was to significantly improve the convergence speed of gradient-based optimizers on large-scale convex machine learning problems, specifically **L2-regularized logistic regression** and **support vector machines (SVMs)**.
 
@@ -24,13 +24,13 @@ However, further refinements are necessary to unlock the full potential of these
 
 ---
 
-## 📈 My Solution: SVRGBB - Blending Variance Reduction with Second-Order Insight for Scalability
+## 📈 My Solution: SVRG-2BB - Blending Variance Reduction with Second-Order Insight for Scalability
 
 While SVRG effectively reduces variance, I found that performance can be further enhanced by strategically incorporating **curvature information** without computing full Hessian matrices. This is where the **Barzilai-Borwein (BB)** method proves invaluable.
 
 **BB** is a step-size heuristic, derived from quasi-Newton methods, that efficiently estimates curvature.
 
-### Key Enhancements with SVRGBB:
+### Key Enhancements with SVRG-2BB:
 - Integrated BB into the core SVRG structure to achieve **superior acceleration**.
 - Dynamically adapted **BB-approximated step sizes** using historical gradient information within each epoch.
 - Preserved and enhanced SVRG’s **variance-reduction** structure to achieve synergy between variance control and second-order insight.
@@ -65,7 +65,7 @@ $$
 ## 📁 Repository Structure
 
 ```bash
-SVRGBB/
+SVRG-2BB/
 ├── SGD_lib/                    # Utility tools for learning rate, epochs, etc.
 ├── SVRG_BB/                    # Main repo for SVRG-2BB proposed method
 │   ├── data/w8a.m              # Datasets (MAT files - eg. w8a.mat) and data loaders(w8a.m)
@@ -104,7 +104,7 @@ SVRGBB/
 
 1. **Launch MATLAB** and navigate to the experiment file:
     ```matlab
-    cd SVRGBB/
+    cd SVRG2BB/
     ```
 
 2. **Run the experiments**:
