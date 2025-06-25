@@ -66,8 +66,9 @@ $$
 $$
 
 $$
-\tilde{A}_{i_t} \approx \nabla^2 f_{i_t}(\tilde{w})  \text{ and } \tilde{A} \approx \nabla^2 F(\tilde{w})
+\tilde{A}_{i_t} \approx \nabla^2 f_{i_t}(\tilde{w})  \text{ and } \tilde{A} \approx \nabla^2 F(\tilde{w})  
 $$
+
 ---
 
 ## 🔍 Why Variance Reduction?
