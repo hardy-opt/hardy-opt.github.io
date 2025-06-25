@@ -117,7 +117,7 @@ To demonstrate the practical benefits of SVRG-2BB, I evaluated these methods on 
     </div>
 </div>
 <div class="caption">
-Gisette dataset: \#n : 6000 , \#d: 5001 and  $\lambda = 1e-5$
+Gisette dataset: #n : 6000 , #d: 5001 and  $\lambda = 1e-5$
 </div>
 
 - ✅ **Optimality Gap vs. Epoch**  
