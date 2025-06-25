@@ -43,22 +43,22 @@ The result is **faster, more stable convergence**, especially on ill-conditioned
 
 This project tackles two fundamental machine learning optimization problems:
 
-### 1. L2-Regularized Logistic Regression
+### 1. L2-Regularized Logistic Regression:
 
-\[
-\min_{w} F(w) = \frac{1}{n} \sum_{i=1}^{n} \log(1 + \exp(-b_i a_i^T w)) + \frac{\lambda}{2} \|w\|^2
-\]
+$$
+\min_w F(w) = \frac{1}{n} \sum_{i=1}^n \log(1 + \exp(-b_i a_i^T w)) + \frac{\lambda}{2} \|w\|^2
+$$
 
-### 2. L2-Squared Support Vector Machine (SVM)
+### 2. L2-Squared Support Vector Machine (SVM):
 
-\[
-\min_{w} F(w) = \frac{1}{2n} \sum_{i=1}^{n} \left( \max(0, 1 - b_i a_i^T w) \right)^2 + \frac{\lambda}{2} \|w\|^2
-\]
+$$
+\min_w F(w) = \frac{1}{2n} \sum_{i=1}^n (\max(0, 1 - b_i a_i^T w))^2 + \frac{\lambda}{2} \|w\|^2
+$$
 
-Where:
-- \( a_i \in \mathbb{R}^d \): Feature vector  
-- \( b_i \in \{ \pm 1 \} \): Label  
-- \( \lambda \): L2-regularization parameter
+### Where:
+* $a_i \in \mathbb{R}^d$: Feature vector
+* $b_i \in \{ \pm 1 \}$: Binary label
+* $\lambda$: L2 regularization parameter
 
 ---
 
@@ -66,15 +66,25 @@ Where:
 
 ```bash
 SVRGBB/
-├── SVRG_BB/
-│   ├── data/                   # Preprocessed .mat datasets
-│   ├── SVRG_NUMERICAL_EXP.m    # Central experiment driver
-│   ├── BB_optimizers/          # BB-augmented SVRG implementations
-│   ├── Results_July2022/       # Latest experiment logs
-│   └── Problem/                # Objective & gradient functions
-├── Figures/                    # Generated .eps figures
+├── SGD_lib/                    # Utility tools for learning rate, epochs, etc.
+├── SVRG_BB/                    # Main repo for SVRG-2BB proposed method
+│   ├── data/w8a.m              # Datasets (MAT files - eg. w8a.mat) and data loaders(w8a.m)
+│   ├── Results_2022/           # Results from 2022 experiments
+│   ├── Results_July2022/       # Latest experiment results
+│   ├── BB_optimizers/bb_solvers/ # Core implementations of SVRG-BB methods
+│   └── Problem/                # Loss functions, gradients, BB updates
+├── Figures/
+│   ├── adult/
+│   ├── w8a/
+│   ├── covtype/
+│   ├── gisette/
+│   ├── mnist38/
+│   ├── ijcnn/
+│   └── Figure_M1_M4/
+├──SVRG_NUMERICAL_EXP.m    # Main experiment script
 └── README.md
 ```
+
 
 ---
 

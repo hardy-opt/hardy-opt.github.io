@@ -1,8 +1,8 @@
 ---
 layout: post
-title: a post with formatting and links
+title: Accelerating Large-Scale Optimization for ML
 date: 2023-07-15 16:40:16
-description: march & april, looking forward to summer
+description: Enhancing Stochastic Variance Reduced Gradient (SVRG) techniques by incorporating Barzilai-Borwein (BB) approximation as Second-order information and adaptive step-size selection.
 tags: formatting links
 categories: sample-posts
 ---
@@ -10,8 +10,62 @@ categories: sample-posts
 
 Gradient noise is the enemy of efficient learning. When you're training models on millions of data points, mini-batch or stochastic gradient descent (SGD) offers scalability—but at a cost: high variance in updates that leads to slower convergence.
 
-In this deep dive, I’ll explore a powerful optimization technique I implemented in MATLAB: **Stochastic Variance Reduced Gradient with Barzilai-Borwein (SVRGBB)**. It masterfully blends concepts from second-order methods and variance reduction to significantly accelerate convergence on critical convex problems like logistic regression and SVMs, particularly relevant in large-scale machine learning.
+## 🧮 Objective Functions
 
+This project addresses two main objective functions in convex optimization:
+
+### 1. L2-Regularized Logistic Regression:
+
+$$
+\min_w F(w) = \frac{1}{n} \sum_{i=1}^n \log(1 + \exp(-b_i a_i^T w)) + \frac{\lambda}{2} \|w\|^2
+$$
+
+### 2. L2-Squared Support Vector Machine (SVM):
+
+$$
+\min_w F(w) = \frac{1}{2n} \sum_{i=1}^n (\max(0, 1 - b_i a_i^T w))^2 + \frac{\lambda}{2} \|w\|^2
+$$
+
+and each function can be represent as follows:
+$$
+\min_w F(w) = \frac{1}{n} \sum_{i=1}^n f_i(w)
+$$
+
+### Where:
+* $a_i \in \mathbb{R}^d$: Feature vector
+* $b_i \in \{ \pm 1 \}$: Binary label
+* $\lambda$: L2 regularization parameter
+
+
+In this deep dive, I’ll explore a powerful optimization technique I implemented in MATLAB: **Stochastic Variance Reduced Gradient with Barzilai-Borwein as Second-order Information (SVRG-2BB)**. It masterfully blends concepts from second-order methods and variance reduction to significantly accelerate convergence on critical convex problems like logistic regression and SVMs, particularly relevant in large-scale machine learning.
+
+
+The proposed serach direction:
+$$
+w_{t} = w_{t-1} - \eta\ (\nabla f_{i_t}(w_{t-1}) - \nabla f_{i_t}(\Tilde{w}) + \nable F(\Tilde{w}) + {(\Tilde{A} - \Tilde{A}_{i_t}) (w_{t-1} - \Tilde{w})})
+$$
+
+We choose BB-approximation in following way,
+
+$$
+\Tilde{A}^k = \frac{s^k)^\top y^\top}{\|s^k\|^2} \mathrm{I} = \frac{1}{n} \sum_{i=1}^{n} \frac{(s^k)^\top (\nabla f_{i}(\Tilde{w}_k) - \nabla f_{i}(\Tilde{w}_{k-1}))}{\|\s^k\|^2},
+$$
+
+$$
+\Tilde{A}^{k}_{i_t} = \frac{(s^k)^\top (\nabla f_{i_t}(\Tilde{w}_k) - \nabla f_{i_t}(\Tilde{w}_{m-1}))}{\|s^k\|^2},
+$$
+
+Where $s^k = \Tilde{w}_k - \Tilde{w}_{k-1}$ and $y^k = \nable F(\Tilde{w}_k) - \nabla F(\Tilde{w}_{k-1})$
+
+Hence, we get
+
+$$
+\textbf{E}[\Tilde{A}_{i_t}] = \Tilde{A}.
+$$
+
+$$
+\Tilde{A}_{i_t} \approx \nabla^2 f_{i_t}(\Tilde{w})  \text{\ and \ } \Tilde{A} \approx \nabla^2 F(\Tilde{w})
+$$
 ---
 
 ## 🔍 Why Variance Reduction?
@@ -28,7 +82,7 @@ But there's more to truly unlocking speed.
 
 While SVRG reduces variance, we can further enhance performance by incorporating curvature information without the computational burden of full Hessian matrices. This is where the **Barzilai-Borwein (BB)** method comes in—a brilliant step-size heuristic derived from quasi-Newton methods that estimates curvature efficiently.
 
-In **SVRGBB**, we integrate BB into the SVRG framework to achieve superior acceleration:
+In **SVRG-2BB**, we integrate BB into the SVRG direction framework to achieve superior acceleration:
 
 - We utilize BB-approximated step sizes that adapt dynamically within each epoch, leveraging historical gradient information.
 - We preserve and enhance SVRG’s core variance-reduction structure, creating a synergistic effect.
@@ -60,7 +114,7 @@ To demonstrate the practical benefits of SVRGBB, I evaluated these methods on th
     </div>
 </div>
 <div class="caption">
-Gisette dataset: \[\#n : 6000 , \#d: 5001\] and  \[\lambda = 1e-5 \]
+Gisette dataset: \#n : 6000 , \#d: 5001 and  $\lambda = 1e-5$
 </div>
 
 - ✅ **Optimality Gap vs. Epoch**  
