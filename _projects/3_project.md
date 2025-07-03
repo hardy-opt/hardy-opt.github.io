@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Accelerating Large-Scale Optimization for ML
-description: A MATLAB project implementing SVRG-2BB for significantly faster and more stable training of large-scale machine learning models like logistic regression by tackling noisy gradients.
+title: Reg-Nyström Optimization for Machine Learning
+description: Hessian Sketching for Scalable ML Optimization is a second-order optimization framework that combines Nyström-based Hessian approximation with adaptive regularization to enable fast, stable training of large-scale machine learning models
 img: assets/img/figures3/fujji.png
 importance: 2
 category: work
