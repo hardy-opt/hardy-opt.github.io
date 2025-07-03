@@ -20,9 +20,9 @@ layout: default
         {% if page.profile.image %}
           {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
           {% if page.profile.image_circular %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' | append: '" style="transform: scale(0.9); transform-origin: center;' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' | append: '" style="transform: scale(0.8); transform-origin: center;' %}
           {% else %}
-            {% assign profile_image_class = 'img-fluid z-depth-1 rounded profile-image-shift' | append: '" style="transform: scale(0.9); transform-origin: center;' %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded profile-image-shift' | append: '" style="transform: scale(0.8); transform-origin: center;' %}
           {% endif %}
           {% capture sizes %}(min-width: {{ site.max_width }}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
