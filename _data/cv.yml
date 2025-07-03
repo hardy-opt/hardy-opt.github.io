@@ -145,14 +145,12 @@
 - title: Publications
   type: nested_list
   contents:
-    - title: A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations.
+    - title: "A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations. Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
       items:
-        - "Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
         - "**Hardik Tankaria**, Shinji Sugimoto and Nobuo Yamashita"
 
-    - title: A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information.
+    - title: "A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information. Journal of Industrial and Management Optimization, 2024, 20(2),pp 525-547. DOI: 10.3934/jimo.2023089"
       items:
-        - "Journal of Industrial and Management Optimization, 2024, 20(2),pp 525-547. DOI: 10.3934/jimo.2023089"
         - "**Hardik Tankaria** and Nobuo Yamashita"
 
 - title: Manuscripts Under Review
@@ -160,10 +158,10 @@
   contents:
     - title: "NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its Application."
       items:
-        - Hardik Tankaria, Dinesh Singh, and Makoto Yamada
+        - "**Hardik Tankaria**, Dinesh Singh, and Makoto Yamada"
     - title: Regularized Nyström method for Large-Scale Unconstrained Non-Convex Optimization.
       items:
-        - Hardik Tankaria
+        - "**Hardik Tankaria**"
 
 - title: Positions of Responsibility
   type: time_table
