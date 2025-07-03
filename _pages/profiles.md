@@ -15,5 +15,5 @@ profiles:
     image_circular: false
     more_info: >
       <p>President, Indian Association of Kyoto</p>
-      <p>Organized large-scale community events</p>
+    
 ---

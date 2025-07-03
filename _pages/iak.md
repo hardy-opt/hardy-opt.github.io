@@ -1,5 +1,3 @@
-# Leadership Experience
-
 ## President, Indian Association of Kyoto
 
 As the President of the Indian Association of Kyoto, I led a multicultural team in organizing several large-scale cultural and community events in Japan. My responsibilities included end-to-end event coordination—covering logistics, budgeting, volunteer management, and marketing. These events brought together over 200 participants and promoted cross-cultural exchange within the community. By fostering a collaborative environment and leading with empathy, I ensured smooth execution under tight deadlines and pressure.
