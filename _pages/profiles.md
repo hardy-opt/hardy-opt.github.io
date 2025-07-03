@@ -8,8 +8,7 @@ nav_order: 7
 
 profiles:
   # if you want to include more than one profile, just replicate the following block
-  # and create one content file for each profile inside _pages/
-  profiles:
+# and create one content file for each profile inside _pages/
   - align: right
     image: speech.png
     content: iak.md
