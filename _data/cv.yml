@@ -231,15 +231,3 @@
     - title: Technical Review of Scientific Articles
       institution: International Conference of Machine Learning (ICML)
       year: 2022
-
-- title: Continuous Learning - Certified Professional Course
-  type: list
-  contents:
-    - title: IBM - Data Science (Ongoing)
-      items:
-        - Including - Python for Data Science
-        - AI and Development
-        - Tools for Data Science
-        - Databases and SQL for Data Science with Python
-        - Machine learning and Data Visualization with Python
-        - Generative AI
