@@ -111,8 +111,13 @@ The connection to Newton Sketch is particularly insightful. The paper shows that
 
 ### Real-World Application
 
-![Brain tumor detection MRI samples](assets/img/figures3/mri_grid_image_svm.png)
-*Figure 3: Sample MRI images from the brain tumor detection dataset, showing various tumor types and normal brain tissue.*
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/figures3/mri_grid_image_svm.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+*Sample MRI images from the brain tumor detection dataset, showing various tumor types and normal brain tissue.*
 
 Total 253 images. 1000 dimension, 177 train size 76 test size, with positive cases: 46 and negative cases: 30
 x_mri: [253×1000 single]
@@ -149,6 +154,8 @@ The method's practical utility is demonstrated through a brain tumor detection a
 | NGD2   | 0.855263 | 0.906977  | 0.847826| 0.876404 |
 | NSGD   | 0.815789 | 0.900000  | 0.782609| 0.837209 |
 
+
+---
 
 ### Significance and Impact
 
