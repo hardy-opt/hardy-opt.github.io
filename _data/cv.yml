@@ -143,10 +143,12 @@
         - Investigated high-dimensional optimization challenges, combining quasi-Newton methods with variance reduction techniques to develop scalable solutions for empirical risk minimization problems.
 
 - title: Publications
-  type: time_table
+  type: nested_list
   contents:
-    - title: "A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations. Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
-    - description: "Hardik Tankaria, Shinji Sugimoto and Nobuo Yamashita"
+    - title: A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations.
+    - items: "Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
+    - items: Hardik Tankaria, Shinji Sugimoto and Nobuo Yamashita
+
     - title: A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information.
       description:
         - "Journal of Industrial and Management Optimization, 2024, 20(2),pp 525-547. DOI: 10.3934/jimo.2023089"
