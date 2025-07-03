@@ -148,7 +148,7 @@
     - title: A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations.
       items:
         - "Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
-        - **Hardik Tankaria**, Shinji Sugimoto and Nobuo Yamashita
+        - "**Hardik Tankaria**", Shinji Sugimoto and Nobuo Yamashita
 
     - title: A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information.
       items:
