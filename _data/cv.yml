@@ -133,7 +133,7 @@
 - title: Industrial Project
   type: time_table
   contents:
-    - title: KIOXIA (Toshiba Memory Corporation)
+    - title: KIOXIA 
       year: Apr 2019 - Mar 2020
       description:
         - Secured ¥1 million funding to develop scalable stochastic optimization algorithms, reducing computational complexity by a factor of d (# of parameters) while maintaining accuracy.
