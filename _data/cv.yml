@@ -22,10 +22,7 @@
 - title: Summary
   type: list
   contents:
-    - PhD graduate with 6+ years of research experience from Kyoto University, specializing in developing scalable optimization algorithms for machine learning, and predictive analytics.
-    - Proven expertise in handling large-scale, high-dimensional datasets and enhancing computational efficiency, with a strong track record of publications in top-tier journals.
-    - Demonstrated leadership and communication skills through international conference presentations and managing cultural and academic teams.
-    - Passionate about driving innovation and contributing to cutting-edge research and development in data science and machine learning at a leading technology company.
+    - PhD graduate with 6+ years of research experience from Kyoto University, specializing in developing scalable optimization algorithms for machine learning, and predictive analytics. Proven expertise in handling large-scale, high-dimensional datasets and enhancing computational efficiency, with a strong track record of publications in top-tier journals. Demonstrated leadership and communication skills through international conference presentations and managing cultural and academic teams. Passionate about driving innovation and contributing to cutting-edge research and development in data science and machine learning at a leading technology company.
 
 - title: Skill Set
   type: nested_list
@@ -83,9 +80,9 @@
       institution: Kyoto University, Dept. of Applied Mathematics & Physics, Graduate School of Informatics, Kyoto, Japan
       year: Apr 2018 - Mar 2024
       description:
-        - GPA: 3.7/4.0
+        - "GPA: 3.7/4.0"
         - Sponsored by Japan International Cooperation Agency (JICA)
-        - Thesis: The Utilization of Second-Order Information for Large-Scale Unconstrained Optimization Problems
+        - "Thesis: The Utilization of Second-Order Information for Large-Scale Unconstrained Optimization Problems"
     - title: Research Student in Mathematical Optimization
       institution: Kyoto University, Dept. of Applied Mathematics & Physics, Graduate School of Informatics, Kyoto, Japan
       year: Oct 2017 - Mar 2018
@@ -150,14 +147,12 @@
   contents:
     - title: A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations.
       items:
-        - Journal: Computational Optimization Applications 82, 61-88 (2022)
-        - DOI: 10.1007/s10589-022-00351-5
-        - Authors: Hardik Tankaria, Shinji Sugimoto and Nobuo Yamashita
+        - "Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
+        - "**Hardik Tankaria**, Shinji Sugimoto and Nobuo Yamashita"
     - title: A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information.
       items:
-        - Journal: Journal of Industrial and Management Optimization, 2024, 20(2),pp 525-547
-        - DOI: 10.3934/jimo.2023089
-        - Authors: Hardik Tankaria and Nobuo Yamashita
+        - "Journal of Industrial and Management Optimization, 2024, 20(2),pp 525-547. DOI: 10.3934/jimo.2023089"
+        - "**Hardik Tankaria** and Nobuo Yamashita"
 
 - title: Manuscripts Under Review
   type: list
