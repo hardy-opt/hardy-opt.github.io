@@ -6,7 +6,7 @@
         <ul class="subitems">
           {% for subitem in content.items %}
             <li>
-              <span class="subitem">{{ subitem | markdownify | strip_html }}</span>
+              <span class="subitem">{{ subitem | markdownify }}</span>
             </li>
           {% endfor %}
         </ul>
