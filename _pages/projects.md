@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Industrial R&D at MI-6, my own optimization research, and one learning project, labelled as such.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
+display_categories: [work, research, learning]
 horizontal: false
 ---
 
@@ -14,12 +14,12 @@ horizontal: false
 {% if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->
   {% for category in page.display_categories %}
+  {% assign categorized_projects = site.projects | where: "category", category %}
+  {% if categorized_projects.size > 0 %}
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
   {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
   {% if page.horizontal %}
   <div class="container">
     <div class="row row-cols-1 row-cols-md-2">
@@ -35,6 +35,7 @@ horizontal: false
     {% endfor %}
   </div>
   {% endif %}
+  {% endif %}
   {% endfor %}
 
 {% else %}
@@ -42,9 +43,6 @@ horizontal: false
 <!-- Display projects without categories -->
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
 {% if page.horizontal %}
 
   <div class="container">
