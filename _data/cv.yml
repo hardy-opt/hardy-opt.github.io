@@ -1,233 +1,226 @@
-#- title: Open Source Projects
-#  type: time_table
-#  contents:
-#    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#      year: 2015-now
-#      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+# Rebuilt 2026-10-17. Every entry here must agree with ../../FACTS.md.
+# Corrections applied: KIOXIA/Toshiba attribution (was wrong), IIT Mandi dates,
+# publication statuses, MI-6 roles added, "data scientist" framing removed.
 
 - title: General Information
   type: map
   contents:
     - name: Full Name
-      value: Hardik Tankaria
+      value: Hardik Tankaria, PhD
+    - name: Research Areas
+      value: Mathematical Optimization; Optimization for Machine Learning; Second-Order & Stochastic Methods; Randomized Numerical Linear Algebra
+    - name: Current Role
+      value: Machine Learning Research Engineer, MI-6 Ltd., Tokyo
+    - name: Location
+      value: Kyoto, Japan
     - name: Email
       value: hardiktankaria1406@gmail.com
-#    - name: Personal Webpage
-#      value: # Please provide URL
-    - name: LinkedIn Profile
-      value: https://www.linkedin.com/in/dr-hardik-tankaria/
+    - name: Website
+      value: https://hardy-opt.github.io
+    - name: GitHub
+      value: https://github.com/hardy-opt
+    - name: Google Scholar
+      value: https://scholar.google.com/citations?user=Tx4DHMQAAAAJ
     - name: Languages
-      value: English (Business), Japanese (Beginner), Gujarati (Native), Hindi (Native)
+      value: Gujarati (native), Hindi (native), English (business), Japanese (elementary)
 
-- title: Summary
+- title: Profile
   type: list
   contents:
-    - PhD graduate with 6+ years of research experience from Kyoto University, specializing in developing scalable optimization algorithms for machine learning, and predictive analytics. Proven expertise in handling large-scale, high-dimensional datasets and enhancing computational efficiency, with a strong track record of publications in top-tier journals. Demonstrated leadership and communication skills through international conference presentations and managing cultural and academic teams. Passionate about driving innovation and contributing to cutting-edge research and development in data science and machine learning at a leading technology company.
-
-- title: Skill Set
-  type: nested_list
-  contents:
-    - title: Programming, Libraries and Frameworks
-      items:
-        - Python
-        - MATLAB
-        - scikit-learn
-        - PyTorch
-        - NumPy
-        - SciPy
-        - Pandas
-    - title: Tools
-      items:
-        - MySQL
-        - MS Office
-        - Power BI
-        - Git
-        - GitHub
-        - Latex
-        - Gurobi Optimizer
-        - CUTEst
-    - title: Machine Learning and Data Science
-      items:
-        - Supervised Learning (Regression, Classification)
-        - Unsupervised Learning (Clustering, Dimensionality Reduction)
-        - Model Evaluation (Cross-validation, ROC-AUC, Precision/Recall, Confusion Matrix)
-        - Ensemble Methods (Bagging, Boosting, Stacking)
-        - Large-scale Data Normalization & Processing
-    - title: Optimization and Computational Techniques
-      items:
-        - Convex and Non-convex Optimization
-        - Gradient Descent
-        - Newton's Method
-        - Quasi-Newton Methods
-        - Stochastic Optimization (SGD, SVRG, SAGA)
-        - Regularization Techniques (L1/Lasso, L2, Elastic Net)
-        - Hyperparameter Optimization (Grid Search, Line Search)
-        - Convergence Analysis
-        - Numerical Linear Algebra
-        - Randomized Algorithms
-    - title: Other
-      items:
-        - Technical and Scientific Writing
-        - Storytelling
-        - Cross-functional Collaboration
-        - Attention to Detail
-        - Scalable Machine Learning
+    - I build optimization algorithms for large-scale machine learning and take them from a convergence
+      proof to a benchmarked implementation. PhD in Informatics (Mathematical Optimization) from Kyoto University, with
+      published work on second-order and variance-reduced methods that make curvature information affordable
+      at high dimension. Currently project owner for three concurrent R&D lines at MI-6 Ltd., spanning search
+      heuristics for computer-aided synthesis planning, budget-aware Bayesian optimization for autonomous
+      experimentation, and interface engineering between machine learning subsystems. Interested in research
+      scientist and research engineer roles where mathematical optimization is the substance of the work.
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Mathematical Optimization
-      institution: Kyoto University, Dept. of Applied Mathematics & Physics, Graduate School of Informatics, Kyoto, Japan
+    - title: PhD in Informatics (Mathematical Optimization)
+      institution: Kyoto University, Graduate School of Informatics, Dept. of Applied Mathematics & Physics
       year: Apr 2018 - Mar 2024
       description:
+        - "Research areas: Mathematical Optimization; Optimization for Machine Learning; Second-Order & Stochastic Methods; Randomized Numerical Linear Algebra"
+        - "Thesis: The Utilization of Second-Order Information for Large-Scale Unconstrained Optimization Problems (<a href='https://www-optima.amp.i.kyoto-u.ac.jp/papers/doctor/2024_doctor_hardik.pdf'>PDF</a>)"
+        - Doctoral study funded by the Japan International Cooperation Agency (JICA)
         - "GPA: 3.7/4.0"
-        - Sponsored by Japan International Cooperation Agency (JICA)
-        - "Thesis: The Utilization of Second-Order Information for Large-Scale Unconstrained Optimization Problems"
-    - title: Research Student in Mathematical Optimization
-      institution: Kyoto University, Dept. of Applied Mathematics & Physics, Graduate School of Informatics, Kyoto, Japan
+    - title: Research Student, Mathematical Optimization
+      institution: Kyoto University, Graduate School of Informatics
       year: Oct 2017 - Mar 2018
-    - title: Master of Science in Mathematics
-      institution: Indian Institute of Technology Hyderabad (IIT-H), Dpt. of Mathematics, Hyderabad, India
+      description:
+        - System Optimization Laboratory
+    - title: MSc, Mathematics
+      institution: Indian Institute of Technology Hyderabad
       year: Aug 2014 - May 2016
       description:
-        - Hasse-Minkowski's Principle for Quadratic forms over Q, Arithmetic, Number theory
-    - title: Bachelor of Science in Mathematics
-      institution: Saurashtra University, D.K.V. Arts & Science College, Jamnagar, India
+        - "Thesis: Hasse-Minkowski Principle for Quadratic Forms over Q"
+        - Admitted via the Joint Admission Test (JAM), all-India rank 343
+    - title: BSc, Mathematics
+      institution: Saurashtra University, D.K.V. Arts & Science College, Jamnagar
       year: Jul 2011 - May 2014
 
 - title: Experience
   type: time_table
   contents:
-    - title: Research Associate
-      institution: Indian Institute of Technology, Mandi, India
-      year: Dec 2024 - Feb 2025
+    - title: Machine Learning Research Engineer
+      institution: MI-6 Ltd., Tokyo, Japan
+      year: Nov 2025 - present
       description:
-        - Developing Nyström-based ADMM Optimization algorithm for Federated Learning to improve computational efficiency.
-        - Investing distributed convex and non-convex optimization techniques for large scale decentralized training.
-        - Analyzing convergence and reducing communication overhead using quantization using Python.
-        - Preparing research paper for submission to top-tier ML/Optimization Journal/conference.
-    - title: E-Commerce & Back Office (Part time)
-      institution: Hayakawa Co. LTD., Kyoto, Japan
-      year: May 2021 - Oct 2024
+        - Project owner for three concurrent R&D lines in optimization and AI for science.
+        - "Budget-aware Bayesian optimization for autonomous experimentation: a closed-loop harness in which
+          every proposed experiment is priced, charged against a budget, and refused if unaffordable, so policy
+          quality is always reported beside spend. Twelve proposal policies, three acquisition optimizers, and
+          a one-command reproducibility check that re-derives every committed figure from committed data."
+        - "Search heuristics for computer-aided synthesis planning: a learned cost-to-go estimate reused to
+          reorder candidate reactions by remaining distance to available starting materials, improving solve
+          rate and reducing search effort at unchanged per-step compute. First-author conference abstract."
+        - An installable, versioned software component publishing a data contract to a separate optimization
+          engine, with determinism enforced as a test, module boundaries checked at process level, and
+          continuous integration gating its own published result counts.
+        - "Methodology across all three: pre-registered experiment designs, paired statistical tests with
+          bootstrap confidence intervals, a stated detection floor beside every comparison, and negative
+          results reported with their mechanism."
+    - title: Machine Learning Research Intern
+      institution: MI-6 Ltd., Tokyo, Japan
+      year: Aug 2025 - Nov 2025
       description:
-        - Conducted in-depth market research and trend analysis for e-commerce platforms, optimizing auto parts listings to boost global sales on eBay and Amazon.
-        - Managed client relations while facilitating negotiations, and ensuring customer satisfaction, contributing to securing major orders and achieving consistent sales growth.
-        - Streamlined online sales operations, processes and enhanced productivity through process optimization using Excel and MS Office Suite, contributing consistent revenue growth and securing major international orders.
-        - Identified key sales trends and provided actionable insights, enhancing strategic decision-making and improving sales targets.
+        - Built a neural-guided bidirectional search method for double-ended synthesis planning, extending a
+          published planner to handle convergent routes via a multi-tree forest and a proof-tree-complete
+          meeting criterion.
+        - Implemented Monte Carlo Tree Search with UCT and PUCT variants and graph-based heuristics for
+          retrosynthetic pathway search; benchmarked against established baselines over public chemical databases.
+        - Built multi-objective scoring for route selection across path length, cost and yield.
+    - title: Machine Learning Research Associate
+      institution: Indian Institute of Technology Mandi, India
+      year: Jan 2025 - Mar 2025
+      description:
+        - Developed a Nystrom-based ADMM algorithm for federated learning, targeting the communication and
+          memory cost of second-order information in distributed training.
+        - Built a Python framework for decentralised training across multiple nodes, with convergence
+          monitoring and benchmarking.
+        - Co-PI; guided two M.Tech researchers. Delivered an invited talk on the method.
     - title: Research Assistant
-      institution: Dept. of Intelligence Science & Technology, Kyoto University, Kyoto, Japan
+      institution: Dept. of Intelligence Science & Technology, Kyoto University
       year: Dec 2021 - Mar 2023
       description:
-        - Pioneered the development of randomized algorithms, including the Regularized Nyström method, reducing computational CPU time by 50-70% for large-scale and high-dimensional optimization problems.
-        - Developed a computationally efficient regularized Nyström method that reduces complexity from O(nd² + d³) (Newton's method) to O(ndm + dm²), where m is only 5-20% of d (dimension/features), significantly enhancing scalability for high-dimensional datasets.
-        - Conducted medical image analysis on brain MRI data using deep learning and transfer learning techniques, advancing tumor detection accuracy by 86%.
-        - Built and validated machine learning models, integrating logistic regression, linear regression, SVM, gradient-based methods, and stochastic optimization for high-dimensional datasets.
-        - Presented research findings at esteemed international conferences, showcasing innovation in scalable matrix approximations, optimization methods for convex and non-convex functions.
-    - title: Online Expert of Mathematics
-      institution: Chegg India Pvt. Ltd
-      year: Nov 2016 - Jun 2017
+        - Developed the regularized Nystrom method for large-scale optimization, reducing per-iteration cost
+          from O(nd^2 + d^3) to O(ndm + dm^2) with sketch size m of roughly 5-20% of the feature dimension,
+          and established global convergence under standard assumptions.
+        - Benchmarked against randomized subspace Newton and Newton-sketch on high-dimensional classification.
+        - Applied curvature-aware optimization to brain-MRI tumour classification with transfer learning.
+    - title: E-Commerce & Marketing Research Analyst (part-time)
+      institution: Hayakawa Co. Ltd., Kyoto, Japan
+      year: May 2021 - Oct 2024
       description:
-        - Created a series of in-depth tutorials covering complex mathematical concepts.
-        - Provided accurate, expert-level solutions to complex graduate-level mathematics problems, demonstrating strong analytical, problem-solving skills, and enhancing academic success for global learners.
-
-- title: Industrial Project
-  type: time_table
-  contents:
-    - title: KIOXIA 
-      year: Apr 2019 - Mar 2020
-      description:
-        - Secured ¥1 million funding to develop scalable stochastic optimization algorithms, reducing computational complexity by a factor of d (# of parameters) while maintaining accuracy.
-        - Enhanced performance of regularization techniques for large-scale datasets through numerical experiments on benchmark datasets, improving optimization behavior analysis.
-        - Designed and implemented an innovative SVRG-RL-BFGS optimization algorithm, reducing computational cost for large-scale machine learning problems.
-        - Applied dimensionality reduction techniques like random projection on high-dimensional datasets, improving computational efficiency and classification accuracy.
-        - Investigated high-dimensional optimization challenges, combining quasi-Newton methods with variance reduction techniques to develop scalable solutions for empirical risk minimization problems.
+        - Held alongside doctoral research. Managed B2B client relationships and negotiations for international
+          e-commerce, conducted competitive analysis for listings and pricing, and automated sales and
+          inventory reporting.
 
 - title: Publications
   type: nested_list
   contents:
-    - title: A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations.
+    - title: "A Regularized Limited Memory BFGS Method for Large-Scale Unconstrained Optimization and its Efficient Implementations"
       items:
-        - "Computational Optimization Applications 82, 61-88 (2022). DOI: 10.1007/s10589-022-00351-5)"
-        - "**Hardik Tankaria**, Shinji Sugimoto and Nobuo Yamashita"
-
-    - title: A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information.
+        - "Computational Optimization and Applications 82(1), 61-88 (2022). doi:10.1007/s10589-022-00351-5"
+        - "**Hardik Tankaria**, Shinji Sugimoto, Nobuo Yamashita"
+    - title: "A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order Information"
       items:
-        - "Journal of Industrial and Management Optimization, 2024, 20(2),pp 525-547. DOI: 10.3934/jimo.2023089"
-        - "**Hardik Tankaria** and Nobuo Yamashita"
+        - "Journal of Industrial and Management Optimization 20(2), 525-547 (2024). doi:10.3934/jimo.2023089"
+        - "**Hardik Tankaria**, Nobuo Yamashita"
+    - title: "NysReg-Gradient: Regularized Nystrom-Gradient for Large-Scale Unconstrained Optimization and its Application"
+      items:
+        - "IEEE IJCNN 2026 (WCCI), Maastricht. # VERIFY STATUS AND ADD DOI - see FACTS.md section 5"
+        - "**Hardik Tankaria**, Makoto Yamada, Dinesh Singh"
+    - title: "Nys-Fed: Communication and Memory Efficient Nystrom Approximated Curvature for Federated Learning"
+      items:
+        - "IEEE IJCNN 2026 (WCCI), Maastricht. # VERIFY STATUS AND ADD DOI - see FACTS.md section 5"
+        - "Sagnik Ghosh, **Hardik Tankaria**, Arnav Bhavsar, Varun Dutt, Dinesh Singh"
+    - title: "Nys-Newton: Nystrom-Approximated Curvature for Convex Optimization"
+      items:
+        - "IEICE Technical Report (IBISML) 122(325), 134-141 (2022)"
+        - "**Hardik Tankaria**, Dinesh Singh, Makoto Yamada"
 
-- title: Manuscripts Under Review
+- title: Preprints
   type: nested_list
   contents:
-    - title: "NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its Application."
+    - title: "Regularized Nystrom Method for Large-Scale Unconstrained Non-Convex Optimization"
       items:
-        - "**Hardik Tankaria**, Dinesh Singh, and Makoto Yamada"
-    - title: Regularized Nyström method for Large-Scale Unconstrained Non-Convex Optimization.
+        - "**Hardik Tankaria** (2024)"
+    - title: "Nys-curve: Nystrom-Approximated Curvature for Stochastic Optimization"
       items:
-        - "**Hardik Tankaria**"
+        - "**Hardik Tankaria**, Dinesh Singh, Makoto Yamada. arXiv:2110.08577 (2021)"
 
-- title: Positions of Responsibility
+- title: Funding & Awards
   type: time_table
   contents:
-    - title: President
-      institution: Indian Association of Kyoto (Cultural organization to celebrate Indian Festival and connect Indian community in Kyoto)
-      year: 2022-2024
-    - title: Treasurer
-      institution: Indian Association of Kyoto Japan
-      year: 2019 - 2022
-    - title: Responsible for leading a team of 5 students
-      institution: Final-year undergraduate project on differential equations
-      year: 2013-2014
+    - title: Co-investigator, Encouragement Research Grant (1,000,000 JPY)
+      institution: Toshiba Memory / KIOXIA
+      year: Apr 2019 - Mar 2020
       description:
-        - Ensuring successful project completion.
+        - "Project: RL-BFGS for Big Data with Improved Global Convergence."
+        - Named co-investigator on an industry-funded grant as a second-year PhD student; responsible for
+          numerical simulations and convergence analysis of the proposed regularized L-BFGS method.
+    - title: JICA Scholarship for Doctoral Study
+      institution: Japan International Cooperation Agency
+      year: 2017
+      description:
+        - Full funding for doctoral study at Kyoto University.
+    - title: GSET - Gujarat State Eligibility Test
+      institution: Government of Gujarat, India
+      year: 2017
+      description:
+        - Qualified for Assistant Professor eligibility in state universities.
+    - title: Merit-cum-Means Scholarship
+      institution: IIT Hyderabad
+      year: 2015
+    - title: Joint Admission Test (JAM) - All-India Rank 343
+      institution: Indian Institutes of Technology
+      year: 2014
 
-- title: Scholarships/Awards
+- title: Service & Leadership
   type: time_table
   contents:
-    - year: 2017-2021
-      items:
-        - Japan International Cooperation Agency (JICA) Scholarship for PhD at Kyoto University
-    - year: 2017
-      items:
-        - Cleared GSET exam for Assistant Professor in Govt. Universities, Gujarat, India
-    - year: 2019-2020
-      items:
-        - Got 1 million Japanese Yen funding for one year industrial project at KIOXIA
-    - year: 2015
-      items:
-        - Awarded MCM Scholarship during master's program
-    - year: 2014
-      items:
-        - Cleared JAM with All India rank 343rd
-    - year: 2011
-      items:
-        - Cleared All India Engineering Entrance Exam
-
-- title: Conferences and Presentations/Talks
-  type: time_table
-  contents:
-    - title: Reducing Variance of Stochastic Gradient using Barzilai-Borwein method as second-order information
-      institution: 20th Joint research meeting of the Japan Society for Industrial and Applied Mathematics (JSIAM)
-      year: February 2024
-      description:
-        - Nagaoka Institute of Technology, Niigata, Japan
-    - title: A Stochastic variance reduced gradient using second order information
-      institution: 10th International Congress on Industrial and Applied Mathematics (ICIAM)
-      year: August 2023
-      description:
-        - Waseda University, Tokyo, Japan
-    - title: "Nys-Newton: Nyström approximated curvature information for convex optimization"
-      institution: (IBISML) Information based Induction Sciences and Machine Learning (online)
-      year: December 2022
-    - title: "Nys-Transfer: Nyström approximated Newton-sketch for Fine-tuning the Deep Nets for Brain MRI"
-      institution: International Symposium on Artificial Intelligence & Brain Science, Okinawa Institute of Science & Technology (OIST)
-      year: July 2022
-      description:
-        - Okinawa, Japan
-    - title: Regularized L-BFGS method for Large Scale Unconstrained Optimization
-      institution: 6th International Conference on Continuous Optimization (ICOPT)
-      year: August 2019
-      description:
-        - Berlin - Germany
-    - title: Technical Review of Scientific Articles
-      institution: International Conference of Machine Learning (ICML)
+    - title: Reviewer
+      institution: ICML
       year: 2022
+      description:
+        - "# VERIFY: your GitHub README also claims IJCNN and ICASSP. List only venues you can evidence."
+    - title: Co-PI, Federated Learning project
+      institution: IIT Mandi
+      year: 2025
+      description:
+        - Guided two M.Tech researchers.
+    - title: President (Treasurer 2019-2022)
+      institution: Indian Association of Kyoto
+      year: 2022 - 2024
+      description:
+        - Led a volunteer team organising cultural events for 200+ participants, including visits by the Mayor
+          of Kyoto, the Consulate General of India in Osaka-Kobe, and members of the Japanese House of
+          Representatives.
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Languages & tools
+      items:
+        - Python (NumPy, SciPy, pandas, scikit-learn, PyTorch, BoTorch, GPyTorch, pytest)
+        - MATLAB
+        - Git, continuous integration, Python packaging
+        - LaTeX
+    - title: Optimization
+      items:
+        - Convex and non-convex optimization
+        - Second-order and quasi-Newton methods (L-BFGS, Newton-sketch, Nystrom approximation)
+        - Stochastic and variance-reduced methods (SGD, SVRG, Adam)
+        - Randomized numerical linear algebra
+        - Convergence and complexity analysis
+        - Heuristic and best-first search (A*, MCTS, AND/OR trees)
+    - title: Machine learning
+      items:
+        - Bayesian optimization and Gaussian processes
+        - Experimental design, benchmarking, paired statistical testing (McNemar, bootstrap CI)
+        - Reproducible research engineering (determinism tests, CI-gated results)
+        - Transfer learning, federated learning
+        - High-dimensional data, medical image analysis
