@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Industrial R&D at MI-6, my own optimization research, and one learning project, labelled as such.
+description: Industrial R&D in optimization and AI for science, my own published optimization research, and one learning project, labelled as such.
 nav: true
 nav_order: 3
 display_categories: [work, research, learning]
