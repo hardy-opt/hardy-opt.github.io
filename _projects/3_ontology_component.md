@@ -1,7 +1,7 @@
 ---
 layout: page
 title: A reproducible handover between two machine learning subsystems
-description: An installable, versioned component that decides which molecular descriptors describe a property, and whose output is required by test to reproduce the validated result exactly. Project owner, MI-6 Ltd.
+description: An installable, versioned component that decides which molecular descriptors describe a property, and whose output is required by test to reproduce the validated result exactly. Project owner, MI-6 Co., Ltd.
 img: assets/img/projects/contract-boundary.svg
 importance: 3
 category: work
@@ -14,7 +14,7 @@ Most machine learning problems are modelling problems. This one was not. It was 
 subsystems, owned by different people, that have to exchange a decision without that decision
 quietly going stale.
 
-> **Industrial R&D at MI-6 Ltd., Tokyo.** I own this project and am the author of the package. The
+> **Industrial R&D at MI-6 Co., Ltd., Tokyo.** I own this project and am the author of the package. The
 > implementation, the chemical knowledge base and the internal data belong to my employer and are
 > not published here. The engineering design below is what I can share, and it is the part worth
 > discussing anyway.

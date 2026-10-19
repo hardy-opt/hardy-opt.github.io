@@ -1,7 +1,7 @@
 ---
 layout: post
 title: When every experiment has a price
-date: 2026-11-03 09:00:00+0900
+date: 2026-08-03 09:00:00+0900
 description: Bayesian optimization is usually benchmarked in iterations. Laboratories do not run on iterations. What changes when you count cost instead.
 tags: bayesian-optimization optimization
 categories: optimization

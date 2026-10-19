@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nys-Fed: making second-order federated learning fit on an edge device"
-date: 2026-11-10 09:00:00+0900
+date: 2026-07-05 09:00:00+0900
 description: Newton-type methods converge in far fewer communication rounds than FedAvg, and nobody uses them, because a Hessian for a 25M-parameter model does not fit on a client. Here is what a Nyström sketch changes, with numbers.
 tags: optimization federated-learning second-order
 categories: optimization
@@ -210,7 +210,7 @@ Implementation from the paper, by my co-author Sagnik Ghosh:
 
 Related work of mine on the same curvature line: *NysReg-Gradient* (IJCNN 2026) and
 [*Regularized Nyström for non-convex optimization*](/publications/). Background on the sketch itself:
-[what a Hessian sketch actually buys you](/blog/2026/what-a-hessian-sketch-buys-you/).
+[what a Hessian sketch actually buys you](/blog/2025/what-a-hessian-sketch-buys-you/).
 
 <!-- ⚠️ BEFORE PUBLISHING: add the DOI / IEEE Xplore link to the citation block above.
      See ../../FACTS.md section 5. Also notify your co-authors as a courtesy: the figures

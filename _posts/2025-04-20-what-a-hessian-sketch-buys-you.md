@@ -1,7 +1,7 @@
 ---
 layout: post
 title: What a Hessian sketch actually buys you
-date: 2026-10-20 09:00:00+0900
+date: 2025-04-20 09:00:00+0900
 description: Second-order optimization is fast and nobody uses it. Here is the arithmetic of why, and what changes if you only look at 10% of the matrix.
 tags: optimization second-order
 categories: optimization

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Bayesian optimization that has to pay for its experiments
-description: A closed-loop optimization system for self-driving laboratories where every proposed experiment is priced, charged to a ledger, and refused if the budget cannot cover it. Project owner, MI-6 Ltd.
+description: A closed-loop optimization system for self-driving laboratories where every proposed experiment is priced, charged to a ledger, and refused if the budget cannot cover it. Project owner, MI-6 Co., Ltd.
 img: assets/img/projects/cost-aware-bo-loop.svg
 importance: 2
 category: work
@@ -19,7 +19,7 @@ A real laboratory does not have an iteration budget. It has instrument hours, re
 slots, and different experiments cost different amounts. This project rebuilt the loop around that
 fact.
 
-> **Industrial R&D at MI-6 Ltd., Tokyo.** I own this project end to end: problem framing, the
+> **Industrial R&D at MI-6 Co., Ltd., Tokyo.** I own this project end to end: problem framing, the
 > policy designs, the harness architecture, the evaluation methodology, and the handover
 > documentation. The implementation, the instrument data and the internal results belong to my
 > employer and are not published here. The mathematics below is standard and comes from the public

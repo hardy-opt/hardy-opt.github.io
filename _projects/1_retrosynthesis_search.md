@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Cutting search cost in computer-aided synthesis planning
-description: A learned cost-to-go heuristic for retrosynthetic search. Reordering candidate reactions by their remaining distance to purchasable materials raises the solve rate at unchanged per-step compute. Project owner, MI-6 Ltd.
+description: A learned cost-to-go heuristic for retrosynthetic search. Reordering candidate reactions by their remaining distance to purchasable materials raises the solve rate at unchanged per-step compute. Project owner, MI-6 Co., Ltd.
 img: assets/img/projects/retro-search.svg
 importance: 1
 category: work
@@ -19,7 +19,7 @@ returns nothing at all.
 This project asked a narrow question: **can the planner be told where to look, without being given
 more compute?** The answer turned out to involve reusing a quantity the planner already computes.
 
-> **Industrial R&D at MI-6 Ltd., Tokyo.** I own this project: problem framing, algorithm design,
+> **Industrial R&D at MI-6 Co., Ltd., Tokyo.** I own this project: problem framing, algorithm design,
 > benchmark construction, evaluation design, and the write-up. I am first author on the resulting
 > conference abstract. The implementation, the internal datasets and the full numbers belong to my
 > employer and are not published here. Everything below is either the published literature or a
@@ -224,5 +224,5 @@ Stated plainly, because a result without its limits is advertising.
 ### Related work of mine
 
 The optimization methodology behind this project is public: see [Research](/research/), and the
-posts on [pre-registering experiments](/blog/2026/pre-registering-an-experiment-you-expect-to-fail/)
-and [what a Hessian sketch buys you](/blog/2026/what-a-hessian-sketch-buys-you/).
+posts on [pre-registering experiments](/blog/2025/pre-registering-an-experiment-you-expect-to-fail/)
+and [what a Hessian sketch buys you](/blog/2025/what-a-hessian-sketch-buys-you/).

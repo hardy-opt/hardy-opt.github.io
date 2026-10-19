@@ -9,7 +9,7 @@ profile:
   image: Hardik.png
   image_circular: false
   more_info: >
-    <p><strong>ML Research Engineer</strong>, MI-6 Ltd., Tokyo</p>
+    <p><strong>ML Research Engineer</strong>, MI-6 Co., Ltd., Tokyo</p>
     <p>PhD in Informatics (Mathematical Optimization),<br>Kyoto University</p>
     <p>Kyoto, Japan</p>
 
@@ -32,7 +32,7 @@ all three.
 
 ## What I am building now
 
-I am an ML research engineer at **MI-6 Ltd.** in Tokyo, where I own three concurrent R&D lines.
+I am an ML research engineer at **MI-6 Co., Ltd.** in Tokyo, where I own three concurrent R&D lines.
 
 **Autonomous experimentation.** A closed-loop Bayesian optimization system for self-driving labs,
 built so the budget is structural rather than an afterthought: every proposed experiment is priced

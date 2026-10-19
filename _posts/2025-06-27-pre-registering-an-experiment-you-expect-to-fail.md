@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pre-registering an experiment you expect to fail
-date: 2026-10-27 09:00:00+0900
+date: 2025-06-27 09:00:00+0900
 description: Four practices that changed how much I trust my own results, and the one that catches the error no amount of care prevents.
 tags: research-methods
 categories: research-methods

@@ -1,5 +1,5 @@
 # Rebuilt 2026-10-17. Every entry here must agree with ../../FACTS.md.
-# Corrections applied: KIOXIA/Toshiba attribution (was wrong), IIT Mandi dates,
+# Corrections applied: industrial grant attribution (was wrong), IIT Mandi dates,
 # publication statuses, MI-6 roles added, "data scientist" framing removed.
 
 - title: General Information
@@ -10,7 +10,7 @@
     - name: Research Areas
       value: Mathematical Optimization; Optimization for Machine Learning; Second-Order & Stochastic Methods; Randomized Numerical Linear Algebra
     - name: Current Role
-      value: Machine Learning Research Engineer, MI-6 Ltd., Tokyo
+      value: Machine Learning Research Engineer, MI-6 Co., Ltd., Tokyo
     - name: Location
       value: Kyoto, Japan
     - name: Email
@@ -30,7 +30,7 @@
     - I build optimization algorithms for large-scale machine learning and take them from a convergence
       proof to a benchmarked implementation. PhD in Informatics (Mathematical Optimization) from Kyoto University, with
       published work on second-order and variance-reduced methods that make curvature information affordable
-      at high dimension. Currently project owner for three concurrent R&D lines at MI-6 Ltd., spanning search
+      at high dimension. Currently project owner for three concurrent R&D lines at MI-6 Co., Ltd., spanning search
       heuristics for computer-aided synthesis planning, budget-aware Bayesian optimization for autonomous
       experimentation, and interface engineering between machine learning subsystems. Interested in research
       scientist and research engineer roles where mathematical optimization is the substance of the work.
@@ -65,7 +65,7 @@
   type: time_table
   contents:
     - title: Machine Learning Research Engineer
-      institution: MI-6 Ltd., Tokyo, Japan
+      institution: MI-6 Co., Ltd., Tokyo, Japan
       year: Nov 2025 - present
       description:
         - Project owner for three concurrent R&D lines in optimization and AI for science.
@@ -83,7 +83,7 @@
           bootstrap confidence intervals, a stated detection floor beside every comparison, and negative
           results reported with their mechanism."
     - title: Machine Learning Research Intern
-      institution: MI-6 Ltd., Tokyo, Japan
+      institution: MI-6 Co., Ltd., Tokyo, Japan
       year: Aug 2025 - Nov 2025
       description:
         - Built a neural-guided bidirectional search method for double-ended synthesis planning, extending a
@@ -156,7 +156,7 @@
   type: time_table
   contents:
     - title: Co-investigator, Encouragement Research Grant (1,000,000 JPY)
-      institution: Toshiba Memory / KIOXIA
+      institution: KIOXIA
       year: Apr 2019 - Mar 2020
       description:
         - "Project: RL-BFGS for Big Data with Improved Global Convergence."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Continuous and discrete optimization: a working map"
-date: 2026-11-24 09:00:00+0900
+date: 2026-09-24 09:00:00+0900
 description: The two halves of mathematical optimization, what separates them, which methods belong where, how to tell which kind of problem you actually have, and where the two meet.
 tags: optimization math
 categories: optimization
@@ -309,5 +309,5 @@ Knowing only one half means reaching for the wrong tool roughly half the time, a
 quiet: you get an answer, it is plausible, and you never learn it was the wrong formulation.
 
 *Related: [where optimization lives in modern AI](/blog/2026/where-optimization-lives-in-modern-ai/)
-· [what a Hessian sketch actually buys you](/blog/2026/what-a-hessian-sketch-buys-you/)
+· [what a Hessian sketch actually buys you](/blog/2025/what-a-hessian-sketch-buys-you/)
 · [my research](/research/)*
