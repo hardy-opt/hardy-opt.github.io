@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-research",
           title: "Research",
-          description: "Making curvature information affordable at high dimension, and knowing when it is not worth it.",
+          description: "Making expensive information affordable. Second-order optimization at high dimension, and sequential decision-making when each experiment has a price.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/research/";
           },
         },{id: "nav-projects",
           title: "Projects",
-          description: "Industrial R&amp;D at MI-6, my own optimization research, and one learning project, labelled as such.",
+          description: "Industrial R&amp;D in optimization and AI for science, my own published optimization research, and one learning project, labelled as such.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -46,7 +46,7 @@ ninja.data = [{
           },
         },{id: "nav-leadership",
           title: "Leadership",
-          description: "Leadership quality and extra curricular activities",
+          description: "Roles where the work was organisational rather than technical, and what each involved.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/leadership/";
@@ -58,7 +58,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/blog/";
           },
-        },{id: "post-where-optimization-actually-lives-in-modern-ai",
+        },{id: "post-what-optimization-is-actually-used-for",
+        
+          title: "What optimization is actually used for",
+        
+        description: "A tour of the fields that run on mathematical optimization, and in each case the specific thing being minimised, the structure that makes it hard, and the method that gets used.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/what-optimization-is-actually-used-for/";
+          
+        },
+      },{id: "post-where-optimization-actually-lives-in-modern-ai",
         
           title: "Where optimization actually lives in modern AI",
         
@@ -149,8 +160,8 @@ ninja.data = [{
       },{id: "news-invited-talk-at-iit-mandi-on-nys-fed-communication-and-memory-efficient-nyström-approximated-curvature-for-federated-learning",
           title: 'Invited talk at IIT Mandi on Nys-Fed: Communication and Memory Efficient Nyström Approximated...',
           description: "",
-          section: "News",},{id: "news-joined-mi-6-co-ltd-tokyo-as-a-machine-learning-research-engineer-leading-r-amp-amp-d-on-bayesian-optimization-for-autonomous-experimentation-and-search-methods-for-synthesis-planning",
-          title: 'Joined MI-6 Co., Ltd. (Tokyo) as a Machine Learning Research Engineer, leading R&amp;amp;amp;D...',
+          section: "News",},{id: "news-joined-a-materials-informatics-r-amp-amp-d-group-in-tokyo-working-on-bayesian-optimization-for-autonomous-experimentation-and-search-methods-for-computer-aided-synthesis-planning",
+          title: 'Joined a materials-informatics R&amp;amp;amp;D group in Tokyo, working on Bayesian optimization for autonomous...',
           description: "",
           section: "News",},{id: "news-two-papers-at-ieee-ijcnn-2026-wcci-maastricht-nysreg-gradient-on-regularized-nyström-curvature-for-large-scale-optimization-and-nys-fed-on-communication-and-memory-efficient-curvature-for-federated-learning",
           title: 'Two papers at IEEE IJCNN 2026 (WCCI, Maastricht): NysReg-Gradient on regularized Nyström curvature...',
@@ -160,17 +171,17 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-cutting-search-cost-in-computer-aided-synthesis-planning",
           title: 'Cutting search cost in computer-aided synthesis planning',
-          description: "A learned cost-to-go heuristic for retrosynthetic search. Reordering candidate reactions by their remaining distance to purchasable materials raises the solve rate at unchanged per-step compute. Project owner, MI-6 Co., Ltd.",
+          description: "A learned cost-to-go heuristic for retrosynthetic search. Reordering candidate reactions by their remaining distance to purchasable materials raises the solve rate at unchanged per-step compute. Industrial R&amp;D project, owned end to end.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_retrosynthesis_search/";
             },},{id: "projects-bayesian-optimization-that-has-to-pay-for-its-experiments",
           title: 'Bayesian optimization that has to pay for its experiments',
-          description: "A closed-loop optimization system for self-driving laboratories where every proposed experiment is priced, charged to a ledger, and refused if the budget cannot cover it. Project owner, MI-6 Co., Ltd.",
+          description: "A closed-loop optimization system for self-driving laboratories where every proposed experiment is priced, charged to a ledger, and refused if the budget cannot cover it. Industrial R&amp;D project, owned end to end.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_budget_aware_bo/";
             },},{id: "projects-a-reproducible-handover-between-two-machine-learning-subsystems",
           title: 'A reproducible handover between two machine learning subsystems',
-          description: "An installable, versioned component that decides which molecular descriptors describe a property, and whose output is required by test to reproduce the validated result exactly. Project owner, MI-6 Co., Ltd.",
+          description: "An installable, versioned component that decides which molecular descriptors describe a property, and whose output is required by test to reproduce the validated result exactly. Industrial R&amp;D project, owned end to end.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_ontology_component/";
             },},{id: "projects-regularized-nyström-curvature-for-large-scale-optimization",
@@ -188,6 +199,11 @@ ninja.data = [{
           description: "A self-directed exercise on public UCI credit datasets. End-to-end supervised pipeline with class imbalance handling, cost-sensitive evaluation and model interpretability.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_credit_risk/";
+            },},{id: "projects-second-order-federated-learning-on-edge-devices",
+          title: 'Second-order federated learning on edge devices',
+          description: "Newton-type methods converge in far fewer communication rounds than FedAvg, and nobody uses them because a Hessian for a 25M-parameter model does not fit on a client. A sampled low-rank sketch changes that.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_nys_fed/";
             },},{
         id: 'social-email',
         title: 'email',
