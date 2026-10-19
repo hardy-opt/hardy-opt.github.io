@@ -218,7 +218,85 @@ which; which operators to fuse; how to tile a matrix multiplication for a partic
 hierarchy. The last one is an integer program that compilers solve with heuristics, and it is where a
 large fraction of real-world speedup comes from.
 
-## 7. Optimization of the pipeline
+## 7. Kernel methods, and why they are not a historical footnote
+
+Kernel machines were displaced by deep learning, and the optimization problems they pose are still
+worth knowing, partly because they keep reappearing inside modern systems.
+
+**The core problem is convex, and that is the point.** Training a support vector machine means
+solving a quadratic program with box constraints:
+
+$$
+\max_{\alpha} \; \sum_i \alpha_i - \tfrac{1}{2}\sum_{i,j} \alpha_i \alpha_j y_i y_j K(x_i, x_j)
+\quad \text{s.t.} \quad 0 \le \alpha_i \le C, \; \sum_i \alpha_i y_i = 0
+$$
+
+Any local optimum is global and there is a duality certificate, so unlike a neural network you can
+*know* you are done. Sequential minimal optimization solves it by repeatedly picking two
+coordinates and optimising them analytically, which is a coordinate-descent idea that long predates
+its rediscovery in large-scale machine learning.
+
+**The scaling obstacle is the kernel matrix.** $$K$$ is $$n \times n$$. At a million samples that
+is $$10^{12}$$ entries, and this is exactly the arithmetic that makes Hessians intractable, one
+level across. The standard escape is the same one: **low-rank approximation**. The Nyström method
+samples $$m \ll n$$ columns and reconstructs $$K \approx C M^{-1} C^{\top}$$; random Fourier
+features instead approximate the kernel by an explicit randomised feature map. Both convert an
+intractable dense problem into a tractable low-rank one, and the quality-versus-rank trade-off is
+the whole engineering question.
+
+This is the same construction I use on the Hessian rather than on a Gram matrix. The mathematics
+transfers directly, which is the useful observation: *sampling a matrix you cannot afford to build*
+is one technique with many addresses.
+
+**Where kernels persist in modern systems.** Gaussian processes are kernel methods, so every
+Bayesian optimization loop is solving a kernel problem, and the $$O(n^3)$$ cost of the posterior is
+why inducing-point and sparse approximations exist. Attention is a kernel-like similarity
+computation, and a visible line of efficient-transformer work (Performer and its relatives) applies
+random-feature kernel approximation directly to it. Kernel methods also remain the right choice when
+data is scarce, which is common in scientific applications.
+
+## 8. Multi-objective optimization: when there is no single best answer
+
+Most of this post assumes one scalar to minimise. A great many real problems have several, and they
+disagree.
+
+A drug candidate should be potent, soluble, non-toxic and synthesisable. A model should be accurate,
+small, fast and fair. An experiment should be informative and cheap. These trade off, and no
+ordering of them is objectively correct.
+
+**The honest formulation.** With objectives $$f_1,\dots,f_k$$, a point $$x$$ **dominates** $$x'$$ if
+it is no worse on every objective and strictly better on at least one. The solutions that nothing
+dominates form the **Pareto front**, and the goal is to characterise that front rather than to
+return one point.
+
+$$
+\mathcal{P} = \{\, x \in \mathcal{X} \;:\; \nexists\, x' \in \mathcal{X} \text{ with } x' \succ x \,\}
+$$
+
+**The three practical approaches.**
+
+*Scalarise.* Collapse to one objective with weights, $$\sum_i w_i f_i(x)$$, and solve repeatedly
+with different weights to trace the front. Simple, and it has a real failure mode: a weighted sum
+cannot reach points on a non-convex region of the front, no matter what weights you choose.
+Chebyshev scalarisation fixes that, which is why it is preferred in serious work.
+
+*Constrain.* Optimise one objective and impose bounds on the rest, the $$\epsilon$$-constraint
+method. Often the most natural framing in engineering, because the constraints are usually real
+requirements rather than preferences.
+
+*Attack the front directly.* Evolutionary methods (NSGA-II and successors) maintain a population
+approximating the whole front. In the expensive-evaluation regime, **multi-objective Bayesian
+optimization** uses acquisition functions over the front itself: expected hypervolume improvement
+asks how much a candidate would grow the volume dominated by the current front.
+
+**Why it matters for AI specifically.** Alignment is multi-objective, and the field mostly handles
+it by scalarising with a KL penalty, which is one point on a front nobody has characterised.
+Model compression is multi-objective: accuracy against latency against memory. Neural architecture
+search is routinely posed over accuracy and FLOPs together. In each case the Pareto structure is
+the thing you would actually want to see, and in each case the practice is to pick a weighting and
+report a single number.
+
+## 9. Optimization of the pipeline
 
 **Hyperparameter optimization.** Each evaluation costs a training run, so you have an expensive
 black-box problem: the native setting for **Bayesian optimization**: fit a surrogate (usually a
@@ -239,7 +317,7 @@ leverage decisions available, because it changes the quality of every subsequent
 (DARTS) to make gradients available: the standard **convex-relaxation** move from classical discrete
 optimization, applied to architecture.
 
-## 8. What is well solved, and what is not
+## 10. What is well solved, and what is not
 
 **Well solved**
 
@@ -257,7 +335,7 @@ optimization, applied to architecture.
   The reason Adam beats SGD on transformers is not settled.
 - **Data selection**, in any principled sense.
 - **Inference scheduling**, enormous economic value, almost entirely heuristic.
-- **Multi-objective alignment**, where the Pareto structure is barely characterised.
+- **Multi-objective alignment**, where the Pareto structure is barely characterised (see section 8).
 - **Non-myopic sequential decision-making** under realistic budgets: the theory is clear and the
   practice usually does not pay, for reasons that are not well understood.
 
