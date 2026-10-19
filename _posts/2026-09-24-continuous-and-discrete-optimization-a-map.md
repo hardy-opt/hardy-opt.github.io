@@ -43,8 +43,8 @@ polynomial-time algorithms, mature solvers, and duality theory that turns the qu
 optimal?" into an arithmetic check. Convex optimization is, for practical purposes, a solved
 technology.
 
-Non-convex is everything else, and the honest summary is that you are looking for a *good* point
-rather than *the* point. What we have are methods that reliably find stationary points, plus
+Non-convex is everything else, and the honest summary is that you are looking for a _good_ point
+rather than _the_ point. What we have are methods that reliably find stationary points, plus
 empirical knowledge about which landscapes are forgiving. Deep learning is the famous case where
 non-convexity turned out to matter far less than everyone feared.
 
@@ -52,12 +52,12 @@ non-convexity turned out to matter far less than everyone feared.
 
 Convex problems come in a nested family, and knowing where yours sits tells you which solver to use:
 
-| Class | Objective / constraints | Example |
-|---|---|---|
-| **LP** | linear / linear | production planning, network flow, diet problem |
-| **QP** | quadratic / linear | portfolio variance, SVM dual, MPC |
-| **SOCP** | linear / second-order cone | robust LP, facility location with distances |
-| **SDP** | linear / positive-semidefinite | relaxations of hard combinatorial problems, control |
+| Class    | Objective / constraints        | Example                                             |
+| -------- | ------------------------------ | --------------------------------------------------- |
+| **LP**   | linear / linear                | production planning, network flow, diet problem     |
+| **QP**   | quadratic / linear             | portfolio variance, SVM dual, MPC                   |
+| **SOCP** | linear / second-order cone     | robust LP, facility location with distances         |
+| **SDP**  | linear / positive-semidefinite | relaxations of hard combinatorial problems, control |
 
 Each contains the one above it. The interesting fact is that **interior-point methods** solve all of
 them with essentially one algorithmic idea (follow a central path toward the boundary) which is
@@ -65,7 +65,7 @@ why a single solver can handle the whole hierarchy.
 
 ## Unconstrained methods, and what each one buys
 
-Everything here is a different answer to: *how much do you know about the local shape?*
+Everything here is a different answer to: _how much do you know about the local shape?_
 
 **Gradient descent**, $$\mathbf{x}_{k+1} = \mathbf{x}_k - \alpha\nabla f(\mathbf{x}_k)$$. Uses the
 slope only. Cheap, and slow when the problem is badly conditioned: the convergence rate degrades
@@ -82,7 +82,7 @@ indefinite, in which case the "descent" direction goes uphill.
 
 **Quasi-Newton (BFGS, L-BFGS)**, build a curvature estimate from successive gradients via the secant
 equation. The practical sweet spot for medium-scale smooth problems, and L-BFGS's limited memory makes
-it workable at high dimension. Its weakness: the estimate is built from gradient *differences*, so
+it workable at high dimension. Its weakness: the estimate is built from gradient _differences_, so
 with stochastic gradients you are differencing noise.
 
 **Trust-region and line-search methods**, two ways to answer "how far should I step?". A line search
@@ -99,7 +99,7 @@ which regularisation solves.
 **Derivative-free methods** (Nelder-Mead, pattern search, CMA-ES): when there is no gradient:
 simulation output, a physical experiment, a black box. Slow and sometimes the only option.
 
-**Bayesian optimization**: when evaluations are *expensive* as well as derivative-free. Build a
+**Bayesian optimization**: when evaluations are _expensive_ as well as derivative-free. Build a
 probabilistic surrogate, use an acquisition function to choose the next point. Dozens of evaluations,
 not thousands.
 
@@ -112,9 +112,10 @@ useful to a practitioner than the solution itself.
 
 **Lagrangian duality** turns the constrained problem into an unconstrained one in the multipliers.
 The dual is always a lower bound; for convex problems the gap is zero. That gap is what lets you
-*certify* optimality.
+_certify_ optimality.
 
 **The main families:**
+
 - **Interior-point**, add a barrier that blows up at the boundary, shrink it. Workhorse for convex
   problems at scale.
 - **Active-set**, guess which constraints bind, solve the equality-constrained problem, repeat.
@@ -160,12 +161,12 @@ And the problems are genuinely hard: TSP, knapsack, set cover, graph colouring a
 barring a complexity surprise there is no polynomial algorithm. This is not a gap in our knowledge of
 algorithms; it is believed to be a property of the problems.
 
-So the discipline changes. In continuous convex optimization you ask *"what is the optimum?"*. In
+So the discipline changes. In continuous convex optimization you ask _"what is the optimum?"_. In
 discrete optimization you ask one of:
 
-- *What is the best solution I can find in the time available?* (heuristics)
-- *How far from optimal might I be?* (bounds and gaps)
-- *Can I prove optimality for instances of this size?* (exact methods)
+- _What is the best solution I can find in the time available?_ (heuristics)
+- _How far from optimal might I be?_ (bounds and gaps)
+- _Can I prove optimality for instances of this size?_ (exact methods)
 
 ## Exact methods
 
@@ -185,7 +186,7 @@ of integer variables that are "NP-hard" in the textbook sense. The theory says w
 exploit structure.
 
 **Dynamic programming** works when the problem has optimal substructure: shortest paths, knapsack,
-sequence alignment. Exact and polynomial *in the state space*, and the state space is usually what
+sequence alignment. Exact and polynomial _in the state space_, and the state space is usually what
 explodes.
 
 **Constraint programming** takes a different route: propagate constraints to shrink variable domains,
@@ -265,7 +266,7 @@ so and use the right solver, you get a certificate of optimality, which is worth
 
 **4 · How large, and in what dimension?** $$10^3$$ variables and $$10^9$$ variables are different
 engineering problems with the same mathematics. For discrete problems, ask instead how large the
-*relaxation gap* is, that, not the variable count, predicts whether branch and bound will finish.
+_relaxation gap_ is, that, not the variable count, predicts whether branch and bound will finish.
 
 **5 · Is the data known?** Deterministic, stochastic (optimise an expectation), or robust (optimise
 the worst case) are three different problems with the same description in words, and choosing the
@@ -278,17 +279,17 @@ count.
 
 # Software worth knowing
 
-| Need | Tools |
-|---|---|
-| LP / MILP / QP | Gurobi, CPLEX, HiGHS (open), SCIP, CBC |
-| Convex modelling | CVXPY, JuMP, MOSEK |
-| Nonlinear | IPOPT, SNOPT, KNITRO, `scipy.optimize` |
-| Constraint programming | OR-Tools CP-SAT, Gecode |
-| SAT / SMT | MiniSat, CaDiCaL, Z3 |
-| Metaheuristics | OR-Tools routing, LocalSolver |
-| Bayesian optimization | BoTorch, Optuna, Ax |
-| Deep-learning optimizers | PyTorch `torch.optim`, Optax |
-| Benchmarking | CUTEst, MIPLIB, TSPLIB |
+| Need                     | Tools                                  |
+| ------------------------ | -------------------------------------- |
+| LP / MILP / QP           | Gurobi, CPLEX, HiGHS (open), SCIP, CBC |
+| Convex modelling         | CVXPY, JuMP, MOSEK                     |
+| Nonlinear                | IPOPT, SNOPT, KNITRO, `scipy.optimize` |
+| Constraint programming   | OR-Tools CP-SAT, Gecode                |
+| SAT / SMT                | MiniSat, CaDiCaL, Z3                   |
+| Metaheuristics           | OR-Tools routing, LocalSolver          |
+| Bayesian optimization    | BoTorch, Optuna, Ax                    |
+| Deep-learning optimizers | PyTorch `torch.optim`, Optax           |
+| Benchmarking             | CUTEst, MIPLIB, TSPLIB                 |
 
 A practical note: CP-SAT is now extremely strong on scheduling and rostering, and is often the right
 first attempt for problems people reflexively model as MILP.
@@ -299,7 +300,7 @@ I was trained in continuous optimization, my thesis was second-order methods for
 unconstrained problems, which is about as continuous as it gets. Industrial problems have not
 respected the boundary once.
 
-A real problem arrives as *"schedule these experiments on this instrument within this budget"*, and
+A real problem arrives as _"schedule these experiments on this instrument within this budget"_, and
 it contains a continuous surrogate model, a discrete selection, and a resource constraint, all at
 once. The continuous theory tells you how to fit the surrogate and how fast you can descend. The
 discrete theory tells you that selection is a search and that a good bound beats a clever heuristic.
@@ -308,6 +309,6 @@ The boundary techniques (relaxation, decomposition, submodularity) are how the t
 Knowing only one half means reaching for the wrong tool roughly half the time, and the failure is
 quiet: you get an answer, it is plausible, and you never learn it was the wrong formulation.
 
-*Related: [where optimization lives in modern AI](/blog/2026/where-optimization-lives-in-modern-ai/)
+_Related: [where optimization lives in modern AI](/blog/2026/where-optimization-lives-in-modern-ai/)
 · [what a Hessian sketch actually buys you](/blog/2025/what-a-hessian-sketch-buys-you/)
-· [my research](/research/)*
+· [my research](/research/)_

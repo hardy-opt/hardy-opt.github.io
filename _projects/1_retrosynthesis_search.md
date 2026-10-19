@@ -27,22 +27,23 @@ more compute?** The answer turned out to involve reusing a quantity the planner 
 > this page is from public papers, cited at the end.
 
 ### Contents
-* [The problem, stated precisely](#the-problem-stated-precisely)
-* [Why the cost explodes](#why-the-cost-explodes)
-* [The quantity that was already there](#the-quantity-that-was-already-there)
-* [What I did with it](#what-i-did-with-it)
-* [Designing an evaluation that cannot flatter itself](#designing-an-evaluation-that-cannot-flatter-itself)
-* [What was found](#what-was-found)
-* [Limitations](#limitations)
-* [References](#references)
+
+- [The problem, stated precisely](#the-problem-stated-precisely)
+- [Why the cost explodes](#why-the-cost-explodes)
+- [The quantity that was already there](#the-quantity-that-was-already-there)
+- [What I did with it](#what-i-did-with-it)
+- [Designing an evaluation that cannot flatter itself](#designing-an-evaluation-that-cannot-flatter-itself)
+- [What was found](#what-was-found)
+- [Limitations](#limitations)
+- [References](#references)
 
 ### The problem, stated precisely
 
 Retrosynthesis is a search over an **AND/OR graph**. Two kinds of node alternate:
 
-- An **OR node** is a molecule. To make it you need *one* of its candidate disconnections, so you
+- An **OR node** is a molecule. To make it you need _one_ of its candidate disconnections, so you
   may choose whichever looks best.
-- An **AND node** is a reaction. To use it you need *all* of its precursors, so every child must
+- An **AND node** is a reaction. To use it you need _all_ of its precursors, so every child must
   itself be made or bought.
 
 The search starts at the target molecule and works backwards. A node is **closed** when the molecule
@@ -50,6 +51,7 @@ is in a fixed set of purchasable building blocks, called the stock. A **route** 
 every leaf is closed.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/retro-search.svg" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">
 Retrosynthetic search as an AND/OR graph. Blue marks the branch the search expands first; dashed
 nodes are the unexpanded frontier, which is where the cost lives.
@@ -163,10 +165,10 @@ disagreements are lopsided. For solved-or-not outcomes that is McNemar's test; f
 quantities, a bootstrap confidence interval.
 
 **Pre-registered run designs.** The comparison, the metric, the sample size and what would count as
-the method *not* working were committed to the repository before each run and not edited afterwards.
+the method _not_ working were committed to the repository before each run and not edited afterwards.
 
 **An oracle study to locate the ceiling.** Injecting the correct reactions directly tells you how
-much head-room is left and, more usefully, *which component* it is in. That answer decided what to
+much head-room is left and, more usefully, _which component_ it is in. That answer decided what to
 work on next, and it was not the component we had been improving.
 
 **A control for the obvious confound.** The cheapest way to find more routes is to consider more
@@ -210,16 +212,16 @@ Stated plainly, because a result without its limits is advertising.
 
 - **Retro\*: Learning Retrosynthetic Planning with Neural Guided A\* Search.**
   Binghong Chen, Chengtao Li, Hanjun Dai, Le Song. ICML 2020.
-  *Introduces the neural-guided best-first search over AND/OR graphs, and the learned value function
-  that this work reuses as a reranking signal.*
+  _Introduces the neural-guided best-first search over AND/OR graphs, and the learned value function
+  that this work reuses as a reranking signal._
 - **Double-Ended Synthesis Planning with Goal-Constrained Bidirectional Search.**
   Kevin Yu, Jihye Roh, Connor Coley et al. NeurIPS 2024.
-  *The double-ended planner whose architecture the diagnostic phase of this project examined.*
+  _The double-ended planner whose architecture the diagnostic phase of this project examined._
 - **Computer-Assisted Retrosynthesis Based on Molecular Similarity.**
   Connor Coley, Luke Rogers, William Green, Klavs Jensen. ACS Central Science, 2017.
-  *Background on template-based one-step retrosynthesis and the ranking problem this work acts on.*
+  _Background on template-based one-step retrosynthesis and the ranking problem this work acts on._
 - **A Note on Two Problems in Connexion with Graphs** and the A\* literature that follows it.
-  *The $$f = g + h$$ decomposition, and why the quality of $$h$$ decides whether the search finishes.*
+  _The $$f = g + h$$ decomposition, and why the quality of $$h$$ decides whether the search finishes._
 
 ### Related work of mine
 

@@ -43,6 +43,7 @@ need dramatically fewer rounds. On non-IID data the advantage is larger still, b
 carries information about the local geometry that an averaged gradient throws away.
 
 {% include figure.liquid loading="eager" path="assets/img/nysfed/newton-vs-sgd.png" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">Newton-type descent against SGD-based paths of the kind used in FedAvg, FedProx and FOMO. Fewer, better-directed steps, if you can afford the curvature. <em>Figure from the Nys-Fed paper.</em></div>
 
 The reason nobody does it is arithmetic. For a model with $$d$$ parameters the Hessian is
@@ -74,6 +75,7 @@ Take the SVD of $$\mathbf{M}$$ to get the best rank-$$k$$ version. The full $$d 
 never formed at any point.
 
 {% include figure.liquid loading="eager" path="assets/img/nysfed/nystrom-client-breakdown.png" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">Nyström approximation of the Hessian at the client. Only sampled columns and the small intersection block are ever computed. <em>Figure from the Nys-Fed paper.</em></div>
 
 ### The detail that makes it work
@@ -115,6 +117,7 @@ client updates its dual variable. One pass (not an inner ADMM loop) which is wha
 cost near first-order.
 
 {% include figure.liquid loading="eager" path="assets/img/nysfed/edge-fl.png" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">The federated setting: curvature is sketched on-device, passed through one ADMM step, and aggregated at the parameter server. <em>Figure from the Nys-Fed paper.</em></div>
 
 Per global update this gives $$O(\log\frac{1}{\epsilon})$$ communication and
@@ -126,17 +129,17 @@ $$O(d\log\frac{1}{\epsilon})$$ convergence time.
 
 Communication time per round, under the same recommended model and hyperparameter settings:
 
-| Model | DONE | FedNew | FedNS | **Nys-Fed** |
-|---|---|---|---|---|
-| ResNet-18 (11.4M params) | ≥ 48 h | ≥ 132 h | ≥ 48 h | **130-141 s** |
+| Model                    | DONE   | FedNew  | FedNS   | **Nys-Fed**   |
+| ------------------------ | ------ | ------- | ------- | ------------- |
+| ResNet-18 (11.4M params) | ≥ 48 h | ≥ 132 h | ≥ 48 h  | **130-141 s** |
 | ResNet-50 (23.9M params) | ≥ 56 h | ≥ 156 h | ≥ 100 h | **700-820 s** |
-| Custom DNN (0.1M params) | ≥ 20 h | ≥ 72 h | ≥ 100 h | **105-250 s** |
+| Custom DNN (0.1M params) | ≥ 20 h | ≥ 72 h  | ≥ 100 h | **105-250 s** |
 
 That is not a tuning win. It is a change in what is possible on the hardware, hours to minutes.
 
 **One asymmetry worth stating plainly, because it cuts against the obvious reading.** For FedNew and
 FedNS on the deep models, parameters were frozen up to the last layer and the inverse Hessian
-computed only for that layer. Nys-Fed computed its sketch over *all* learnable parameters. So the
+computed only for that layer. Nys-Fed computed its sketch over _all_ learnable parameters. So the
 baselines were given the easier job and still took hours. Without that note the table is not
 interpretable, which is exactly why it belongs here.
 
@@ -144,12 +147,13 @@ interpretable, which is exactly why it belongs here.
 
 On the `phishing` dataset, where both methods can run properly:
 
-| | DONE, 2 local iters | **Nys-Fed, 8 cols** | DONE, 5 iters | **Nys-Fed, 16 cols** | DONE, 10 iters | **Nys-Fed, 64 cols** |
-|---|---|---|---|---|---|---|
-| Time per epoch (s) | 151 | **7.6** | 513.5 | **16** | 745.1 | **45.3** |
-| Time for 1000 epochs (h) | 41.6 | **2.11** | 142.6 | **4.4** | 206.9 | **12.58** |
+|                          | DONE, 2 local iters | **Nys-Fed, 8 cols** | DONE, 5 iters | **Nys-Fed, 16 cols** | DONE, 10 iters | **Nys-Fed, 64 cols** |
+| ------------------------ | ------------------- | ------------------- | ------------- | -------------------- | -------------- | -------------------- |
+| Time per epoch (s)       | 151                 | **7.6**             | 513.5         | **16**               | 745.1          | **45.3**             |
+| Time for 1000 epochs (h) | 41.6                | **2.11**            | 142.6         | **4.4**              | 206.9          | **12.58**            |
 
 {% include figure.liquid loading="eager" path="assets/img/nysfed/phishing-logistic.png" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">phishing, logistic loss, semilog. Nys-Fed against first-order (FedAvg, FedAdam, FedProx) and second-order (FedNew, FedNS, DONE) baselines. <em>Figure from the Nys-Fed paper.</em></div>
 
 ### Across datasets and architectures
@@ -191,7 +195,7 @@ loop is long and abstract.
 
 This is the same mathematics: a sampled low-rank approximation of a matrix you cannot afford to
 build, regularized so the direction stays usable, pointed at a constraint that is completely
-concrete: *this device has 400 MB of GPU memory and a metered connection.* The mathematics does not
+concrete: _this device has 400 MB of GPU memory and a metered connection._ The mathematics does not
 change. What changes is that the answer is now the difference between a method that runs and a
 method that does not.
 
@@ -205,11 +209,11 @@ Implementation from the paper, by my co-author Sagnik Ghosh:
 
 > **Nys-Fed: Communication and Memory Efficient Nyström Approximated Curvature for Federated
 > Learning.** Sagnik Ghosh, Hardik Tankaria, Arnav Bhavsar, Varun Dutt, Dinesh Singh.
-> *IEEE International Joint Conference on Neural Networks (IJCNN), IEEE World Congress on
-> Computational Intelligence (WCCI)*, Maastricht, 2026.
+> _IEEE International Joint Conference on Neural Networks (IJCNN), IEEE World Congress on
+> Computational Intelligence (WCCI)_, Maastricht, 2026.
 
-Related work of mine on the same curvature line: *NysReg-Gradient* (IJCNN 2026) and
-[*Regularized Nyström for non-convex optimization*](/publications/). Background on the sketch itself:
+Related work of mine on the same curvature line: _NysReg-Gradient_ (IJCNN 2026) and
+[_Regularized Nyström for non-convex optimization_](/publications/). Background on the sketch itself:
 [what a Hessian sketch actually buys you](/blog/2025/what-a-hessian-sketch-buys-you/).
 
 <!-- ⚠️ BEFORE PUBLISHING: add the DOI / IEEE Xplore link to the citation block above.

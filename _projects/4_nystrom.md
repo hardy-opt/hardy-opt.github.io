@@ -90,11 +90,11 @@ $$
 
 Three variants were studied, differing only in the exponent:
 
-| Variant | $$\gamma$$ | Behaviour |
-|---|---|---|
-| NGD  | $$1/2$$ | mildest regularization, closest to pure Nyström-Newton |
-| NGD1 | $$1$$   | regularization decays in proportion to the gradient |
-| NGD2 | $$2$$   | strongest early damping, most conservative |
+| Variant | $$\gamma$$ | Behaviour                                              |
+| ------- | ---------- | ------------------------------------------------------ |
+| NGD     | $$1/2$$    | mildest regularization, closest to pure Nyström-Newton |
+| NGD1    | $$1$$      | regularization decays in proportion to the gradient    |
+| NGD2    | $$2$$      | strongest early damping, most conservative             |
 
 **Why the regularizer is the contribution, not the sketch.** On a non-convex objective the true
 Hessian is **indefinite**: it has negative eigenvalues, because the iterate is near a saddle rather
@@ -191,27 +191,27 @@ positive and 30 negative cases in the test split.
 
 #### Confusion matrices
 
-| Method | TP | TN | FP | FN |
-|---|---|---|---|---|
-| Newton | 40 | 25 | 5 | 6 |
-| GD     | 30 | 27 | 3 | 16 |
-| L-BFGS | 39 | 26 | 4 | 7 |
-| **NGD**  | 39 | **28** | **2** | 7 |
-| NGD1   | 39 | 26 | 4 | 7 |
-| NGD2   | 39 | 26 | 4 | 7 |
-| NSGD   | 36 | 26 | 4 | 10 |
+| Method  | TP  | TN     | FP    | FN  |
+| ------- | --- | ------ | ----- | --- |
+| Newton  | 40  | 25     | 5     | 6   |
+| GD      | 30  | 27     | 3     | 16  |
+| L-BFGS  | 39  | 26     | 4     | 7   |
+| **NGD** | 39  | **28** | **2** | 7   |
+| NGD1    | 39  | 26     | 4     | 7   |
+| NGD2    | 39  | 26     | 4     | 7   |
+| NSGD    | 36  | 26     | 4     | 10  |
 
 #### Metrics
 
-| Method | Accuracy | Precision | Recall | F1 |
-|---|---|---|---|---|
-| Newton | 0.855 | 0.889 | 0.870 | 0.879 |
-| GD     | 0.750 | 0.909 | 0.652 | 0.759 |
-| L-BFGS | 0.855 | 0.907 | 0.848 | 0.876 |
-| **NGD**  | **0.882** | **0.951** | 0.848 | **0.897** |
-| NGD1   | 0.855 | 0.907 | 0.848 | 0.876 |
-| NGD2   | 0.855 | 0.907 | 0.848 | 0.876 |
-| NSGD   | 0.816 | 0.900 | 0.783 | 0.837 |
+| Method  | Accuracy  | Precision | Recall | F1        |
+| ------- | --------- | --------- | ------ | --------- |
+| Newton  | 0.855     | 0.889     | 0.870  | 0.879     |
+| GD      | 0.750     | 0.909     | 0.652  | 0.759     |
+| L-BFGS  | 0.855     | 0.907     | 0.848  | 0.876     |
+| **NGD** | **0.882** | **0.951** | 0.848  | **0.897** |
+| NGD1    | 0.855     | 0.907     | 0.848  | 0.876     |
+| NGD2    | 0.855     | 0.907     | 0.848  | 0.876     |
+| NSGD    | 0.816     | 0.900     | 0.783  | 0.837     |
 
 NGD gives the best accuracy and F1 here, driven mainly by fewer false positives. Note the sample
 size: the test set is 76 images, so a difference of one or two classifications moves these numbers
@@ -246,10 +246,10 @@ device's memory rather than a datacentre's compute. That is
 
 ### Code and papers
 
-- *NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its
-  Application.* IEEE IJCNN 2026 (WCCI).
-- *Regularized Nyström Method for Large-Scale Unconstrained Non-Convex Optimization.* Preprint.
-- *Nys-Newton: Nyström-Approximated Curvature for Convex Optimization.* IBISML, 2022.
+- _NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its
+  Application._ IEEE IJCNN 2026 (WCCI).
+- _Regularized Nyström Method for Large-Scale Unconstrained Non-Convex Optimization._ Preprint.
+- _Nys-Newton: Nyström-Approximated Curvature for Convex Optimization._ IBISML, 2022.
 - MATLAB experiment code: [`hardy-opt/Nys_Reg`](https://github.com/hardy-opt/Nys_Reg)
 - A PyTorch implementation is in preparation, which will make the method usable as a drop-in
   `torch.optim` optimizer.
@@ -258,13 +258,13 @@ device's memory rather than a datacentre's compute. That is
 
 - **On the Nyström Method for Approximating a Gram Matrix for Improved Kernel-Based Learning.**
   Petros Drineas, Michael Mahoney. JMLR 6:2153-2175, 2005.
-  *The foundational treatment of the Nyström approximation used here on the Hessian.*
+  _The foundational treatment of the Nyström approximation used here on the Hessian._
 - **RSN: Randomized Subspace Newton.**
   Robert Gower, Dmitry Kovalev, Felix Lieder, Peter Richtárik. NeurIPS 2019.
-  *A principal competitor, and one of the baselines in the experiments.*
+  _A principal competitor, and one of the baselines in the experiments._
 - **Newton Sketch: A Near Linear-Time Optimization Algorithm with Linear-Quadratic Convergence.**
   Mert Pilanci, Martin Wainwright. SIAM J. Optimization 27(1):205-245, 2017.
-  *The other principal competitor, and the method the structural comparison above is drawn against.*
+  _The other principal competitor, and the method the structural comparison above is drawn against._
 - **Convergence Properties of the Regularized Newton Method for Unconstrained Nonconvex Optimization.**
   Kenji Ueda, Nobuo Yamashita. Applied Mathematics and Optimization 62:27-46, 2010.
-  *The direct inspiration for the adaptive regularization strategy.*
+  _The direct inspiration for the adaptive regularization strategy._

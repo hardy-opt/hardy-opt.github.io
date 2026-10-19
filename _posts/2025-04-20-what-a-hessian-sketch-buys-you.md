@@ -14,7 +14,7 @@ slow. Newton's method is expensive and fast. Then almost every practitioner uses
 spends the savings on hyperparameter tuning.
 
 That is the right call more often than the textbooks imply. But it is worth understanding exactly
-*what* is expensive, because the expensive part is narrower than people assume, and once you know
+_what_ is expensive, because the expensive part is narrower than people assume, and once you know
 which term dominates, you can go after it.
 
 ## The arithmetic
@@ -25,7 +25,7 @@ Suppose you are minimising a loss over $$d$$ parameters using $$n$$ data points.
 which direction is downhill.
 
 **Newton's method** also wants the Hessian: the $$d \times d$$ matrix of second derivatives, which
-tells you how the slope is *changing*. Forming it costs $$O(nd^2)$$, and solving the linear system
+tells you how the slope is _changing_. Forming it costs $$O(nd^2)$$, and solving the linear system
 $$H \delta w = -g$$ costs $$O(d^3)$$.
 
 That $$d^3$$ is the problem. At $$d = 1{,}000$$ it is a billion operations, annoying. At
@@ -111,6 +111,6 @@ works at $$d = 10^{10}$$, and I would not claim otherwise without running it.
 
 But the arithmetic at the top of this post is not going away, and $$d^3$$ is a term worth attacking.
 
-*The methods here are from [NysReg-Gradient](/publications/) (IJCNN 2026) and the non-convex
+_The methods here are from [NysReg-Gradient](/publications/) (IJCNN 2026) and the non-convex
 preprint. MATLAB experiment code is at [`Nys_Reg`](https://github.com/hardy-opt/Nys_Reg); a PyTorch
-implementation is in preparation.*
+implementation is in preparation._

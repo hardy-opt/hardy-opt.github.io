@@ -25,9 +25,9 @@ announcements:
 measuring, or asking next, and then proves it was worth it.**
 
 That question looks different depending on where you stand. In a self-driving laboratory it is
-*which experiment should the instrument run next, and can we afford it.* In computer-aided chemistry
-it is *which of ten thousand candidate reactions deserves the next expansion.* In a training loop it
-is *how much curvature information is worth paying for.* They are the same problem, and I work on
+_which experiment should the instrument run next, and can we afford it._ In computer-aided chemistry
+it is _which of ten thousand candidate reactions deserves the next expansion._ In a training loop it
+is _how much curvature information is worth paying for._ They are the same problem, and I work on
 all three.
 
 ## What I am building now
@@ -57,8 +57,8 @@ compute. First-author conference abstract. [See the projects →](/projects/)
 
 My PhD at [Kyoto University](https://www.kyoto-u.ac.jp/en) was on making second-order information
 affordable at scale, and I pushed every method through to an application rather than stopping at
-the theorem. A regularized L-BFGS method in *Computational Optimization and Applications*. A
-Barzilai-Borwein variant of SVRG in *JIMO*. The regularized Nyström curvature line, which reduces
+the theorem. A regularized L-BFGS method in _Computational Optimization and Applications_. A
+Barzilai-Borwein variant of SVRG in _JIMO_. The regularized Nyström curvature line, which reduces
 per-iteration cost from $$O(nd^2 + d^3)$$ to $$O(ndm + dm^2)$$ with a sketch of roughly 5 to 20
 percent of the feature dimension, and keeps the step a descent direction even when the Hessian is
 indefinite.

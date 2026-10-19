@@ -35,7 +35,7 @@ cheap, B may reach the same value for half the spend. On the axis that matches t
 B is better. On the axis in the paper, A is.
 
 This is not hypothetical and it is not news: cost-aware acquisition has been studied since at least
-the *expected improvement per second* work in the early 2010s, and there is a steady line of
+the _expected improvement per second_ work in the early 2010s, and there is a steady line of
 follow-up on cost-aware and multi-fidelity variants. What has not really followed is the
 **benchmarking convention**. Most comparisons still count steps.
 
@@ -51,7 +51,7 @@ Options are all bad. Run it anyway and overspend. Refuse it and have the loop pr
 again. Fall back to something arbitrary. Stop early.
 
 So "how well did the policy do?" is not a well-formed question. The well-formed version has two
-parts: *what did it achieve*, and *did the campaign complete within its budget*. A policy with
+parts: _what did it achieve_, and _did the campaign complete within its budget_. A policy with
 excellent final regret that only finishes 3 campaigns out of 29 is not a good policy. It is a policy
 you cannot deploy.
 
@@ -70,11 +70,11 @@ so the constraint can be applied inside the acquisition optimization rather than
 cannot pay for. Boring, and it is the component that makes everything else honest.
 
 **A constrained acquisition step.** Not "maximise expected improvement, then check the price"
-*maximise expected improvement over the affordable set*. The difference shows up exactly at the end
+_maximise expected improvement over the affordable set_. The difference shows up exactly at the end
 of a campaign, where the behaviour matters most.
 
 There is also a constraint that is easy to miss: a real instrument is often booked in **slots**, so
-there is a cap on what a *single* evaluation may consume, separate from the total. That is a
+there is a cap on what a _single_ evaluation may consume, separate from the total. That is a
 restriction on the problem rather than a new policy, and it changes which policies win.
 
 ## Does looking further ahead help?
@@ -107,5 +107,5 @@ I am building a public benchmark on exactly this, on open synthetic test functio
 defined in the open, so the comparison is reproducible on a laptop. When it is ready it will be
 linked from [Projects](/projects/).
 
-*Related reading: Snoek, Larochelle & Adams (2012) on expected improvement per second; Lam, Willcox
-& Wolpert on non-myopic BO; and the cost-aware BO line that follows from both.*
+_Related reading: Snoek, Larochelle & Adams (2012) on expected improvement per second; Lam, Willcox
+& Wolpert on non-myopic BO; and the cost-aware BO line that follows from both._

@@ -27,12 +27,11 @@ last_updated: false # set to true if you want to display last updated in the foo
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
 
-
 #exclude:
-  #- _news/announcement_*.md
-  #  - _posts/
-  #- _projects/?_project.md
-  #- assets/jupyter/blog.ipynb
+#- _news/announcement_*.md
+#  - _posts/
+#- _projects/?_project.md
+#- assets/jupyter/blog.ipynb
 # -----------------------------------------------------------------------------
 # Theme
 # -----------------------------------------------------------------------------
@@ -74,7 +73,7 @@ max_width: 930px
 # see https://schema.org/docs/faq.html for more information
 serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: true # Include Schema.org in the HTML head
-og_image: /assets/img/Hardik.png  # The site-wide (default for all links) Open Graph preview image
+og_image: /assets/img/Hardik.png # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -165,7 +164,6 @@ collections:
 # Jekyll settings
 # -----------------------------------------------------------------------------
 encoding: utf-8
-
 
 # Markdown and syntax highlight
 markdown: kramdown
@@ -272,7 +270,7 @@ jekyll-archives:
     permalinks:
       year: "/blog/:year/"
       tags: "/blog/:type/:name/"
-#      categories: "/blog/:type/:name/"
+  #      categories: "/blog/:type/:name/"
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
@@ -313,20 +311,7 @@ scholar:
 
   sort_by: date
   order: descending
-  type_order:
-       [
-         article,
-         inproceedings,
-         phdthesis,
-         unpublished,
-         inbook,
-         book,
-         misc,
-         report,
-         conference,
-         incollections,
-         proceedings,
-       ]
+  type_order: [article, inproceedings, phdthesis, unpublished, inbook, book, misc, report, conference, incollections, proceedings]
   type_names:
     article: Journal articles
     inproceedings: Conference papers
@@ -367,7 +352,7 @@ filtered_bibtex_keywords:
     supp,
     video,
     website,
-    description
+    description,
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)

@@ -37,7 +37,7 @@ with proofs, rates matching lower bounds, and reliable software. Any local minim
 **Non-convex case** (anything deep): not solved, and the interesting discovery of the last decade is
 that it mostly does not matter. In high dimension, local minima are rarely the obstacle, saddle
 points and ill-conditioning are. Most minima found by SGD generalise comparably. The practical
-question shifted from *"will we find a good minimum?"* to *"how cheaply, and which one?"*
+question shifted from _"will we find a good minimum?"_ to _"how cheaply, and which one?"_
 
 ### What is used, and why
 
@@ -56,7 +56,7 @@ disproportionately, because with Adam the $$\ell_2$$ penalty gets divided by the
 denominator as the gradient and stops acting like weight decay at all.
 
 **Why Adam dominates transformers** is still partly empirical. The most credible explanation is that
-transformer loss landscapes are badly conditioned *across coordinate blocks*. Embeddings, attention
+transformer loss landscapes are badly conditioned _across coordinate blocks_. Embeddings, attention
 projections and layer-norm parameters have gradient scales orders of magnitude apart, and diagonal
 rescaling handles exactly that. SGD has to pick one learning rate for all of them.
 
@@ -150,7 +150,7 @@ here is classical and the practice is not yet mature.
 ## 4. Generative models: the objective is the design choice
 
 **Diffusion models** are trained with a denoising objective, predict the noise added at a random
-timestep: which is a tractable surrogate for an intractable likelihood. The *training* problem is
+timestep: which is a tractable surrogate for an intractable likelihood. The _training_ problem is
 plain supervised regression and well behaved.
 
 The interesting optimization is at **sampling** time. Generation means integrating a reverse-time
@@ -218,7 +218,7 @@ which; which operators to fuse; how to tile a matrix multiplication for a partic
 hierarchy. The last one is an integer program that compilers solve with heuristics, and it is where a
 large fraction of real-world speedup comes from.
 
-## 7. Optimization *of* the pipeline
+## 7. Optimization _of_ the pipeline
 
 **Hyperparameter optimization.** Each evaluation costs a training run, so you have an expensive
 black-box problem: the native setting for **Bayesian optimization**: fit a surrogate (usually a
@@ -226,8 +226,8 @@ Gaussian process or a tree ensemble), use an acquisition function to decide wher
 Hyperband and ASHA add early stopping, which turns it into a **bandit** problem with partial
 information.
 
-A detail I care about, having worked on it: the literature mostly counts *iterations*, while real
-campaigns are limited by *spend*, and different configurations cost different amounts. Counting the
+A detail I care about, having worked on it: the literature mostly counts _iterations_, while real
+campaigns are limited by _spend_, and different configurations cost different amounts. Counting the
 wrong resource changes which method looks best. I wrote about that
 [here](/blog/2026/when-every-experiment-has-a-price/).
 
@@ -242,12 +242,14 @@ optimization, applied to architecture.
 ## 8. What is well solved, and what is not
 
 **Well solved**
+
 - Convex problems, at essentially any scale that matters
 - First-order stochastic optimization for over-parameterised models
 - Distributed data-parallel training, as engineering
 - Layer-wise post-training quantisation
 
 **Not solved**
+
 - **Second-order methods at scale.** Everything used is a diagonal or block approximation. The gap
   between what curvature could give and what we can afford is still wide, and it is where I think
   the most under-exploited leverage sits.

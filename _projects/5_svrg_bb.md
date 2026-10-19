@@ -13,7 +13,7 @@ toc:
 # SVRG with Barzilai-Borwein curvature
 
 **My contribution.** Method design, the convergence proof, implementation and experiments. With
-Nobuo Yamashita; published in the *Journal of Industrial and Management Optimization*.
+Nobuo Yamashita; published in the _Journal of Industrial and Management Optimization_.
 
 ### The problem
 
@@ -141,8 +141,8 @@ variance of the gradient estimate falling, which is the mechanism rather than th
 
 ### Code and paper
 
-- *A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order
-  Information.* Journal of Industrial and Management Optimization 20(2), 525-547, 2024.
+- _A Stochastic Variance Reduced Gradient using Barzilai-Borwein Techniques as Second Order
+  Information._ Journal of Industrial and Management Optimization 20(2), 525-547, 2024.
   [doi:10.3934/jimo.2023089](https://doi.org/10.3934/jimo.2023089)
 - MATLAB implementation and figures: [`hardy-opt/SVRG2BB`](https://github.com/hardy-opt/SVRG2BB)
 
@@ -150,11 +150,11 @@ variance of the gradient estimate falling, which is the mechanism rather than th
 
 - **Accelerating Stochastic Gradient Descent using Predictive Variance Reduction.**
   Rie Johnson, Tong Zhang. NeurIPS 2013.
-  *The original SVRG, and the control variate construction above.*
+  _The original SVRG, and the control variate construction above._
 - **Two-Point Step Size Gradient Methods.**
   Jonathan Barzilai, Jonathan Borwein. IMA Journal of Numerical Analysis 8(1):141-148, 1988.
-  *The step size rule, and the secant derivation it comes from.*
+  _The step size rule, and the secant derivation it comes from._
 - **Barzilai-Borwein Step Size for Stochastic Gradient Descent.**
   Conghui Tan, Shiqian Ma, Yu-Hong Dai, Yuqiu Qian. NeurIPS 2016.
-  *The closest prior work combining the two ideas, and one of the methods the convergence theorem
-  also covers.*
+  _The closest prior work combining the two ideas, and one of the methods the convergence theorem
+  also covers._

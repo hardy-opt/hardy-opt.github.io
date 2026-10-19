@@ -68,12 +68,12 @@ act on.
 This is the one I would most like to see become standard, because it is nearly free and it prevents
 a whole category of mistake.
 
-A detection floor is one sentence: *at this sample size and this variance, we cannot resolve a
-difference smaller than Δ.* You compute it once, from the spread you already measured.
+A detection floor is one sentence: _at this sample size and this variance, we cannot resolve a
+difference smaller than Δ._ You compute it once, from the spread you already measured.
 
 Why it matters: without it, a small improvement is indistinguishable from noise **and the reader has
 no way to tell which they are looking at**. With it, "+0.3% on 20 seeds, floor 0.9%" reads
-immediately as *we found nothing*: which is a real result, honestly reported, and stops you and
+immediately as _we found nothing_: which is a real result, honestly reported, and stops you and
 everyone after you from building on sand.
 
 I have seen more wasted effort come from un-floored small effects than from any other single
@@ -81,8 +81,8 @@ methodological gap.
 
 ## 4. Report the negative results, with the mechanism
 
-A write-up that only reports what worked is less useful than one that says: *we tried five things,
-four lost, here is why.*
+A write-up that only reports what worked is less useful than one that says: _we tried five things,
+four lost, here is why._
 
 This is partly about other people's time. It is mostly about yours. The negative results are what
 tell you where the problem actually is. If four search-side interventions all fail and one succeeds,

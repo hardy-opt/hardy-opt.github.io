@@ -20,14 +20,15 @@ quietly going stale.
 > discussing anyway.
 
 ### Contents
-* [The setting](#the-setting)
-* [The failure mode](#the-failure-mode)
-* [The contract](#the-contract)
-* [Four guarantees, each enforced by a test](#four-guarantees-each-enforced-by-a-test)
-* [Representing what is not known](#representing-what-is-not-known)
-* [A capability that was measured and then not used](#a-capability-that-was-measured-and-then-not-used)
-* [Scope and limitations](#scope-and-limitations)
-* [References](#references)
+
+- [The setting](#the-setting)
+- [The failure mode](#the-failure-mode)
+- [The contract](#the-contract)
+- [Four guarantees, each enforced by a test](#four-guarantees-each-enforced-by-a-test)
+- [Representing what is not known](#representing-what-is-not-known)
+- [A capability that was measured and then not used](#a-capability-that-was-measured-and-then-not-used)
+- [Scope and limitations](#scope-and-limitations)
+- [References](#references)
 
 ### The setting
 
@@ -45,7 +46,7 @@ the general case it is NP-hard; every practical method is a heuristic with a jus
 The two usual families are **supervised selection**, which ranks descriptors by measured
 association with the target, and **knowledge-driven selection**, which uses a structured
 representation of what each descriptor physically means. The second has an obvious appeal: it can
-explain *why* a descriptor was chosen, and it does not need labels. It also has an obvious problem,
+explain _why_ a descriptor was chosen, and it does not need labels. It also has an obvious problem,
 which appears later in this page.
 
 In our system the selection is made by one subsystem and consumed by another: a Bayesian
@@ -74,6 +75,7 @@ So the engineering question was not "which selection method is best?". It was:
 The answer is an explicit, versioned artifact that crosses the boundary, and nothing else.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/contract-boundary.svg" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">
 The seam. Each side owns a clearly separated question, and exactly one versioned artifact passes
 between them.
@@ -174,12 +176,12 @@ test, an enforced import boundary, and published results that gate themselves.
 
 - **Hidden Technical Debt in Machine Learning Systems.**
   D. Sculley et al. NeurIPS 2015.
-  *Names the failure mode this project is built against: entanglement and undeclared consumers
-  across machine learning subsystem boundaries.*
+  _Names the failure mode this project is built against: entanglement and undeclared consumers
+  across machine learning subsystem boundaries._
 - **Molecular Descriptors for Chemoinformatics.**
   Roberto Todeschini, Viviana Consonni. Wiley, 2009.
-  *The standard reference on the scale and variety of the descriptor space that makes selection a
-  combinatorial problem.*
+  _The standard reference on the scale and variety of the descriptor space that makes selection a
+  combinatorial problem._
 - **Feature Selection: A Data Perspective.**
   Jundong Li et al. ACM Computing Surveys, 2017.
-  *Survey of the supervised selection family the knowledge-driven arm is compared against.*
+  _Survey of the supervised selection family the knowledge-driven arm is compared against._

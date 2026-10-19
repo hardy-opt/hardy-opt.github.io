@@ -26,14 +26,15 @@ fact.
 > literature, cited at the end.
 
 ### Contents
-* [The standard formulation](#the-standard-formulation)
-* [What breaks when evaluations have prices](#what-breaks-when-evaluations-have-prices)
-* [The design](#the-design)
-* [A constraint the literature mostly ignores](#a-constraint-the-literature-mostly-ignores)
-* [Engineering](#engineering)
-* [A negative result worth reporting](#a-negative-result-worth-reporting)
-* [Scope and limitations](#scope-and-limitations)
-* [References](#references)
+
+- [The standard formulation](#the-standard-formulation)
+- [What breaks when evaluations have prices](#what-breaks-when-evaluations-have-prices)
+- [The design](#the-design)
+- [A constraint the literature mostly ignores](#a-constraint-the-literature-mostly-ignores)
+- [Engineering](#engineering)
+- [A negative result worth reporting](#a-negative-result-worth-reporting)
+- [Scope and limitations](#scope-and-limitations)
+- [References](#references)
 
 ### The standard formulation
 
@@ -93,8 +94,8 @@ may be unaffordable.
 Every available response is bad. Run it anyway and overspend. Refuse it and watch the loop propose
 the same point again. Fall back to something arbitrary. Stop early with budget unspent.
 
-So "how well did the policy do?" is not a well-formed question. It has two parts: *what did it
-achieve*, and *did it finish inside its budget at all*. A policy with excellent final regret that
+So "how well did the policy do?" is not a well-formed question. It has two parts: _what did it
+achieve_, and _did it finish inside its budget at all_. A policy with excellent final regret that
 rarely finishes inside its budget is not a good policy. It is one you cannot deploy.
 
 ### The design
@@ -102,6 +103,7 @@ rarely finishes inside its budget is not a good policy. It is one you cannot dep
 The response is to make affordability **structural** rather than something checked afterwards.
 
 {% include figure.liquid loading="eager" path="assets/img/projects/cost-aware-bo-loop.svg" class="img-fluid rounded z-depth-1" %}
+
 <div class="caption">
 The loop. A proposal is priced before it is accepted, and the ledger can refuse it. The dashed
 return path is the part most formulations leave out.
@@ -124,7 +126,7 @@ $$
 
 The difference between these two shows up precisely at the end of a campaign, which is where the
 behaviour matters. Because $$c$$ is a closed form, $$\mathcal{X}_{\text{aff}}$$ can be imposed
-*inside* the optimization rather than used to reject afterwards.
+_inside_ the optimization rather than used to reject afterwards.
 
 The harness carries a family of proposal policies, both budget-aware and budget-blind,
 interchangeable acquisition optimizers, and several benchmark problems, so that the comparisons
@@ -181,7 +183,7 @@ own pre-registered arm with a stated detection floor, and the write-up records t
 the outcome rather than only the verdict. The internal numbers are my employer's.
 
 I would rather be the person who measures a sophisticated method and reports what the measurement
-says than the person who ships it because it ought to work. Deciding *not* to adopt something, with
+says than the person who ships it because it ought to work. Deciding _not_ to adopt something, with
 the evidence attached, saves more engineering time than most positive findings do.
 
 ### Scope and limitations
@@ -198,16 +200,16 @@ the evidence attached, saves more engineering time than most positive findings d
 
 - **Practical Bayesian Optimization of Machine Learning Algorithms.**
   Jasper Snoek, Hugo Larochelle, Ryan Adams. NeurIPS 2012.
-  *Introduces expected improvement per unit cost, the starting point for every cost-aware variant.*
+  _Introduces expected improvement per unit cost, the starting point for every cost-aware variant._
 - **Taking the Human Out of the Loop: A Review of Bayesian Optimization.**
   Bobak Shahriari, Kevin Swersky, Ziyu Wang, Ryan Adams, Nando de Freitas. Proc. IEEE, 2016.
-  *The standard survey of the formulation in the first section.*
+  _The standard survey of the formulation in the first section._
 - **Bayesian Optimization with a Finite Budget: An Approximate Dynamic Programming Approach.**
   Remi Lam, Karen Willcox, David Wolpert. NeurIPS 2016.
-  *Poses the finite-budget problem as a dynamic program, which is what the two-step lookahead
-  approximates.*
+  _Poses the finite-budget problem as a dynamic program, which is what the two-step lookahead
+  approximates._
 - **Gaussian Processes for Machine Learning.** Carl Rasmussen, Christopher Williams. MIT Press, 2006.
-  *The surrogate model underneath all of it.*
+  _The surrogate model underneath all of it._
 
 ### Related public work
 

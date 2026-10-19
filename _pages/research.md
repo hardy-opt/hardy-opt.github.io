@@ -39,7 +39,8 @@ complete experimental tables, the thesis is the one document that contains all o
 ## Three results
 
 ### 1 · Regularized L-BFGS, making line searches cheaper
-*[Computational Optimization and Applications 82, 61-88 (2022)](https://doi.org/10.1007/s10589-022-00351-5)*
+
+_[Computational Optimization and Applications 82, 61-88 (2022)](https://doi.org/10.1007/s10589-022-00351-5)_
 · with Shinji Sugimoto and Nobuo Yamashita
 
 L-BFGS approximates curvature from a short history of gradients, which is why it is the standard
@@ -57,8 +58,9 @@ than speed on any single problem.
 regularization parameter is one more thing to choose.
 
 ### 2 · Regularized Nyström curvature: a sketch instead of a Hessian
-*NysReg-Gradient, IEEE IJCNN 2026 (WCCI)* · with Makoto Yamada and Dinesh Singh
-*and [Regularized Nyström Method for Non-Convex Optimization](https://www.researchgate.net/profile/Hardik-Tankaria/publication/380000293_Regularized_Nystrom_method_for_Large-Scale_Unconstrained_Non-Convex_Optimization/links/6626b65443f8df018d21b6eb/Regularized-Nystroem-method-for-Large-Scale-Unconstrained-Non-Convex-Optimization.pdf) (preprint)*
+
+_NysReg-Gradient, IEEE IJCNN 2026 (WCCI)_ · with Makoto Yamada and Dinesh Singh
+_and [Regularized Nyström Method for Non-Convex Optimization](https://www.researchgate.net/profile/Hardik-Tankaria/publication/380000293_Regularized_Nystrom_method_for_Large-Scale_Unconstrained_Non-Convex_Optimization/links/6626b65443f8df018d21b6eb/Regularized-Nystroem-method-for-Large-Scale-Unconstrained-Non-Convex-Optimization.pdf) (preprint)_
 
 Instead of the full Hessian, sample $$m \ll d$$ of its columns and use the
 **Nyström method** to build a low-rank approximation of the whole matrix from that partial
@@ -83,7 +85,8 @@ is the better engineering choice. The sketch size $$m$$ is the dial, and the rig
 problem-dependent.
 
 ### 3 · Variance reduction with Barzilai-Borwein steps
-*[Journal of Industrial and Management Optimization 20(2), 525-547 (2024)](https://doi.org/10.3934/jimo.2023089)*
+
+_[Journal of Industrial and Management Optimization 20(2), 525-547 (2024)](https://doi.org/10.3934/jimo.2023089)_
 · with Nobuo Yamashita
 
 SVRG removes most of the variance from stochastic gradients, but still needs a step size. The
@@ -99,7 +102,7 @@ own method. Evaluated on logistic regression and L2-SVM over gisette, covtype, i
 
 **Federated learning.** Second-order information is expensive to move, not just to compute. With
 collaborators at IIT Mandi I worked on communication- and memory-efficient Nyström-approximated
-curvature for the federated setting, as a Nyström-based ADMM method (*Nys-Fed*, IEEE IJCNN 2026).
+curvature for the federated setting, as a Nyström-based ADMM method (_Nys-Fed_, IEEE IJCNN 2026).
 
 **Medical imaging.** Brain-MRI tumour classification with transfer learning, using curvature-aware
 optimization in a data-scarce regime: the setting where better use of each gradient actually
