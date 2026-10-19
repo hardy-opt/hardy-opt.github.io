@@ -13,7 +13,7 @@ profile:
     <p>PhD in Informatics (Mathematical Optimization),<br>Kyoto University</p>
     <p>Kyoto, Japan</p>
 
-selected_papers: true # shows papers marked selected={true} in papers.bib
+selected_papers: false # full list lives on /publications/
 social: true
 announcements:
   enabled: true
