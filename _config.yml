@@ -14,7 +14,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Optimization algorithms for large-scale machine learning: second-order methods, Nyström
   curvature approximation, Bayesian optimization under budget, and AI for science.
 footer_text: >
-  &copy; Hardik Tankaria. Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
+  Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
   the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: >
   mathematical optimization, machine learning, second-order methods, L-BFGS,
