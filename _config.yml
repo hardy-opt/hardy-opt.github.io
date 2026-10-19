@@ -6,16 +6,18 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Hardik
 middle_name:
 last_name: Tankaria
-contact_note:
-  > "Mathematics is the most beautiful and most powerful creation of the human spirit."
-  > - **Stefan Banach**
+contact_note: >
+  <em>"Mathematics is the most beautiful and most powerful creation of the human spirit."</em>
+  &mdash; <strong>Stefan Banach</strong>
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Hardik Tankaria, PhD in Informatics (Mathematical Optimization), Kyoto University. ML Research Engineer at MI-6.
 footer_text: >
   &copy; Hardik Tankaria. Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
   the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: mathematical optimization, machine learning, second-order methods, L-BFGS, Nyström
-  approximation, Bayesian optimization, research engineer, Kyoto University, AI for science # add your own keywords or leave empty
+keywords: >
+  mathematical optimization, machine learning, second-order methods, L-BFGS,
+  Nyström approximation, Bayesian optimization, research engineer, Kyoto University,
+  AI for science
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: ∇ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
