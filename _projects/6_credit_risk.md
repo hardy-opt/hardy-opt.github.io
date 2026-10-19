@@ -2,7 +2,7 @@
 layout: page
 title: Credit risk classification
 description: A self-directed exercise on public UCI credit datasets. End-to-end supervised pipeline with class imbalance handling, cost-sensitive evaluation and model interpretability.
-img: assets/img/figures1/model_comparison.png
+img: assets/img/figures1/credit_risk_card.png
 importance: 9
 category: learning
 related_publications: false
