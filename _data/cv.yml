@@ -8,7 +8,13 @@
     - name: Full Name
       value: Hardik Tankaria, PhD
     - name: Research Areas
-      value: Mathematical Optimization; Optimization for Machine Learning; Second-Order & Stochastic Methods; Randomized Numerical Linear Algebra
+      value: >-
+        Mathematical Optimization; Optimization for Machine Learning;
+        Second-Order and Stochastic Methods; Randomized Numerical Linear Algebra;
+        Constrained and Multi-Objective Bayesian Optimization;
+        Knowledge Representation for Scientific Machine Learning;
+        Heuristic Search and Planning for Combinatorial Discovery;
+        Federated and Communication-Efficient Distributed Optimization
     - name: Current Role
       value: Machine Learning Research Engineer, MI-6 Co., Ltd., Tokyo
     - name: Location
@@ -22,7 +28,7 @@
     - name: Google Scholar
       value: https://scholar.google.com/citations?user=Tx4DHMQAAAAJ
     - name: Languages
-      value: Gujarati (native), Hindi (native), English (business), Japanese (elementary)
+      value: Gujarati (native), Hindi (native), English (business), Japanese (beginner)
 
 - title: Profile
   type: list
@@ -42,7 +48,7 @@
       institution: Kyoto University, Graduate School of Informatics, Dept. of Applied Mathematics & Physics
       year: Apr 2018 - Mar 2024
       description:
-        - "Research areas: Mathematical Optimization; Optimization for Machine Learning; Second-Order & Stochastic Methods; Randomized Numerical Linear Algebra"
+        - "Doctoral research areas: mathematical optimization; optimization for machine learning; second-order and stochastic methods; randomized numerical linear algebra"
         - "Thesis: The Utilization of Second-Order Information for Large-Scale Unconstrained Optimization Problems (<a href='https://www-optima.amp.i.kyoto-u.ac.jp/papers/doctor/2024_doctor_hardik.pdf'>PDF</a>)"
         - Doctoral study funded by the Japan International Cooperation Agency (JICA)
         - "GPA: 3.7/4.0"
@@ -183,13 +189,19 @@
   type: time_table
   contents:
     - title: Reviewer
-      institution: ICML
-      year: 2022
+      institution: ICML, IJCNN, ICASSP, ICDCIT
+      year: 2022 - present
     - title: Co-PI, Federated Learning project
       institution: IIT Mandi
       year: 2025
       description:
         - Guided two M.Tech researchers.
+    - title: Vice President
+      institution: Japan Chapter, Indian Institute of Technology Hyderabad (IIT Hyderabad) Alumni Association
+      year: 2025 - present
+      description:
+        - Core member of the Executive Committee, responsible for institutional and community partnerships,
+          including academia-industry collaboration between the institute and organisations in Japan.
     - title: President (Treasurer 2019-2022)
       institution: Indian Association of Kyoto
       year: 2022 - 2024
