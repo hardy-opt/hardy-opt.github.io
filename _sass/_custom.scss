@@ -1,0 +1,86 @@
+/* -----------------------------------------------------------------------------
+   Site-specific overrides.
+   Kept in its own partial so that updating the al-folio theme does not discard
+   them. Imported last from assets/css/main.scss, so these rules win.
+   -------------------------------------------------------------------------- */
+
+/* --- Justified body text -----------------------------------------------------
+   Prose is justified so each paragraph starts and ends on the same vertical
+   line. Hyphenation is enabled because justifying without it opens large word
+   gaps ("rivers") on narrow columns.
+
+   Deliberately NOT justified: headings, captions, tables, code, equations, the
+   navbar, and anything in a card or tooltip. Justifying short lines looks worse
+   than leaving them ragged. */
+
+.post,
+article {
+  p,
+  li {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+
+  /* things that must stay ragged or centred */
+  .caption,
+  figcaption,
+  blockquote p,
+  table p,
+  td,
+  th,
+  pre,
+  code,
+  .highlight,
+  .more-info p,
+  .bibliography p,
+  mjx-container,
+  .MathJax {
+    text-align: initial;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+  }
+
+  /* captions read better centred under their figure */
+  .caption,
+  figcaption {
+    text-align: center;
+  }
+
+  /* a list item holding only a link or a short label should not stretch */
+  li > p:only-child:empty {
+    text-align: initial;
+  }
+}
+
+/* Headings are never justified. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: initial;
+  hyphens: manual;
+  -webkit-hyphens: manual;
+}
+
+/* Tables must not inherit justification from their container. */
+table {
+  td,
+  th {
+    text-align: initial;
+    hyphens: manual;
+  }
+}
+
+/* --- About page contact note -------------------------------------------------
+   The theme sets this to 0.8rem, which rendered the Banach quote noticeably
+   smaller than the surrounding prose. Match the body size instead. */
+
+.contact-note {
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: initial;
+}
