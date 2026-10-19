@@ -8,9 +8,7 @@ nav_order: 7
 
 profiles:
   - align: right
-    image: speech.png
     content: iith_japan.md
-    image_circular: false
     more_info: >
       <p><strong>Vice President</strong></p>
       <p>IIT Hyderabad Alumni Association,<br />Japan Chapter</p>
