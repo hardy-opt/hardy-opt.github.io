@@ -35,6 +35,22 @@ _Invited talk, Indian Institute of Technology, Mandi, India_
 
 ---
 
+## June 2026
+
+**NysReg-Gradient: Regularized Nyström-Gradient for Large-Scale Unconstrained Optimization and its Application**  
+_IEEE International Joint Conference on Neural Networks (IJCNN), IEEE World Congress on Computational Intelligence (WCCI)_  
+**Location: `Maastricht, Netherlands`**
+
+---
+
+## June 2026
+
+**Nys-Fed: Communication and Memory Efficient Nyström Approximated Curvature for Federated Learning**  
+_IEEE International Joint Conference on Neural Networks (IJCNN), IEEE World Congress on Computational Intelligence (WCCI)_  
+**Location: `Maastricht, Netherlands`**
+
+---
+
 # Domestic Conferences / Poster Presentations
 
 ---
