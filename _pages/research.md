@@ -129,7 +129,7 @@ proposes something it cannot afford.
 
 I build closed-loop systems where affordability is structural rather than checked afterwards. A cost
 model fitted to real instrument runs prices every candidate; because it is a fitted closed form, the
-feasible set is known exactly in advance, so the budget constraint is imposed *inside* the
+feasible set is known exactly in advance, so the budget constraint is imposed _inside_ the
 acquisition optimization. The same framing extends naturally to **constrained and multi-objective**
 acquisition, where several competing properties must improve together under a shared budget, and to
 **multi-fidelity** settings where a cheap observation and an expensive characterisation measure the
@@ -155,7 +155,7 @@ expensive failure is **drift**: the component that produces a decision and the e
 validated it slowly stop being the same thing, while both continue to run.
 
 I work on structured knowledge representations, descriptor ontologies and the versioned contracts
-they publish, designed so that the handover is *required by test* to reproduce the validated result
+they publish, designed so that the handover is _required by test_ to reproduce the validated result
 rather than merely resembling it. That means determinism enforced as a test, module boundaries
 checked at process level, and continuous integration that gates its own published numbers. It also
 means representing absence of knowledge explicitly, with confidence tiers and an explicit no-answer
@@ -169,7 +169,7 @@ state, so a caller can distinguish "examined and found nothing" from "never aske
 collaborators at IIT Mandi I worked on communication- and memory-efficient Nyström-approximated
 curvature for the federated setting, as a Nyström-based ADMM method. On a ResNet-18 the Hessian does
 not fit on a client at all; a sampled sketch takes the per-round cost from tens of hours to about
-two minutes. Published as *Nys-Fed* at IEEE IJCNN 2026.
+two minutes. Published as _Nys-Fed_ at IEEE IJCNN 2026.
 [Read more →](/projects/7_nys_fed/)
 
 **Medical imaging.** Brain-MRI tumour classification with transfer learning, using curvature-aware

@@ -6,13 +6,13 @@ Optimization algorithms for large-scale machine learning, and the systems that d
 computing or measuring next. The site covers the research, the project write-ups, the publications
 and a set of longer technical posts.
 
-| Section | What is there |
-| --- | --- |
-| [Research](https://hardy-opt.github.io/research/) | Second-order and variance-reduced methods, Bayesian optimization under budget, heuristic search, knowledge representation |
-| [Projects](https://hardy-opt.github.io/projects/) | Industrial R&D write-ups, published optimization research, one learning project |
-| [Publications](https://hardy-opt.github.io/publications/) | Journal and conference papers, preprints, doctoral thesis |
-| [Blog](https://hardy-opt.github.io/blog/) | Longer pieces on optimization in modern AI, research methodology, and applications across fields |
-| [CV](https://hardy-opt.github.io/cv/) | Full curriculum vitae, also downloadable as a PDF |
+| Section                                                   | What is there                                                                                                             |
+| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [Research](https://hardy-opt.github.io/research/)         | Second-order and variance-reduced methods, Bayesian optimization under budget, heuristic search, knowledge representation |
+| [Projects](https://hardy-opt.github.io/projects/)         | Industrial R&D write-ups, published optimization research, one learning project                                           |
+| [Publications](https://hardy-opt.github.io/publications/) | Journal and conference papers, preprints, doctoral thesis                                                                 |
+| [Blog](https://hardy-opt.github.io/blog/)                 | Longer pieces on optimization in modern AI, research methodology, and applications across fields                          |
+| [CV](https://hardy-opt.github.io/cv/)                     | Full curriculum vitae, also downloadable as a PDF                                                                         |
 
 ## Building locally
 

@@ -232,7 +232,7 @@ $$
 $$
 
 Any local optimum is global and there is a duality certificate, so unlike a neural network you can
-*know* you are done. Sequential minimal optimization solves it by repeatedly picking two
+_know_ you are done. Sequential minimal optimization solves it by repeatedly picking two
 coordinates and optimising them analytically, which is a coordinate-descent idea that long predates
 its rediscovery in large-scale machine learning.
 
@@ -245,7 +245,7 @@ intractable dense problem into a tractable low-rank one, and the quality-versus-
 the whole engineering question.
 
 This is the same construction I use on the Hessian rather than on a Gram matrix. The mathematics
-transfers directly, which is the useful observation: *sampling a matrix you cannot afford to build*
+transfers directly, which is the useful observation: _sampling a matrix you cannot afford to build_
 is one technique with many addresses.
 
 **Where kernels persist in modern systems.** Gaussian processes are kernel methods, so every
@@ -275,16 +275,16 @@ $$
 
 **The three practical approaches.**
 
-*Scalarise.* Collapse to one objective with weights, $$\sum_i w_i f_i(x)$$, and solve repeatedly
+_Scalarise._ Collapse to one objective with weights, $$\sum_i w_i f_i(x)$$, and solve repeatedly
 with different weights to trace the front. Simple, and it has a real failure mode: a weighted sum
 cannot reach points on a non-convex region of the front, no matter what weights you choose.
 Chebyshev scalarisation fixes that, which is why it is preferred in serious work.
 
-*Constrain.* Optimise one objective and impose bounds on the rest, the $$\epsilon$$-constraint
+_Constrain._ Optimise one objective and impose bounds on the rest, the $$\epsilon$$-constraint
 method. Often the most natural framing in engineering, because the constraints are usually real
 requirements rather than preferences.
 
-*Attack the front directly.* Evolutionary methods (NSGA-II and successors) maintain a population
+_Attack the front directly._ Evolutionary methods (NSGA-II and successors) maintain a population
 approximating the whole front. In the expensive-evaluation regime, **multi-objective Bayesian
 optimization** uses acquisition functions over the front itself: expected hypervolume improvement
 asks how much a candidate would grow the volume dominated by the current front.

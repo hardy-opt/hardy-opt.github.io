@@ -12,7 +12,7 @@ toc:
 ---
 
 Lists of optimization applications are easy to write and useless to read. "Optimization is used in
-logistics, finance and engineering" tells you nothing, because the interesting part is never *that*
+logistics, finance and engineering" tells you nothing, because the interesting part is never _that_
 a field uses optimization. It is **what quantity gets minimised, what structure makes the problem
 hard, and which method survives contact with it**.
 
@@ -157,7 +157,7 @@ daily. How do you mix feed to meet nutritional requirements at least cost (a lin
 original "diet problem"), and how do you cut shapes from stock material with minimum waste (an
 integer program solved by column generation, where each cutting pattern is a variable)?
 
-**Process control.** Model predictive control solves an optimization problem *at every timestep*:
+**Process control.** Model predictive control solves an optimization problem _at every timestep_:
 over the next horizon, choose the control sequence that minimises deviation from target subject to
 physical limits, apply the first move, then re-solve. Chemical plants, refineries and increasingly
 vehicles run on this. The constraint is wall-clock: the problem must be solved faster than the
@@ -167,13 +167,13 @@ process evolves, which is why its convex structure matters so much.
 
 Five structures account for most of this:
 
-| Structure | Where it showed up above |
-|---|---|
-| **Convex relaxation of a discrete problem** | chip placement, topology optimization, optimal power flow, molecular latent spaces |
-| **Low-rank approximation of a matrix you cannot build** | kernel methods, Hessian sketching, covariance estimation |
-| **Decomposition into a master problem and subproblems** | crew scheduling, supply chain, unit commitment |
-| **Expensive-evaluation sequential decisions** | drug discovery, materials, hyperparameter tuning, experiment design |
-| **Pareto reasoning instead of a scalar objective** | radiation therapy, molecular design, model compression |
+| Structure                                               | Where it showed up above                                                           |
+| ------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Convex relaxation of a discrete problem**             | chip placement, topology optimization, optimal power flow, molecular latent spaces |
+| **Low-rank approximation of a matrix you cannot build** | kernel methods, Hessian sketching, covariance estimation                           |
+| **Decomposition into a master problem and subproblems** | crew scheduling, supply chain, unit commitment                                     |
+| **Expensive-evaluation sequential decisions**           | drug discovery, materials, hyperparameter tuning, experiment design                |
+| **Pareto reasoning instead of a scalar objective**      | radiation therapy, molecular design, model compression                             |
 
 And the recurring practical lesson: **the hard part is usually the formulation, not the solver.**
 Circuit sizing is easy once you know it is a geometric program and intractable if you do not.
@@ -186,6 +186,6 @@ application domain.
 
 ---
 
-*Related: [where optimization lives in modern AI](/blog/2026/where-optimization-lives-in-modern-ai/)
+_Related: [where optimization lives in modern AI](/blog/2026/where-optimization-lives-in-modern-ai/)
 · [continuous and discrete optimization: a working map](/blog/2026/continuous-and-discrete-optimization-a-map/)
-· [my research](/research/)*
+· [my research](/research/)_

@@ -125,25 +125,25 @@ Curvature is sketched on-device, passed through one ADMM step, and aggregated at
 
 **Communication time per round**, under matched model and hyperparameter settings:
 
-| Model                      | DONE    | FedNew   | FedNS    | **Nys-Fed**     |
-| -------------------------- | ------- | -------- | -------- | --------------- |
-| ResNet-18 (11.4M params)   | ≥ 48 h  | ≥ 132 h  | ≥ 48 h   | **130 to 141 s** |
-| ResNet-50 (23.9M params)   | ≥ 56 h  | ≥ 156 h  | ≥ 100 h  | **700 to 820 s** |
-| Custom DNN (0.1M params)   | ≥ 20 h  | ≥ 72 h   | ≥ 100 h  | **105 to 250 s** |
+| Model                    | DONE   | FedNew  | FedNS   | **Nys-Fed**      |
+| ------------------------ | ------ | ------- | ------- | ---------------- |
+| ResNet-18 (11.4M params) | ≥ 48 h | ≥ 132 h | ≥ 48 h  | **130 to 141 s** |
+| ResNet-50 (23.9M params) | ≥ 56 h | ≥ 156 h | ≥ 100 h | **700 to 820 s** |
+| Custom DNN (0.1M params) | ≥ 20 h | ≥ 72 h  | ≥ 100 h | **105 to 250 s** |
 
 That is a change in what the hardware can do, not a tuning win.
 
 **One asymmetry worth stating,** because it cuts against the easy reading: for FedNew and FedNS on
 the deep models, parameters were frozen up to the last layer and the inverse Hessian computed only
-for that layer. Nys-Fed sketched over *all* learnable parameters. The baselines were given the
+for that layer. Nys-Fed sketched over _all_ learnable parameters. The baselines were given the
 easier job and still took hours.
 
 **Convex models, like-for-like against DONE** on the `phishing` dataset:
 
-|                           | DONE, 2 iters | **Nys-Fed, 8 cols** | DONE, 5 iters | **Nys-Fed, 16 cols** | DONE, 10 iters | **Nys-Fed, 64 cols** |
-| ------------------------- | ------------- | ------------------- | ------------- | -------------------- | -------------- | -------------------- |
-| Time per epoch (s)        | 151           | **7.6**             | 513.5         | **16**               | 745.1          | **45.3**             |
-| Time for 1000 epochs (h)  | 41.6          | **2.11**            | 142.6         | **4.4**              | 206.9          | **12.58**            |
+|                          | DONE, 2 iters | **Nys-Fed, 8 cols** | DONE, 5 iters | **Nys-Fed, 16 cols** | DONE, 10 iters | **Nys-Fed, 64 cols** |
+| ------------------------ | ------------- | ------------------- | ------------- | -------------------- | -------------- | -------------------- |
+| Time per epoch (s)       | 151           | **7.6**             | 513.5         | **16**               | 745.1          | **45.3**             |
+| Time for 1000 epochs (h) | 41.6          | **2.11**            | 142.6         | **4.4**              | 206.9          | **12.58**            |
 
 <div class="row">
   <div class="col-sm mt-3 mt-md-0">
@@ -183,8 +183,8 @@ Implementation by my co-author Sagnik Ghosh:
 
 > **Nys-Fed: Communication and Memory Efficient Nyström Approximated Curvature for Federated
 > Learning.** Sagnik Ghosh, Hardik Tankaria, Arnav Bhavsar, Varun Dutt, Dinesh Singh.
-> *IEEE International Joint Conference on Neural Networks (IJCNN), IEEE World Congress on
-> Computational Intelligence (WCCI)*, Maastricht, 2026.
+> _IEEE International Joint Conference on Neural Networks (IJCNN), IEEE World Congress on
+> Computational Intelligence (WCCI)_, Maastricht, 2026.
 
 Extended discussion: [the blog post on this work](/blog/2026/nys-fed-second-order-federated-learning/).
 The underlying curvature method: [regularized Nyström](/projects/4_nystrom/).
@@ -192,8 +192,8 @@ The underlying curvature method: [regularized Nyström](/projects/4_nystrom/).
 ### References
 
 - **FedNew: A Communication-Efficient and Privacy-Preserving Newton-Type Method for Federated
-  Learning.** Anis Elgabli et al. ICML 2022. *The one-pass ADMM construction this builds on.*
+  Learning.** Anis Elgabli et al. ICML 2022. _The one-pass ADMM construction this builds on._
 - **Communication-Efficient Learning of Deep Networks from Decentralized Data.**
-  Brendan McMahan et al. AISTATS 2017. *FedAvg, the first-order baseline.*
+  Brendan McMahan et al. AISTATS 2017. _FedAvg, the first-order baseline._
 - **DONE: Distributed Approximate Newton-type Method for Federated Edge Learning.**
-  Canh Dinh et al. IEEE TPDS, 2022. *The Richardson-iteration baseline.*
+  Canh Dinh et al. IEEE TPDS, 2022. _The Richardson-iteration baseline._
