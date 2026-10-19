@@ -6,17 +6,18 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Hardik
 middle_name:
 last_name: Tankaria
-contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+contact_note:
+  > "Mathematics is the most beautiful and most powerful creation of the human spirit."
+  > - **Stefan Banach**
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Hardik Tankaria, PhD in Informatics (Mathematical Optimization), Kyoto University. ML Research Engineer at MI-6.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website # add your own keywords or leave empty
+  &copy; Hardik Tankaria. Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and
+  the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+keywords: mathematical optimization, machine learning, second-order methods, L-BFGS, Nyström
+  approximation, Bayesian optimization, research engineer, Kyoto University, AI for science # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ∇ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://hardy-opt.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
@@ -69,9 +70,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
-serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
+serve_schema_org: true # Include Schema.org in the HTML head
+og_image: /assets/img/Hardik.png  # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -85,7 +86,7 @@ pirsch_analytics: # your Pirsch analytics site ID (length 32 characters)
 openpanel_analytics: # your Openpanel analytics client ID (format: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX)
 
 # For Google Search Console, see https://support.google.com/webmasters/answer/9008080?hl=en#meta_tag_verification&zippy=%2Chtml-tag
-google_site_verification: # your google-site-verification ID (Google Search Console)
+google_site_verification: XihpRxvUI58i4a8fFkE5Xb_K5kcrt7imXhzZwL0uXO8 # your google-site-verification ID (Google Search Console)
 bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 
 # -----------------------------------------------------------------------------
@@ -183,6 +184,13 @@ exclude:
   - bin/
   - _pages/about_einstein.md
   - _pages/books.md
+  - _news/announcement_1.md
+  - _news/announcement_2.md
+  - _news/announcement_3.md
+  - assets/video/
+  - assets/plotly/
+  - assets/img/template_error.png
+  - assets/json/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
   - Dockerfile
@@ -266,7 +274,7 @@ jekyll-archives:
   books:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
-display_tags: ["optimization", "credit_modeling", "math", "MLDL"]
+display_tags: ["optimization", "second-order", "bayesian-optimization", "federated-learning", "research-methods", "MLDL", "math"]
 # ["math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
 #display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
 
@@ -303,9 +311,26 @@ scholar:
 
   sort_by: date
   order: descending
-  type_order: [article, inbook, book, unpublished, misc, report, conference, incollections, inproceedings, proceedings]
-  type_names: {unpublished: Preprint, report: reports, article: Journal articles,
-  inproceedings: conference articles & others}
+  type_order:
+       [
+         article,
+         inproceedings,
+         phdthesis,
+         unpublished,
+         inbook,
+         book,
+         misc,
+         report,
+         conference,
+         incollections,
+         proceedings,
+       ]
+type_names:
+       article: Journal articles
+       inproceedings: Conference papers
+       phdthesis: Thesis
+       unpublished: Preprints
+       report: Reports
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
