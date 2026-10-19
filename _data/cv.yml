@@ -203,11 +203,12 @@
 - title: Technical Skills
   type: nested_list
   contents:
-    - title: Languages & tools
+    - title: Programming
       items:
-        - Python (NumPy, SciPy, pandas, scikit-learn, PyTorch, BoTorch, GPyTorch, pytest)
+        - Python (expert)
         - MATLAB
-        - Git, continuous integration, Python packaging
+        - C++ (basic)
+        - SQL
         - LaTeX
     - title: Optimization
       items:
@@ -216,11 +217,69 @@
         - Stochastic and variance-reduced methods (SGD, SVRG, Adam)
         - Randomized numerical linear algebra
         - Convergence and complexity analysis
-        - Heuristic and best-first search (A*, MCTS, AND/OR trees)
-    - title: Machine learning
+        - Multi-objective and hyperparameter optimization
+    - title: Supervised learning
+      items:
+        - "Classification and regression: logistic regression, linear and L2-regularized models, support vector machines (hinge and squared hinge)"
+        - Random forests, gradient boosting (XGBoost, LightGBM), stacked ensembles
+        - Feature engineering, exploratory analysis, data preprocessing
+        - Class-imbalance handling (SMOTE, class weighting) and cost-sensitive objectives
+        - "Model selection and evaluation: cross-validation, ROC-AUC, precision/recall, F1, confusion matrices"
+        - Model interpretability (SHAP, feature importance)
+    - title: Deep learning
+      items:
+        - Convolutional networks (ResNet) and recurrent networks (LSTM)
+        - Transfer learning and fine-tuning
+        - CNN encoders for surrogate models
+        - Curvature-aware training of deep networks
+        - Medical image classification
+    - title: Bayesian and probabilistic methods
       items:
         - Bayesian optimization and Gaussian processes
-        - Experimental design, benchmarking, paired statistical testing (McNemar, bootstrap CI)
-        - Reproducible research engineering (determinism tests, CI-gated results)
-        - Transfer learning, federated learning
-        - High-dimensional data, medical image analysis
+        - Acquisition function design
+        - Cost-aware and multi-fidelity acquisition
+        - Sequential decision-making under a budget
+    - title: Federated and distributed learning
+      items:
+        - Federated learning across edge clients, benchmarked against FedAvg, FedProx, FedAdam, FedNew, FedNS and DONE
+        - ADMM and one-pass ADMM
+        - Communication- and memory-efficient second-order updates
+        - Quantization of client updates
+        - Decentralised training frameworks
+    - title: Search and planning
+      items:
+        - "Shortest-path and best-first search with learned heuristics: A*, bidirectional A* with meeting-point selection"
+        - Monte Carlo Tree Search with UCT and PUCT variants
+        - AND/OR graph search and cost-to-go value functions
+        - Branch-selection heuristics to reduce search expansions
+        - Multi-objective route scoring
+    - title: AI systems and agentic architectures
+      items:
+        - LLM agents with knowledge grounding and tool use
+        - Sub-agent architectures communicating through versioned data contracts
+        - Cost-aware and multi-fidelity decision agents
+        - Evaluation of LLM components with pre-registered predictions, positive controls and instrument-validity gates
+    - title: AI-assisted engineering
+      items:
+        - Claude Code and Codex in the development and review loop
+        - Independent re-derivation of published results by a separate agent
+        - AI-assisted refactoring, test generation and documentation
+    - title: Libraries
+      items:
+        - PyTorch, NumPy, SciPy, scikit-learn, pandas
+        - BoTorch, GPyTorch, Optuna
+        - Gurobi
+        - RDKit, MONAI, NiBabel
+    - title: Research engineering
+      items:
+        - Reproducible research (determinism tests, CI-gated results)
+        - Architecture decision records
+        - Experimental design and pre-registration
+        - Paired statistical testing (McNemar, bootstrap confidence intervals) and stated detection floors
+        - Benchmark and dataset generation with multi-stage validation
+    - title: Platforms and tools
+      items:
+        - Linux, macOS
+        - Git, GitHub Actions, pytest, Python packaging, conda
+        - Google Colab, Google Cloud Platform
+        - MS Office including Excel (VBA, pivot tables)
