@@ -2,7 +2,7 @@
 layout: post
 title: Where optimization actually lives in modern AI
 date: 2026-10-17 09:00:00+0900
-description: A map of the optimization problems inside modern machine learning and generative AI: what is being minimised, which method solves it, why that method and not another, and which parts are still badly solved.
+description: "A map of the optimization problems inside modern machine learning and generative AI. What is being minimised, which method solves it, why that method and not another, and which parts are still badly solved."
 tags: optimization MLDL
 categories: optimization
 giscus_comments: false
