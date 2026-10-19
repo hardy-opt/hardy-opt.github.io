@@ -210,10 +210,3 @@ the evidence attached, saves more engineering time than most positive findings d
   approximates._
 - **Gaussian Processes for Machine Learning.** Carl Rasmussen, Christopher Williams. MIT Press, 2006.
   _The surrogate model underneath all of it._
-
-### Related public work
-
-I am building an employer-independent benchmark on this same question, on open synthetic test
-functions with cost models defined in the open, so the capability is demonstrable without the
-proprietary parts. It will appear on [GitHub](https://github.com/hardy-opt) and be linked here.
-Background reading: [when every experiment has a price](/blog/2026/when-every-experiment-has-a-price/).
