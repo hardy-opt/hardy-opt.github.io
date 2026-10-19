@@ -19,7 +19,7 @@ returns nothing at all.
 This project asked a narrow question: **can the planner be told where to look, without being given
 more compute?** The answer turned out to involve reusing a quantity the planner already computes.
 
-> **Industrial R&D, Tokyo.** I own this project: problem framing, algorithm design,
+> **Industrial R&D.** I own this project: problem framing, algorithm design,
 > benchmark construction, evaluation design, and the write-up. I am first author on the resulting
 > conference abstract. The implementation, the internal datasets and the full numbers belong to my
 > employer and are not published here. Everything below is either the published literature or a

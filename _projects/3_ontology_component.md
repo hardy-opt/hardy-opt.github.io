@@ -14,7 +14,7 @@ Most machine learning problems are modelling problems. This one was not. It was 
 subsystems, owned by different people, that have to exchange a decision without that decision
 quietly going stale.
 
-> **Industrial R&D, Tokyo.** I own this project and am the author of the package. The
+> **Industrial R&D.** I own this project and am the author of the package. The
 > implementation, the chemical knowledge base and the internal data belong to my employer and are
 > not published here. The engineering design below is what I can share, and it is the part worth
 > discussing anyway.
