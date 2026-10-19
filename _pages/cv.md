@@ -4,7 +4,7 @@ permalink: /cv/
 title: CV
 nav: true
 nav_order: 5
-cv_pdf: hardik_tankaria_resume.pdf # you can also use external links here
+cv_pdf: hardik_tankaria_cv.pdf # you can also use external links here
 toc:
   sidebar: left
 ---

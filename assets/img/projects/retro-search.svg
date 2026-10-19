@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 440" width="880" height="440" font-family="Helvetica, Arial, sans-serif">
+  <rect width="880" height="440" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="879" height="439" fill="none" stroke="#dce2ea"/>
+
+  <text x="24" y="34" font-size="15" font-weight="700" fill="#141821">Retrosynthetic search as an AND/OR graph</text>
+  <text x="24" y="54" font-size="12" fill="#49536a">OR nodes are molecules (choose one disconnection). AND nodes are reactions (all precursors must be made).</text>
+
+  <!-- target -->
+  <circle cx="440" cy="96" r="20" fill="#e7f0f8" stroke="#1f6fb4" stroke-width="2"/>
+  <text x="440" y="101" font-size="12" font-weight="700" text-anchor="middle" fill="#1f6fb4">T</text>
+  <text x="440" y="78" font-size="11" text-anchor="middle" fill="#49536a">target</text>
+
+  <!-- edges target -> reactions -->
+  <path d="M440 116 L300 162" stroke="#74809a" stroke-width="1.6" fill="none"/>
+  <path d="M440 116 L440 162" stroke="#1f6fb4" stroke-width="2.4" fill="none"/>
+  <path d="M440 116 L600 162" stroke="#74809a" stroke-width="1.6" fill="none"/>
+
+  <!-- reaction (AND) nodes -->
+  <g>
+    <rect x="272" y="162" width="56" height="26" rx="3" fill="#f4f6f8" stroke="#74809a"/>
+    <text x="300" y="179" font-size="11" text-anchor="middle" fill="#49536a">r1</text>
+  </g>
+  <g>
+    <rect x="412" y="162" width="56" height="26" rx="3" fill="#e7f0f8" stroke="#1f6fb4" stroke-width="2"/>
+    <text x="440" y="179" font-size="11" font-weight="700" text-anchor="middle" fill="#1f6fb4">r2</text>
+  </g>
+  <g>
+    <rect x="572" y="162" width="56" height="26" rx="3" fill="#f4f6f8" stroke="#74809a"/>
+    <text x="600" y="179" font-size="11" text-anchor="middle" fill="#49536a">r3</text>
+  </g>
+  <text x="664" y="179" font-size="11" fill="#74809a">AND: every child required</text>
+
+  <!-- edges reactions -> precursors -->
+  <path d="M300 188 L250 236" stroke="#74809a" stroke-width="1.4" fill="none"/>
+  <path d="M300 188 L352 236" stroke="#74809a" stroke-width="1.4" fill="none"/>
+  <path d="M440 188 L404 236" stroke="#1f6fb4" stroke-width="2.4" fill="none"/>
+  <path d="M440 188 L494 236" stroke="#1f6fb4" stroke-width="2.4" fill="none"/>
+  <path d="M600 188 L600 236" stroke="#74809a" stroke-width="1.4" fill="none"/>
+
+  <!-- precursor molecules -->
+  <g font-size="11" text-anchor="middle">
+    <circle cx="250" cy="256" r="18" fill="#f4f6f8" stroke="#74809a"/><text x="250" y="260" fill="#49536a">m1</text>
+    <circle cx="352" cy="256" r="18" fill="#f4f6f8" stroke="#74809a"/><text x="352" y="260" fill="#49536a">m2</text>
+    <circle cx="404" cy="256" r="18" fill="#e7f0f8" stroke="#1f6fb4" stroke-width="2"/><text x="404" y="260" fill="#1f6fb4">m3</text>
+    <circle cx="494" cy="256" r="18" fill="#e7f0f8" stroke="#1f6fb4" stroke-width="2"/><text x="494" y="260" fill="#1f6fb4">m4</text>
+    <circle cx="600" cy="256" r="18" fill="#f4f6f8" stroke="#74809a"/><text x="600" y="260" fill="#49536a">m5</text>
+  </g>
+
+  <!-- next level -->
+  <path d="M404 274 L404 318" stroke="#1f6fb4" stroke-width="2.4" fill="none"/>
+  <path d="M494 274 L494 318" stroke="#2e7d63" stroke-width="2.4" fill="none"/>
+  <path d="M250 274 L250 318" stroke="#74809a" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
+  <path d="M352 274 L352 318" stroke="#74809a" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
+  <path d="M600 274 L600 318" stroke="#74809a" stroke-width="1.4" stroke-dasharray="3 3" fill="none"/>
+
+  <!-- stock / frontier -->
+  <g font-size="10" text-anchor="middle">
+    <rect x="228" y="318" width="44" height="22" rx="11" fill="#ffffff" stroke="#74809a" stroke-dasharray="3 3"/><text x="250" y="333" fill="#74809a">?</text>
+    <rect x="330" y="318" width="44" height="22" rx="11" fill="#ffffff" stroke="#74809a" stroke-dasharray="3 3"/><text x="352" y="333" fill="#74809a">?</text>
+    <rect x="382" y="318" width="44" height="22" rx="11" fill="#e7f0f8" stroke="#1f6fb4"/><text x="404" y="333" fill="#1f6fb4">?</text>
+    <rect x="472" y="318" width="44" height="22" rx="11" fill="#e6f2ed" stroke="#2e7d63" stroke-width="1.6"/><text x="494" y="333" fill="#2e7d63">buy</text>
+    <rect x="578" y="318" width="44" height="22" rx="11" fill="#ffffff" stroke="#74809a" stroke-dasharray="3 3"/><text x="600" y="333" fill="#74809a">?</text>
+  </g>
+  <text x="648" y="333" font-size="11" fill="#2e7d63">in purchasable stock: leaf closed</text>
+
+  <!-- cost to go bracket -->
+  <path d="M700 96 L724 96 L724 326 L700 326" stroke="#c23a2b" stroke-width="1.4" fill="none"/>
+  <text x="736" y="200" font-size="12" font-weight="700" fill="#c23a2b">V(m)</text>
+  <text x="736" y="218" font-size="11" fill="#c23a2b">reactions still</text>
+  <text x="736" y="233" font-size="11" fill="#c23a2b">needed to reach</text>
+  <text x="736" y="248" font-size="11" fill="#c23a2b">purchasable stock</text>
+
+  <!-- legend -->
+  <g font-size="11">
+    <line x1="24" y1="384" x2="54" y2="384" stroke="#1f6fb4" stroke-width="2.4"/>
+    <text x="62" y="388" fill="#49536a">path the search expands first</text>
+    <line x1="268" y1="384" x2="298" y2="384" stroke="#74809a" stroke-width="1.4" stroke-dasharray="3 3"/>
+    <text x="306" y="388" fill="#49536a">unexpanded frontier: the combinatorial cost</text>
+  </g>
+  <text x="24" y="414" font-size="11.5" fill="#141821">The dominant cost is exploration: how many molecules are expanded before a complete route is found.</text>
+  <text x="24" y="430" font-size="11.5" fill="#141821">A good estimate of V(m) orders the frontier, so fewer wrong branches are opened at the same compute budget.</text>
+</svg>

@@ -2,33 +2,85 @@
 layout: about
 title: About
 permalink: /
-subtitle: PhD in Mathematical Optimization and Machine Learning, Aspiring Data Scientist
+subtitle: Optimization for AI systems. Autonomous experimentation, agentic architectures, neural-guided search, and the algorithms that make them affordable.
 
 profile:
   align: right
-  image: Hardik11.png
-  image_circular: false # crops the image to make it circular
+  image: Hardik.png
+  image_circular: false
   more_info: >
-    <p>Location: Kyoto, Japan</p>
-  #  <p>555 your office number</p>
-  #  <p>123 your address street</p>
+    <p><strong>ML Research Engineer</strong>, MI-6 Co., Ltd., Tokyo</p>
+    <p>PhD in Informatics (Mathematical Optimization),<br>Kyoto University</p>
+    <p>Kyoto, Japan</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-#announcements:
-#  enabled: true # includes a list of news items
-#  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-#  limit: 5 # leave blank to include all the news in the `_news` folder
-
-#latest_posts:
-#  enabled: true
-#  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-#  limit: 3 # leave blank to include all the blog posts
+selected_papers: true # shows papers marked selected={true} in papers.bib
+social: true
+announcements:
+  enabled: true
+  scrollable: true
+  limit: 4
 ---
 
-Hii! Welcome to my professional portfolio. I am Hardik Tankaria, a dedicated researcher with a Ph.D. in Continuous Optimization from [Kyoto University](https://www.kyoto-u.ac.jp/en), Japan, and a master degree from [IIT Hyderabad](https://www.iith.ac.in/). Recently, I served as research associate in [IIT Mandi](https://www.iitmandi.ac.in/), contributing large-scale optimization with federated learning. With over six years of specialized experience, my work is to develop large-scale optimization techniques and solve complex optimization challenges in machine learning and in deep learning.
+**I build the decision layer of AI systems: the part that works out what is worth computing,
+measuring, or asking next, and then proves it was worth it.**
 
-I am looking for a challenging role as a [Data Scientist or Machine Learning Engineer] that allows me to apply my strong background in innovating and solving complex real-world problems within data-driven industries. I want to work on impactful projects that leverage data to create significant value.
+That question looks different depending on where you stand. In a self-driving laboratory it is
+_which experiment should the instrument run next, and can we afford it._ In computer-aided chemistry
+it is _which of ten thousand candidate reactions deserves the next expansion._ In a training loop it
+is _how much curvature information is worth paying for._ They are the same problem, and I work on
+all three.
 
----
+## What I am building now
+
+I am an ML research engineer at **MI-6 Co., Ltd.** in Tokyo, where I own three concurrent R&D lines.
+
+**Autonomous experimentation.** A closed-loop Bayesian optimization system for self-driving labs,
+built so the budget is structural rather than an afterthought: every proposed experiment is priced
+by a fitted cost model, charged against a ledger, and refused if the remaining budget cannot cover
+it. Twelve proposal policies, three interchangeable acquisition optimizers, architecture decision
+records, and a one-command reproducibility check that re-derives every committed figure from
+committed data. CNN encoders turn instrument images into surrogate inputs, so the loop learns from
+what the instrument actually sees rather than from a scalar proxy.
+
+**Agentic architecture.** A packaged, versioned sub-agent that publishes a data contract to a
+separate optimization engine. Determinism is enforced as a test, the module boundary is checked at
+process level, and continuous integration gates its own published result counts so they cannot
+drift. On top of it I am architecting an **agentic LLM framework with a knowledge ontology** that
+makes cost-aware experimental decisions, choosing adaptively between a cheap observation and an
+expensive full characterisation inside a multi-fidelity loop.
+
+**Neural-guided search.** Monte Carlo Tree Search and bidirectional A\* over AND/OR graphs for
+synthesis planning, with a learned cost-to-go heuristic that cuts exploration at unchanged per-step
+compute. First-author conference abstract. [See the projects →](/projects/)
+
+## Where it comes from
+
+My PhD at [Kyoto University](https://www.kyoto-u.ac.jp/en) was on making second-order information
+affordable at scale, and I pushed every method through to an application rather than stopping at
+the theorem. A regularized L-BFGS method in _Computational Optimization and Applications_. A
+Barzilai-Borwein variant of SVRG in _JIMO_. The regularized Nyström curvature line, which reduces
+per-iteration cost from $$O(nd^2 + d^3)$$ to $$O(ndm + dm^2)$$ with a sketch of roughly 5 to 20
+percent of the feature dimension, and keeps the step a descent direction even when the Hessian is
+indefinite.
+
+Those methods went into **brain-MRI tumour classification** with transfer learning, where data is
+scarce and getting more out of each gradient actually matters; into **federated learning** on edge
+devices, where the Hessian for a ResNet-50 does not fit on the client and a sketch takes the
+per-round cost from hours to minutes; and onto high-dimensional classification benchmarks and the
+CUTEst collection. [More on the research →](/research/)
+
+## How I work
+
+Experiments designed before they are run. Paired statistical tests rather than single-run deltas. A
+stated detection floor beside every comparison. Negative results reported with their mechanism
+rather than dropped. Most of the levers you try do not work, and knowing which ones did, and why, is
+the job.
+
+**Day to day:** Python, PyTorch, BoTorch and GPyTorch, NumPy and SciPy, pytest and CI, Git, MATLAB,
+RDKit. Things I have shipped: packaged libraries with versioned contracts, benchmark harnesses with
+thousands of tests, reproducibility checks that fail the build when a figure stops following from
+its data.
+
+**Currently interested in** research scientist and research engineer roles where optimization and
+decision-making are the substance of the work: AI for science, autonomous experimentation,
+industrial R&D, efficient training, and scientific computing.

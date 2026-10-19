@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 420" width="880" height="420" font-family="Helvetica, Arial, sans-serif">
+  <rect width="880" height="420" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="879" height="419" fill="none" stroke="#dce2ea"/>
+  <defs>
+    <marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#1f6fb4"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="34" font-size="15" font-weight="700" fill="#141821">One decision crossing a boundary between two owners</text>
+  <text x="24" y="54" font-size="12" fill="#49536a">The failure mode is drift: the component and the experiment that validated it slowly stop being the same thing.</text>
+
+  <!-- left subsystem -->
+  <rect x="32" y="86" width="268" height="206" rx="5" fill="#e7f0f8" stroke="#1f6fb4" stroke-width="1.6"/>
+  <text x="166" y="112" font-size="13" font-weight="700" text-anchor="middle" fill="#1f6fb4">Descriptor knowledge</text>
+  <text x="166" y="130" font-size="11" text-anchor="middle" fill="#49536a">owns: what a descriptor means</text>
+  <g font-size="11" fill="#49536a">
+    <text x="52" y="160">which signals an endpoint needs</text>
+    <text x="52" y="180">confidence in each mapping</text>
+    <text x="52" y="200">what is redundant with what</text>
+    <text x="52" y="220">coverage counts</text>
+    <text x="52" y="240">an explicit "no answer" state</text>
+  </g>
+  <rect x="52" y="256" width="228" height="22" rx="3" fill="#ffffff" stroke="#1f6fb4" stroke-dasharray="3 3"/>
+  <text x="166" y="271" font-size="10.5" text-anchor="middle" fill="#1f6fb4">no optimizer code may be imported</text>
+
+  <!-- right subsystem -->
+  <rect x="580" y="86" width="268" height="206" rx="5" fill="#f4f6f8" stroke="#74809a" stroke-width="1.6"/>
+  <text x="714" y="112" font-size="13" font-weight="700" text-anchor="middle" fill="#49536a">Optimization engine</text>
+  <text x="714" y="130" font-size="11" text-anchor="middle" fill="#74809a">owns: how a model is fitted</text>
+  <g font-size="11" fill="#74809a">
+    <text x="600" y="160">Gaussian process training</text>
+    <text x="600" y="180">acquisition optimization</text>
+    <text x="600" y="200">batch proposal</text>
+    <text x="600" y="220">the optimization loop</text>
+    <text x="600" y="240">applying the selection</text>
+  </g>
+
+  <!-- the contract -->
+  <rect x="332" y="128" width="216" height="122" rx="5" fill="#ffffff" stroke="#141821" stroke-width="2"/>
+  <text x="440" y="152" font-size="12.5" font-weight="700" text-anchor="middle" fill="#141821">versioned feature specification</text>
+  <line x1="348" y1="162" x2="532" y2="162" stroke="#dce2ea"/>
+  <g font-size="10.5" fill="#49536a" text-anchor="middle">
+    <text x="440" y="180">ordered descriptors</text>
+    <text x="440" y="198">signals, confidence, provenance</text>
+    <text x="440" y="216">redundancy, coverage</text>
+    <text x="440" y="234">versioned, byte-deterministic</text>
+  </g>
+
+  <line x1="300" y1="189" x2="326" y2="189" stroke="#1f6fb4" stroke-width="2" marker-end="url(#a3)"/>
+  <line x1="548" y1="189" x2="574" y2="189" stroke="#1f6fb4" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="440" y="276" font-size="11" font-weight="700" text-anchor="middle" fill="#141821">the seam: one artifact, one version</text>
+
+  <!-- guarantees strip -->
+  <rect x="32" y="316" width="816" height="88" rx="4" fill="#f4f6f8" stroke="#dce2ea"/>
+  <text x="48" y="338" font-size="12" font-weight="700" fill="#141821">The guarantee is a test, not a paragraph</text>
+  <g font-size="11.5" fill="#49536a">
+    <text x="48" y="358">Regenerate the spec, hand it to the consumer unchanged, re-evaluate on the same folds, and require the</text>
+    <text x="48" y="376">held-out score to match the recorded value bit for bit. Build a wheel, install it in a clean environment</text>
+    <text x="48" y="394">outside the repository, run the command line tool, require the output bytes to equal the committed fixture.</text>
+  </g>
+</svg>
