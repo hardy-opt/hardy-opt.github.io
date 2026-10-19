@@ -131,11 +131,11 @@
         - "**Hardik Tankaria**, Nobuo Yamashita"
     - title: "NysReg-Gradient: Regularized Nystrom-Gradient for Large-Scale Unconstrained Optimization and its Application"
       items:
-        - "IEEE IJCNN 2026 (WCCI), Maastricht. # VERIFY STATUS AND ADD DOI - see FACTS.md section 5"
+        - "IEEE IJCNN 2026 (WCCI), Maastricht"
         - "**Hardik Tankaria**, Makoto Yamada, Dinesh Singh"
     - title: "Nys-Fed: Communication and Memory Efficient Nystrom Approximated Curvature for Federated Learning"
       items:
-        - "IEEE IJCNN 2026 (WCCI), Maastricht. # VERIFY STATUS AND ADD DOI - see FACTS.md section 5"
+        - "IEEE IJCNN 2026 (WCCI), Maastricht"
         - "Sagnik Ghosh, **Hardik Tankaria**, Arnav Bhavsar, Varun Dutt, Dinesh Singh"
     - title: "Nys-Newton: Nystrom-Approximated Curvature for Convex Optimization"
       items:
@@ -185,8 +185,6 @@
     - title: Reviewer
       institution: ICML
       year: 2022
-      description:
-        - "# VERIFY: your GitHub README also claims IJCNN and ICASSP. List only venues you can evidence."
     - title: Co-PI, Federated Learning project
       institution: IIT Mandi
       year: 2025
