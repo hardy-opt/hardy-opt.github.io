@@ -5,7 +5,7 @@ description: SVRG removes most of the noise from stochastic gradients but still 
 img: assets/img/figures2/Gisette-1.0e-05-Opt_Time.png
 importance: 5
 category: research
-related_publications: true
+related_publications: false # the page carries its own annotated References section
 toc:
   sidebar: left
 ---

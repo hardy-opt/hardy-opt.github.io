@@ -5,7 +5,7 @@ description: Newton's method costs O(nd² + d³) per step. Sampling a few column
 img: assets/img/figures3/ngds.png
 importance: 4
 category: research
-related_publications: true
+related_publications: false # the page carries its own annotated References section
 toc:
   sidebar: left
 ---

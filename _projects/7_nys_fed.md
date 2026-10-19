@@ -5,7 +5,7 @@ description: Newton-type methods converge in far fewer communication rounds than
 img: assets/img/nysfed/nystrom-client-breakdown.png
 importance: 6
 category: research
-related_publications: true
+related_publications: false # the page carries its own annotated References section
 toc:
   sidebar: left
 ---
