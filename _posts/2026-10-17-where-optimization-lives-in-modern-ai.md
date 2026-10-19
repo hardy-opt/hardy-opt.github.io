@@ -218,7 +218,7 @@ which; which operators to fuse; how to tile a matrix multiplication for a partic
 hierarchy. The last one is an integer program that compilers solve with heuristics, and it is where a
 large fraction of real-world speedup comes from.
 
-## 7. Optimization _of_ the pipeline
+## 7. Optimization of the pipeline
 
 **Hyperparameter optimization.** Each evaluation costs a training run, so you have an expensive
 black-box problem: the native setting for **Bayesian optimization**: fit a surrogate (usually a
